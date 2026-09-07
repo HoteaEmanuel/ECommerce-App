@@ -6,33 +6,43 @@ import { AppFonts } from "../../styles/fonts";
 import { AppColors } from "../../styles/colors";
 import { FontAwesome, MaterialIcons } from "@expo/vector-icons";
 
-const tempItem = {
-  id: 1,
-  price: 1199,
-  title: "iPhone 16 Pro Max",
-  imageURL:
-    "https://2b.com.eg/media/catalog/product/cache/661473ab953cdcdf4c3b607144109b90/m/a/ma658.jpg",
+type CartItemProps = {
+  title: string;
+  price: number | string;
+  qty: number;
+  imageURL: string;
+  onDeletePress: () => void;
+  onIncreasePress: () => void;
+  onDecreasePress: () => void;
 };
 
-const CartItem = () => {
+const CartItem = ({
+  imageURL,
+  onDecreasePress,
+  onDeletePress,
+  onIncreasePress,
+  price,
+  qty,
+  title,
+}: CartItemProps) => {
   return (
     <View style={styles.container}>
       {/* Image Container */}
       <View style={styles.imageContainer}>
-        <Image source={{ uri: tempItem.imageURL }} style={styles.image} />
+        <Image source={{ uri: imageURL }} style={styles.image} />
       </View>
 
       {/* Details Container */}
       <View style={styles.detailsContainer}>
-        <AppText style={styles.textTitle}>{tempItem.title}</AppText>
-        <AppText style={styles.textPrice}>{tempItem.title}</AppText>
+        <AppText style={styles.textTitle}>{title}</AppText>
+        <AppText style={styles.textPrice}>{price}</AppText>
 
         <View style={styles.qtyContainer}>
-          <Pressable style={styles.iconButton}>
+          <Pressable style={styles.iconButton} onPress={onIncreasePress}>
             <FontAwesome name="plus" size={s(10)} color={AppColors.primary} />
           </Pressable>
-          <AppText style={styles.textQty}>1</AppText>
-          <Pressable style={styles.iconButton}>
+          <AppText style={styles.textQty}>{qty}</AppText>
+          <Pressable style={styles.iconButton} onPress={onDecreasePress}>
             <FontAwesome name="minus" size={s(10)} color={AppColors.primary} />
           </Pressable>
         </View>
@@ -40,7 +50,7 @@ const CartItem = () => {
 
       {/* Delete Container */}
       <View style={styles.deleteContainer}>
-        <Pressable style={styles.deleteButton}>
+        <Pressable style={styles.deleteButton} onPress={onDeletePress}>
           <MaterialIcons
             name="delete-outline"
             size={s(14)}
