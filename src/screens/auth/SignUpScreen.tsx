@@ -19,7 +19,7 @@ const SignUpScreen = () => {
   return (
     <AppSaveView style={styles.container}>
       <Image source={IMAGES.appLogo} style={styles.logo} />
-      <AppTextInput value={userName} onChangeText={setUserName} />
+      <AppTextInput value={userName} onChangeText={setUserName} placeholder="Name"/>
       <AppTextInput placeholder="Email" value={email} onChangeText={setEmail} />
       <AppTextInput
         placeholder="Password"

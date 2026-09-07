@@ -24,6 +24,7 @@ const SignInScreen = () => {
         value={password}
         onChangeText={setPassword}
         secureTextEntry
+        autoFocus
       />
 
       <AppButton
