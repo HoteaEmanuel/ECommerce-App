@@ -6,8 +6,12 @@ import { AppFonts } from "../../styles/fonts";
 import ProductCard from "../../components/cards/ProductCard";
 import { products } from "../../data/products";
 import { s, vs } from "react-native-size-matters";
-
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../store/store";
+import { addItemToCart } from "../../store/reducers/cartSlice";
 const HomeScreen = () => {
+  const { items } = useSelector((store: RootState) => store.cartSlice);
+  const dispatch = useDispatch();
   return (
     <AppSaveView>
       <HomeHeader />
@@ -18,7 +22,7 @@ const HomeScreen = () => {
         renderItem={({ item }) => (
           <ProductCard
             imageURL={item.imageURL}
-            onAddToCartPress={() => {}}
+            onAddToCartPress={() => dispatch(addItemToCart(item))}
             price={item.price}
             title={item.title}
           />

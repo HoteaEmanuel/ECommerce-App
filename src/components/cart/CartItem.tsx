@@ -6,6 +6,7 @@ import { AppFonts } from "../../styles/fonts";
 import { AppColors } from "../../styles/colors";
 import { FontAwesome, MaterialIcons } from "@expo/vector-icons";
 
+
 type CartItemProps = {
   title: string;
   price: number | string;
@@ -25,6 +26,8 @@ const CartItem = ({
   qty,
   title,
 }: CartItemProps) => {
+
+
   return (
     <View style={styles.container}>
       {/* Image Container */}
@@ -35,15 +38,15 @@ const CartItem = ({
       {/* Details Container */}
       <View style={styles.detailsContainer}>
         <AppText style={styles.textTitle}>{title}</AppText>
-        <AppText style={styles.textPrice}>{price}</AppText>
+        <AppText style={styles.textPrice}>${price}</AppText>
 
         <View style={styles.qtyContainer}>
           <Pressable style={styles.iconButton} onPress={onIncreasePress}>
-            <FontAwesome name="plus" size={s(10)} color={AppColors.primary} />
+            <FontAwesome name="plus" size={s(10)} color={AppColors.black} />
           </Pressable>
           <AppText style={styles.textQty}>{qty}</AppText>
           <Pressable style={styles.iconButton} onPress={onDecreasePress}>
-            <FontAwesome name="minus" size={s(10)} color={AppColors.primary} />
+            <FontAwesome name="minus" size={10} color={AppColors.black} />
           </Pressable>
         </View>
       </View>
@@ -129,10 +132,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignContent: "center",
     backgroundColor: AppColors.blueGray,
-    padding: s(10),
-    height: vs(10),
-    width: s(10),
-    borderRadius: s(10),
+    padding: s(5),
+    height: vs(24),
+    width: s(24),
+    borderRadius: s(12),
+    alignItems:'center'
   },
   textQty: {
     flex: 1,

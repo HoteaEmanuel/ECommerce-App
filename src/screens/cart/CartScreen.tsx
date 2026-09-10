@@ -10,29 +10,38 @@ import { sharedPaddingHorizontal } from "../../styles/sharedStyles";
 import { vs } from "react-native-size-matters";
 import AppButton from "../../components/buttons/AppButton";
 import { useNavigation } from "@react-navigation/native";
-
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../store/store";
+import {
+  addItemToCart,
+  removeItemFromCart,
+  removeProductFromCart,
+} from "../../store/reducers/cartSlice";
 const CartScreen = () => {
-  const navigation=useNavigation();
+  const navigation = useNavigation();
+  const { items } = useSelector((store: RootState) => store.cartSlice);
+
+  const dispatch = useDispatch();
   return (
     <AppSaveView>
       <HomeHeader />
-       <FlatList
-          data={products}
-          keyExtractor={(item) => item.id.toString()}
-          renderItem={({ item }) => (
-            <CartItem
-              // title={item.title}
-              // imageURL={item.imageURL}
-              // price={item.price}
-              qty={0}
-              onIncreasePress={() => {}}
-              onDecreasePress={() => {}}
-              onDeletePress={() => {}}
-              {...item}
-            />
-          )}
-          showsVerticalScrollIndicator={false}
-        />
+      <FlatList
+        data={items}
+        keyExtractor={(item) => item.id.toString()}
+        renderItem={({ item }) => (
+          <CartItem
+            // title={item.title}
+            // imageURL={item.imageURL}
+            // price={item.price}
+            {...item}
+            onIncreasePress={() => dispatch(addItemToCart(item))}
+            onDecreasePress={() => dispatch(removeItemFromCart(item))}
+            onDeletePress={() => dispatch(removeProductFromCart(item))}
+            price={item.sum}
+          />
+        )}
+        showsVerticalScrollIndicator={false}
+      />
       <View
         style={{
           paddingHorizontal: sharedPaddingHorizontal,
@@ -40,9 +49,11 @@ const CartScreen = () => {
           // flex: 1,
         }}
       >
-       
         <TotalsView itemsPrice={200} />
-        <AppButton title="Continue" onPress={() => navigation.navigate('CheckoutScreen')}></AppButton>
+        <AppButton
+          title="Continue"
+          onPress={() => navigation.navigate("CheckoutScreen")}
+        ></AppButton>
       </View>
     </AppSaveView>
   );

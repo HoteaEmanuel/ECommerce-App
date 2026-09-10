@@ -4,6 +4,7 @@ import { s, vs } from "react-native-size-matters";
 import AppText from "../texts/AppText";
 import { AppColors } from "../../styles/colors";
 import { SHIPPING_FEE, TAXES } from "../../constants/constants";
+import Separator from "../separator";
 
 type TotalsViewProps = {
   itemsPrice: number;
@@ -25,7 +26,7 @@ const TotalsView = ({ itemsPrice }: TotalsViewProps) => {
         <AppText style={styles.orderTotalText}>Shipping Fee:</AppText>
         <AppText style={styles.priceText}>${SHIPPING_FEE}</AppText>
       </View>
-      <View style={styles.separator} />
+      <Separator />
       <View style={styles.row}>
         <AppText style={styles.orderTotalText}>Order Total:</AppText>
         <AppText style={styles.priceText}>${ORDER_TOTAL}</AppText>
@@ -50,11 +51,5 @@ const styles = StyleSheet.create({
   priceText: {
     fontSize: s(16),
     color: AppColors.primary,
-  },
-  separator: {
-    height: 1,
-    width: "100%",
-    backgroundColor: AppColors.blueGray,
-    marginVertical: vs(10),
   },
 });

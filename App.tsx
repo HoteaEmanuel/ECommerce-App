@@ -3,6 +3,8 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import { NavigationContainer } from "@react-navigation/native";
 import MainAppStack from "./src/navigation/MainAppStack";
 import { useFonts } from "expo-font";
+import { Provider } from "react-redux";
+import { store } from "./src/store/store";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -13,9 +15,11 @@ export default function App() {
   if (!fontsLoaded) return <ActivityIndicator size={"large"} />;
   return (
     <SafeAreaProvider style={styles.container}>
-      <NavigationContainer>
-        <MainAppStack />
-      </NavigationContainer>
+      <Provider store={store}>
+        <NavigationContainer>
+          <MainAppStack />
+        </NavigationContainer>
+      </Provider>
     </SafeAreaProvider>
   );
 }

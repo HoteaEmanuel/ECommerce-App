@@ -11,10 +11,15 @@ type ProductCardProps = {
   imageURL: string;
   title: string;
   price: number;
-  onPress: () => void;
+  onAddToCartPress: () => void;
 };
 
-const ProductCard = ({ imageURL, onPress, price, title }: ProductCardProps) => {
+const ProductCard = ({
+  imageURL,
+  onAddToCartPress,
+  price,
+  title,
+}: ProductCardProps) => {
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
@@ -31,7 +36,10 @@ const ProductCard = ({ imageURL, onPress, price, title }: ProductCardProps) => {
         <AppText style={styles.priceText}>${price}</AppText>
       </View>
 
-      <TouchableOpacity style={styles.addToCartButton} onPress={onPress}>
+      <TouchableOpacity
+        style={styles.addToCartButton}
+        onPress={onAddToCartPress}
+      >
         <Ionicons name="cart" size={15} color={AppColors.white} />
       </TouchableOpacity>
     </View>
