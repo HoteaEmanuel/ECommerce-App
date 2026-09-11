@@ -18,7 +18,7 @@ const initialState: CartState = {
 
 const cartSlice = createSlice({
   name: "cart",
-  initialState: initialState,
+  initialState,
   reducers: {
     addItemToCart: (state, action) => {
       const idxItemInCart = state.items.findIndex(

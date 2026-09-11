@@ -14,6 +14,7 @@ import AppTextInputController from "../../components/inputs/AppTextInputControll
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+type FormData = yup.InferType<typeof schema>
 const schema = yup.object({
   fullName: yup
     .string()
@@ -37,7 +38,9 @@ const CheckoutScreen = () => {
   const { control, handleSubmit } = useForm({
     resolver: yupResolver(schema),
   });
-  const saveOrder = (orderData: yup.InferType<typeof schema>) => {};
+  const saveOrder = (orderData: FormData) => {
+
+  };
 
   return (
     <AppSaveView>

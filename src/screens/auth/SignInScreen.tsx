@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Alert, Image, StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
 import AppSaveView from "../../components/views/AppSaveView";
 import { sharedPaddingHorizontal } from "../../styles/sharedStyles";
@@ -13,7 +13,11 @@ import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import AppTextInputController from "../../components/inputs/AppTextInputController";
-
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../config/firebase";
+import { showMessage } from "react-native-flash-message";
+import { useDispatch } from "react-redux";
+import { setUserData } from "../../store/reducers/userSlice";
 const schema = yup.object({
   email: yup
     .string()
@@ -31,10 +35,24 @@ const SignInScreen = () => {
     resolver: yupResolver(schema),
   });
   const navigation = useNavigation();
-  const handleLogin = (loginData: FormData) => {
+
+  const dispatch = useDispatch();
+  const handleLogin = async (loginData: FormData) => {
     try {
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        loginData.email,
+        loginData.password,
+      );
+      dispatch(setUserData(userCredential.user));
       navigation.navigate("MainAppBottomTabs");
-    } catch (error) {}
+    } catch (error) {
+      let errorMessage = "Invalid email or password";
+      showMessage({
+        message: errorMessage,
+        type: "danger",
+      });
+    }
   };
   return (
     <AppSaveView style={styles.container}>

@@ -13,6 +13,9 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import AppTextInputController from "../../components/inputs/AppTextInputController";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../config/firebase";
+import { showMessage } from "react-native-flash-message";
 const schema = yup.object({
   name: yup.string().required().min(3, "Name is required"),
   email: yup
@@ -34,10 +37,21 @@ const SignUpScreen = () => {
 
   const navigation = useNavigation();
 
-  const handleSignUp = (data: FormData) => {
+  const handleSignUp = async (data: FormData) => {
     try {
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        data.email,
+        data.password,
+      );
       navigation.navigate("MainAppBottomTabs");
-    } catch (error) {}
+      return userCredential.user;
+    } catch (error) {
+      showMessage({
+        message: "Unable to create account. Please try again.",
+        type: "danger",
+      });
+    }
   };
   return (
     <AppSaveView style={styles.container}>
