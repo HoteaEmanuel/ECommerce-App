@@ -9,28 +9,49 @@ import AppButton from "../../components/buttons/AppButton";
 
 import { AppColors } from "../../styles/colors";
 import { useNavigation } from "@react-navigation/native";
+import * as yup from "yup";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import AppTextInputController from "../../components/inputs/AppTextInputController";
 
+const schema = yup.object({
+  email: yup
+    .string()
+    .email("Please provide a valid email")
+    .required("Email is required"),
+  password: yup
+    .string()
+    .min(8, "Password must contain atleast 8 characters")
+    .required("Password is required"),
+});
+
+type FormData = yup.InferType<typeof schema>;
 const SignInScreen = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
+  const { handleSubmit, control } = useForm({
+    resolver: yupResolver(schema),
+  });
   const navigation = useNavigation();
+  const handleLogin = (loginData: FormData) => {
+    try {
+      navigation.navigate("MainAppBottomTabs");
+    } catch (error) {}
+  };
   return (
     <AppSaveView style={styles.container}>
       <Image source={IMAGES.appLogo} style={styles.logo} />
-      <AppTextInput placeholder="Email" value={email} onChangeText={setEmail} />
-      <AppTextInput
+      <AppTextInputController
+        placeholder="Email"
+        control={control}
+        name="email"
+      />
+      <AppTextInputController
         placeholder="Password"
-        value={password}
-        onChangeText={setPassword}
+        control={control}
+        name="password"
         secureTextEntry
-        autoFocus
       />
 
-      <AppButton
-        title="Login"
-        onPress={() => navigation.navigate("MainAppBottomTabs")}
-      />
+      <AppButton title="Login" onPress={handleSubmit(handleLogin)} />
       <AppButton
         title="Sign up"
         style={styles.registerButton}

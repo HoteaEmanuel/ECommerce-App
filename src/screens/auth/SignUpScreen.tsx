@@ -9,26 +9,60 @@ import AppButton from "../../components/buttons/AppButton";
 
 import { AppColors } from "../../styles/colors";
 import { useNavigation } from "@react-navigation/native";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import { useForm } from "react-hook-form";
+import AppTextInputController from "../../components/inputs/AppTextInputController";
+const schema = yup.object({
+  name: yup.string().required().min(3, "Name is required"),
+  email: yup
+    .string()
+    .email("Please provide a valid email")
+    .required("Email is required"),
+  password: yup
+    .string()
+    .min(8, "Password must contain atleast 8 characters")
+    .required("Password is required"),
+});
+
+type FormData = yup.InferType<typeof schema>;
 
 const SignUpScreen = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [userName, setUserName] = useState("");
+  const { handleSubmit, control } = useForm({
+    resolver: yupResolver(schema),
+  });
 
   const navigation = useNavigation();
+
+  const handleSignUp = (data: FormData) => {
+    try {
+      navigation.navigate("MainAppBottomTabs");
+    } catch (error) {}
+  };
   return (
     <AppSaveView style={styles.container}>
       <Image source={IMAGES.appLogo} style={styles.logo} />
-      <AppTextInput value={userName} onChangeText={setUserName} placeholder="Name"/>
-      <AppTextInput placeholder="Email" value={email} onChangeText={setEmail} />
-      <AppTextInput
+      <AppTextInputController
+        name="name"
+        placeholder="Name"
+        control={control}
+      />
+      <AppTextInputController
+        placeholder="Email"
+        name="email"
+        control={control}
+      />
+      <AppTextInputController
         placeholder="Password"
-        value={password}
-        onChangeText={setPassword}
+        name="password"
+        control={control}
         secureTextEntry
       />
 
-      <AppButton title="Create new account" />
+      <AppButton
+        title="Create new account"
+        onPress={handleSubmit(handleSignUp)}
+      />
       <AppButton
         title="Go to Sign In"
         style={styles.signInButton}

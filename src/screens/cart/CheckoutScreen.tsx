@@ -10,20 +10,59 @@ import { AppColors } from "../../styles/colors";
 import AppTextInput from "../../components/inputs/AppTextInput";
 import AppButton from "../../components/buttons/AppButton";
 import { IS_IOS } from "../../constants/constants";
-
+import AppTextInputController from "../../components/inputs/AppTextInputController";
+import { useForm } from "react-hook-form";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+const schema = yup.object({
+  fullName: yup
+    .string()
+    .required("Name is required")
+    .min(3, "Name must be at least 3 characters")
+    .max(100, "Name must be shorter than 100 characters"),
+  phoneNumber: yup
+    .string()
+    .required("Phone Number is required")
+    .matches(/^[0-9]+$/, "Must contain only digits")
+    .min(10, "Phone number must be at least 10 digits"),
+  detailedAddress: yup
+    .string()
+    .required("The address is required")
+    .min(
+      15,
+      "Please provide a detailed address containing atlest 15 characters",
+    ),
+});
 const CheckoutScreen = () => {
+  const { control, handleSubmit } = useForm({
+    resolver: yupResolver(schema),
+  });
+  const saveOrder = (orderData: yup.InferType<typeof schema>) => {};
+
   return (
     <AppSaveView>
       <View style={{ paddingHorizontal: sharedPaddingHorizontal }}>
         <View style={styles.inputsContainer}>
-          <AppTextInput placeholder="Full Name" />
-          <AppTextInput placeholder="Phone Number" />
-          <AppTextInput placeholder="Detailed Address" />
+          <AppTextInputController
+            control={control}
+            placeholder={"Full Name"}
+            name="fullName"
+          />
+          <AppTextInputController
+            control={control}
+            placeholder="Phone Number"
+            name="phoneNumber"
+          />
+          <AppTextInputController
+            control={control}
+            placeholder="Detailed Address"
+            name="detailedAddress"
+          />
         </View>
       </View>
 
       <View style={styles.bottomButtonContainer}>
-        <AppButton title="Confirm" />
+        <AppButton title="Confirm" onPress={handleSubmit(saveOrder)} />
       </View>
     </AppSaveView>
   );
@@ -38,7 +77,7 @@ const styles = StyleSheet.create({
     borderRadius: s(8),
     backgroundColor: AppColors.white,
     marginTop: IS_IOS ? vs(15) : 0,
-    paddingTop:vs(15)
+    paddingTop: vs(15),
   },
   bottomButtonContainer: {
     paddingHorizontal: sharedPaddingHorizontal,

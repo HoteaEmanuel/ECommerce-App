@@ -22,6 +22,12 @@ const CartScreen = () => {
   const { items } = useSelector((store: RootState) => store.cartSlice);
 
   const dispatch = useDispatch();
+
+  if (items.length === 0) return <EmptyCart />;
+  const totalPrice = items.reduce(
+    (sum, item) => sum + item.sum,
+    0,
+  );
   return (
     <AppSaveView>
       <HomeHeader />
@@ -49,12 +55,12 @@ const CartScreen = () => {
           // flex: 1,
         }}
       >
-        <TotalsView itemsPrice={200} />
+        <TotalsView itemsPrice={totalPrice} />
         <AppButton
           title="Continue"
           onPress={() => navigation.navigate("CheckoutScreen")}
         ></AppButton>
-      </View>
+      </View> 
     </AppSaveView>
   );
 };
