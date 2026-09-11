@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { StyleSheet, TextInput, TextInputProps } from "react-native";
 import React from "react";
 import { s, vs } from "react-native-size-matters";
@@ -13,6 +14,7 @@ const AppTextInput = ({
   secureTextEntry,
   style,
 }: AppTextInputProps) => {
+  const { i18n } = useTranslation();
   return (
     <TextInput
       value={value}
@@ -20,7 +22,7 @@ const AppTextInput = ({
       placeholder={placeholder}
       keyboardType={keyboardType}
       secureTextEntry={secureTextEntry}
-      style={[styles.input, style]}
+      style={[styles.input, { textAlign: i18n.dir() === "rtl" ? "right" : "left" }, style]}
     />
   );
 };

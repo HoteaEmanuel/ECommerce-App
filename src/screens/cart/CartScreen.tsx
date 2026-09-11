@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { FlatList, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import AppSaveView from "../../components/views/AppSaveView";
@@ -18,6 +19,7 @@ import {
   removeProductFromCart,
 } from "../../store/reducers/cartSlice";
 const CartScreen = () => {
+  const { t } = useTranslation();
   const navigation = useNavigation();
   const { items } = useSelector((store: RootState) => store.cartSlice);
 
@@ -57,7 +59,7 @@ const CartScreen = () => {
       >
         <TotalsView itemsPrice={totalPrice} />
         <AppButton
-          title="Continue"
+          title={t("common.continue")}
           onPress={() => navigation.navigate("CheckoutScreen")}
         ></AppButton>
       </View> 

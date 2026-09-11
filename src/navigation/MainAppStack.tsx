@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { createStackNavigator } from "@react-navigation/stack";
 import AuthStack from "./AuthStack";
 import MainAppBottomTabs from "./MainAppButtomTabs";
@@ -7,6 +8,7 @@ import MyOrdersScreen from "../screens/profile/MyOrdersScreen";
 const Stack = createStackNavigator();
 
 export default function MainAppStack() {
+  const { t } = useTranslation();
   return (
     <Stack.Navigator
       screenOptions={{
@@ -19,6 +21,7 @@ export default function MainAppStack() {
         name="CheckoutScreen"
         options={{
           headerShown: true,
+          title: t("navigation.checkout"),
         }}
         component={CheckoutScreen}
       />
@@ -26,7 +29,7 @@ export default function MainAppStack() {
       <Stack.Screen
         name="MyOrdersScreen"
         
-        options={{ headerShown: true, title:'My Orders' }}
+        options={{ headerShown: true, title: t("navigation.orders") }}
         component={MyOrdersScreen}
       />
     </Stack.Navigator>

@@ -1,0 +1,80 @@
+{
+  "common": {
+    "confirm": "Confirmar",
+    "continue": "Continuar",
+    "delete": "Excluir",
+    "cancel": "Cancelar",
+    "loading": "Carregando…"
+  },
+  "navigation": {
+    "home": "Início",
+    "cart": "Carrinho",
+    "profile": "Perfil",
+    "checkout": "Finalizar compra",
+    "orders": "Meus pedidos"
+  },
+  "auth": {
+    "email": "E-mail",
+    "password": "Senha",
+    "name": "Nome",
+    "login": "Entrar",
+    "signup": "Cadastrar-se",
+    "createAccount": "Criar conta",
+    "goToSignIn": "Ir para o login",
+    "invalidCredentials": "E-mail ou senha incorretos.",
+    "signupError": "O endereço de e-mail é inválido ou já está em uso."
+  },
+  "profile": {
+    "language": "Idioma",
+    "logout": "Sair"
+  },
+  "language": {
+    "title": "Alterar idioma",
+    "saveError": "Não foi possível salvar o idioma. Tente novamente."
+  },
+  "cart": {
+    "emptyTitle": "Seu carrinho está vazio",
+    "emptyMessage": "Explore os produtos e encontre algo de que goste!",
+    "startShopping": "Começar a comprar",
+    "products": "Produtos",
+    "taxes": "Impostos",
+    "shipping": "Frete",
+    "total": "Total do pedido",
+    "addItem": "Adicionar {{title}} ao carrinho",
+    "increase": "Aumentar a quantidade de {{title}}",
+    "decrease": "Diminuir a quantidade de {{title}}"
+  },
+  "checkout": {
+    "fullName": "Nome completo",
+    "phone": "Número de telefone",
+    "address": "Endereço completo",
+    "success": "Pedido realizado com sucesso!",
+    "error": "Não foi possível realizar o pedido. Tente novamente."
+  },
+  "orders": {
+    "details": "Detalhes do pedido",
+    "date": "Data",
+    "total": "Preço total",
+    "loadError": "Não foi possível carregar seus pedidos. Tente novamente.",
+    "signInRequired": "Entre para ver seus pedidos.",
+    "empty": "Você ainda não tem pedidos."
+  },
+  "validation": {
+    "emailRequired": "O e-mail é obrigatório.",
+    "emailInvalid": "Digite um endereço de e-mail válido.",
+    "passwordRequired": "A senha é obrigatória.",
+    "passwordMin": "A senha deve conter pelo menos 8 caracteres.",
+    "nameRequired": "O nome é obrigatório.",
+    "nameMin": "O nome deve conter pelo menos 3 caracteres.",
+    "nameMax": "O nome deve conter no máximo 100 caracteres.",
+    "phoneRequired": "O número de telefone é obrigatório.",
+    "phoneDigits": "O número de telefone deve conter apenas dígitos.",
+    "phoneMin": "O número de telefone deve conter pelo menos 10 dígitos.",
+    "addressRequired": "O endereço é obrigatório.",
+    "addressMin": "Digite um endereço completo com pelo menos 15 caracteres."
+  },
+  "home": {
+    "loadError": "Não foi possível carregar os produtos. Tente novamente.",
+    "empty": "Nenhum produto disponível."
+  }
+}

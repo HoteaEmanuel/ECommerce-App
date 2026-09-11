@@ -1,3 +1,5 @@
+import { formatPrice } from "../../localization/formatters";
+import { useTranslation } from "react-i18next";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { AppColors } from "../../styles/colors";
@@ -20,6 +22,7 @@ const ProductCard = ({
   price,
   title,
 }: ProductCardProps) => {
+  const { t, i18n } = useTranslation();
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
@@ -33,12 +36,14 @@ const ProductCard = ({
 
       <View style={styles.detailsContainer}>
         <AppText style={styles.titleText}>{title}</AppText>
-        <AppText style={styles.priceText}>${price}</AppText>
+        <AppText style={styles.priceText}>{formatPrice(price, i18n.resolvedLanguage ?? "en")}</AppText>
       </View>
 
       <TouchableOpacity
         style={styles.addToCartButton}
         onPress={onAddToCartPress}
+        accessibilityRole="button"
+        accessibilityLabel={t("cart.addItem", { title })}
       >
         <Ionicons name="cart" size={15} color={AppColors.white} />
       </TouchableOpacity>

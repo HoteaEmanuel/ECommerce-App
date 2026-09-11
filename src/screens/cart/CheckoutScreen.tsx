@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import AppSaveView from "../../components/views/AppSaveView";
@@ -9,37 +10,79 @@ import { s, vs } from "react-native-size-matters";
 import { AppColors } from "../../styles/colors";
 import AppTextInput from "../../components/inputs/AppTextInput";
 import AppButton from "../../components/buttons/AppButton";
-import { IS_IOS } from "../../constants/constants";
+import { IS_IOS, SHIPPING_FEE, TAXES } from "../../constants/constants";
 import AppTextInputController from "../../components/inputs/AppTextInputController";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-type FormData = yup.InferType<typeof schema>
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../store/store";
+import { addDoc, collection, doc } from "firebase/firestore";
+import { db } from "../../config/firebase";
+import { showMessage } from "react-native-flash-message";
+import { useNavigation } from "@react-navigation/native";
+import { emptyCart } from "../../store/reducers/cartSlice";
+type FormData = yup.InferType<typeof schema>;
 const schema = yup.object({
   fullName: yup
     .string()
-    .required("Name is required")
-    .min(3, "Name must be at least 3 characters")
-    .max(100, "Name must be shorter than 100 characters"),
+    .required("validation.nameRequired")
+    .min(3, "validation.nameMin")
+    .max(100, "validation.nameMax"),
   phoneNumber: yup
     .string()
-    .required("Phone Number is required")
-    .matches(/^[0-9]+$/, "Must contain only digits")
-    .min(10, "Phone number must be at least 10 digits"),
+    .required("validation.phoneRequired")
+    .matches(/^[0-9]+$/, "validation.phoneDigits")
+    .min(10, "validation.phoneMin"),
   detailedAddress: yup
     .string()
-    .required("The address is required")
+    .required("validation.addressRequired")
     .min(
       15,
-      "Please provide a detailed address containing atlest 15 characters",
+      "validation.addressMin",
     ),
 });
 const CheckoutScreen = () => {
+  const { t } = useTranslation();
   const { control, handleSubmit } = useForm({
     resolver: yupResolver(schema),
   });
-  const saveOrder = (orderData: FormData) => {
 
+  const { items } = useSelector((store: RootState) => store.cartSlice);
+  const navigation = useNavigation();
+
+  const totalProductPrices = items.reduce((sum, item) => sum + item.sum, 0);
+  const totalPrice = totalProductPrices + TAXES + SHIPPING_FEE;
+  const dispatch = useDispatch();
+  const { userData } = useSelector((store: RootState) => store.userSlice);
+  const saveOrder = async (formData: FormData) => {
+    try {
+      const orderBody = {
+        ...formData,
+        items,
+        totalProductPrices,
+        createdAt: new Date(),
+        totalPrice,
+      };
+
+      const userOrderRef = collection(doc(db, "users", userData.uid), "orders");
+
+      await addDoc(userOrderRef, orderBody);
+      const ordersRef = collection(db, "orders");
+      await addDoc(ordersRef, orderBody);
+      showMessage({
+        type: "success",
+        message: t("checkout.success"),
+      });
+      dispatch(emptyCart());
+      navigation.goBack();
+    } catch (error) {
+      console.log(error);
+      showMessage({
+        type: "danger",
+        message: t("checkout.error"),
+      });
+    }
   };
 
   return (
@@ -48,24 +91,24 @@ const CheckoutScreen = () => {
         <View style={styles.inputsContainer}>
           <AppTextInputController
             control={control}
-            placeholder={"Full Name"}
+            placeholder={t("checkout.fullName")}
             name="fullName"
           />
           <AppTextInputController
             control={control}
-            placeholder="Phone Number"
+            placeholder={t("checkout.phone")}
             name="phoneNumber"
           />
           <AppTextInputController
             control={control}
-            placeholder="Detailed Address"
+            placeholder={t("checkout.address")}
             name="detailedAddress"
           />
         </View>
       </View>
 
       <View style={styles.bottomButtonContainer}>
-        <AppButton title="Confirm" onPress={handleSubmit(saveOrder)} />
+        <AppButton title={t("common.confirm")} onPress={handleSubmit(saveOrder)} />
       </View>
     </AppSaveView>
   );

@@ -11,7 +11,12 @@ import { RootState } from "../../store/store";
 import { addItemToCart } from "../../store/reducers/cartSlice";
 import { Product } from "../../types/product";
 import { getProductsData } from "../../config/dataServices";
+import { useTranslation } from "react-i18next";
+import { showMessage } from "react-native-flash-message";
+import AppText from "../../components/texts/AppText";
 const HomeScreen = () => {
+  const { t } = useTranslation();
+  const [loading, setLoading] = useState(true);
   const { items } = useSelector((store: RootState) => store.cartSlice);
   const dispatch = useDispatch();
   const [products, setProducts] = useState<Product[]>([]);
@@ -19,8 +24,12 @@ const HomeScreen = () => {
   const getProducts = async () => {
     try {
       const products = await getProductsData();
-      setProducts(products as Product[]);
-    } catch (error) {}
+      setProducts(products ?? []);
+    } catch (error) {
+      showMessage({ message: t("home.loadError"), type: "danger" });
+    } finally {
+      setLoading(false);
+    }
   };
   useEffect(() => {
     getProducts();
@@ -31,6 +40,7 @@ const HomeScreen = () => {
       <FlatList
         numColumns={2}
         data={products}
+        ListEmptyComponent={<AppText>{t(loading ? "common.loading" : "home.empty")}</AppText>}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
           <ProductCard

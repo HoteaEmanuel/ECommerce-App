@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Alert, Image, StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
 import AppSaveView from "../../components/views/AppSaveView";
@@ -21,16 +22,17 @@ import { setUserData } from "../../store/reducers/userSlice";
 const schema = yup.object({
   email: yup
     .string()
-    .email("Please provide a valid email")
-    .required("Email is required"),
+    .email("validation.emailInvalid")
+    .required("validation.emailRequired"),
   password: yup
     .string()
-    .min(8, "Password must contain atleast 8 characters")
-    .required("Password is required"),
+    .min(8, "validation.passwordMin")
+    .required("validation.passwordRequired"),
 });
 
 type FormData = yup.InferType<typeof schema>;
 const SignInScreen = () => {
+  const { t } = useTranslation();
   const { handleSubmit, control } = useForm({
     resolver: yupResolver(schema),
   });
@@ -44,10 +46,14 @@ const SignInScreen = () => {
         loginData.email,
         loginData.password,
       );
-      dispatch(setUserData(userCredential.user));
+
+      const userDataObj = {
+        id: userCredential.user.uid,
+      };
+      dispatch(setUserData(userDataObj));
       navigation.navigate("MainAppBottomTabs");
     } catch (error) {
-      let errorMessage = "Invalid email or password";
+      const errorMessage = t("auth.invalidCredentials");
       showMessage({
         message: errorMessage,
         type: "danger",
@@ -58,20 +64,20 @@ const SignInScreen = () => {
     <AppSaveView style={styles.container}>
       <Image source={IMAGES.appLogo} style={styles.logo} />
       <AppTextInputController
-        placeholder="Email"
+        placeholder={t("auth.email")}
         control={control}
         name="email"
       />
       <AppTextInputController
-        placeholder="Password"
+        placeholder={t("auth.password")}
         control={control}
         name="password"
         secureTextEntry
       />
 
-      <AppButton title="Login" onPress={handleSubmit(handleLogin)} />
+      <AppButton title={t("auth.login")} onPress={handleSubmit(handleLogin)} />
       <AppButton
-        title="Sign up"
+        title={t("auth.signup")}
         style={styles.registerButton}
         textColor={AppColors.primary}
         onPress={() => navigation.navigate("SignUpScreen")}

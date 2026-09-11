@@ -1,0 +1,80 @@
+{
+  "common": {
+    "confirm": "确认",
+    "continue": "继续",
+    "delete": "删除",
+    "cancel": "取消",
+    "loading": "加载中…"
+  },
+  "navigation": {
+    "home": "首页",
+    "cart": "购物车",
+    "profile": "我的",
+    "checkout": "结算",
+    "orders": "我的订单"
+  },
+  "auth": {
+    "email": "电子邮箱",
+    "password": "密码",
+    "name": "姓名",
+    "login": "登录",
+    "signup": "注册",
+    "createAccount": "创建账户",
+    "goToSignIn": "前往登录",
+    "invalidCredentials": "邮箱或密码错误。",
+    "signupError": "邮箱地址无效或已被使用。"
+  },
+  "profile": {
+    "language": "语言",
+    "logout": "退出登录"
+  },
+  "language": {
+    "title": "更改语言",
+    "saveError": "无法保存语言设置，请重试。"
+  },
+  "cart": {
+    "emptyTitle": "购物车为空",
+    "emptyMessage": "浏览商品，找到您喜欢的好物！",
+    "startShopping": "开始购物",
+    "products": "商品",
+    "taxes": "税费",
+    "shipping": "运费",
+    "total": "订单总额",
+    "addItem": "将{{title}}加入购物车",
+    "increase": "增加{{title}}的数量",
+    "decrease": "减少{{title}}的数量"
+  },
+  "checkout": {
+    "fullName": "全名",
+    "phone": "电话号码",
+    "address": "详细地址",
+    "success": "下单成功！",
+    "error": "无法提交订单，请重试。"
+  },
+  "orders": {
+    "details": "订单详情",
+    "date": "日期",
+    "total": "总价",
+    "loadError": "无法加载您的订单，请重试。",
+    "signInRequired": "请登录以查看您的订单。",
+    "empty": "您还没有订单。"
+  },
+  "validation": {
+    "emailRequired": "请输入电子邮箱。",
+    "emailInvalid": "请输入有效的邮箱地址。",
+    "passwordRequired": "请输入密码。",
+    "passwordMin": "密码至少需要8个字符。",
+    "nameRequired": "请输入姓名。",
+    "nameMin": "姓名至少需要3个字符。",
+    "nameMax": "姓名不能超过100个字符。",
+    "phoneRequired": "请输入电话号码。",
+    "phoneDigits": "电话号码只能包含数字。",
+    "phoneMin": "电话号码至少需要10位数字。",
+    "addressRequired": "请输入地址。",
+    "addressMin": "请输入至少15个字符的详细地址。"
+  },
+  "home": {
+    "loadError": "无法加载商品，请重试。",
+    "empty": "暂无商品。"
+  }
+}

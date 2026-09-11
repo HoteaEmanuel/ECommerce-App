@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { s, vs } from "react-native-size-matters";
@@ -9,6 +10,7 @@ import { useNavigation } from "@react-navigation/native";
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 
 const EmptyCart = () => {
+  const { t } = useTranslation();
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
@@ -18,13 +20,13 @@ const EmptyCart = () => {
         color={AppColors.primary}
         style={styles.icon}
       />
-      <AppText style={styles.title}> Your Cart is Empty </AppText>
+      <AppText style={styles.title}>{t("cart.emptyTitle")}</AppText>
       <AppText style={styles.subTitle}>
-        Browse the products and find something you like! :){" "}
+        {t("cart.emptyMessage")}
       </AppText>
 
       <AppButton
-        title="Start shopping"
+        title={t("cart.startShopping")}
         style={styles.button}
         onPress={() => navigation.navigate("Home")}
       />

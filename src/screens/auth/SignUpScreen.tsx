@@ -1,5 +1,6 @@
+import { useTranslation } from "react-i18next";
 import { Image, StyleSheet, Text, View } from "react-native";
-import React, { useState } from "react";
+import React, { useDebugValue, useState } from "react";
 import AppSaveView from "../../components/views/AppSaveView";
 import { sharedPaddingHorizontal } from "../../styles/sharedStyles";
 import { IMAGES } from "../../constants/images-paths";
@@ -16,24 +17,28 @@ import AppTextInputController from "../../components/inputs/AppTextInputControll
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../config/firebase";
 import { showMessage } from "react-native-flash-message";
+import { useDispatch } from "react-redux";
+import { setUserData } from "../../store/reducers/userSlice";
 const schema = yup.object({
-  name: yup.string().required().min(3, "Name is required"),
+  name: yup.string().required("validation.nameRequired").min(3, "validation.nameMin"),
   email: yup
     .string()
-    .email("Please provide a valid email")
-    .required("Email is required"),
+    .email("validation.emailInvalid")
+    .required("validation.emailRequired"),
   password: yup
     .string()
-    .min(8, "Password must contain atleast 8 characters")
-    .required("Password is required"),
+    .min(8, "validation.passwordMin")
+    .required("validation.passwordRequired"),
 });
 
 type FormData = yup.InferType<typeof schema>;
 
 const SignUpScreen = () => {
+  const { t } = useTranslation();
   const { handleSubmit, control } = useForm({
     resolver: yupResolver(schema),
   });
+  const dispatch = useDispatch();
 
   const navigation = useNavigation();
 
@@ -44,12 +49,17 @@ const SignUpScreen = () => {
         data.email,
         data.password,
       );
+
+      const userDataObj = {
+        id: userCredential.user.uid,
+      };
+      dispatch(setUserData(userDataObj));
       navigation.navigate("MainAppBottomTabs");
       return userCredential.user;
     } catch (error) {
       showMessage({
-        message: "Unable to create account. Please try again.",
         type: "danger",
+        message: t("auth.signupError"),
       });
     }
   };
@@ -58,27 +68,27 @@ const SignUpScreen = () => {
       <Image source={IMAGES.appLogo} style={styles.logo} />
       <AppTextInputController
         name="name"
-        placeholder="Name"
+        placeholder={t("auth.name")}
         control={control}
       />
       <AppTextInputController
-        placeholder="Email"
+        placeholder={t("auth.email")}
         name="email"
         control={control}
       />
       <AppTextInputController
-        placeholder="Password"
+        placeholder={t("auth.password")}
         name="password"
         control={control}
         secureTextEntry
       />
 
       <AppButton
-        title="Create new account"
+        title={t("auth.createAccount")}
         onPress={handleSubmit(handleSignUp)}
       />
       <AppButton
-        title="Go to Sign In"
+        title={t("auth.goToSignIn")}
         style={styles.signInButton}
         textColor={AppColors.primary}
         onPress={() => navigation.navigate("SignInScreen")}

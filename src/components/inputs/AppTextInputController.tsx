@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { StyleSheet, type TextInputProps } from "react-native";
 import React from "react";
 import {
@@ -30,6 +31,7 @@ const AppTextInputController = <T extends FieldValues>({
   keyboardType = "default",
   autoFocus = false,
 }: AppTextInputControllerProps<T>) => {
+  const { t, i18n } = useTranslation();
   return (
     <Controller
       control={control}
@@ -50,7 +52,7 @@ const AppTextInputController = <T extends FieldValues>({
             autoFocus={autoFocus}
           />
           {error?.message && (
-            <AppText style={styles.textError}>{error.message}</AppText>
+            <AppText style={styles.textError}>{i18n.exists(error.message) ? t(error.message) : error.message}</AppText>
           )}
         </>
       )}

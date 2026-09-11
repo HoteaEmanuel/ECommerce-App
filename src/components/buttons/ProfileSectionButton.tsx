@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { AppColors } from "../../styles/colors";
@@ -15,6 +16,7 @@ const ProfileSectionButton = ({
   title,
   onPress,
 }: ProfileSectionButtonProps) => {
+  const { i18n } = useTranslation();
   return (
     <TouchableOpacity onPress={onPress} style={styles.container}>
       <View style={styles.textContainer}>
@@ -22,7 +24,7 @@ const ProfileSectionButton = ({
       </View>
       <View>
         <MaterialIcons
-          name="arrow-forward-ios"
+          name={i18n.dir() === "rtl" ? "arrow-back-ios" : "arrow-forward-ios"}
           size={s(14)}
           color={AppColors.medGray}
         />

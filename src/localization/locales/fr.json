@@ -1,0 +1,80 @@
+{
+  "common": {
+    "confirm": "Confirmer",
+    "continue": "Continuer",
+    "delete": "Supprimer",
+    "cancel": "Annuler",
+    "loading": "Chargement…"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "cart": "Panier",
+    "profile": "Profil",
+    "checkout": "Passer commande",
+    "orders": "Mes commandes"
+  },
+  "auth": {
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "name": "Nom",
+    "login": "Se connecter",
+    "signup": "S’inscrire",
+    "createAccount": "Créer un compte",
+    "goToSignIn": "Aller à la connexion",
+    "invalidCredentials": "E-mail ou mot de passe incorrect.",
+    "signupError": "L’adresse e-mail est invalide ou déjà utilisée."
+  },
+  "profile": {
+    "language": "Langue",
+    "logout": "Se déconnecter"
+  },
+  "language": {
+    "title": "Changer de langue",
+    "saveError": "Impossible d’enregistrer la langue. Réessayez."
+  },
+  "cart": {
+    "emptyTitle": "Votre panier est vide",
+    "emptyMessage": "Parcourez les produits et trouvez ce qui vous plaît !",
+    "startShopping": "Commencer les achats",
+    "products": "Produits",
+    "taxes": "Taxes",
+    "shipping": "Frais de livraison",
+    "total": "Total de la commande",
+    "addItem": "Ajouter {{title}} au panier",
+    "increase": "Augmenter la quantité de {{title}}",
+    "decrease": "Réduire la quantité de {{title}}"
+  },
+  "checkout": {
+    "fullName": "Nom complet",
+    "phone": "Numéro de téléphone",
+    "address": "Adresse complète",
+    "success": "Commande passée avec succès !",
+    "error": "Impossible de passer la commande. Réessayez."
+  },
+  "orders": {
+    "details": "Détails de la commande",
+    "date": "Date",
+    "total": "Prix total",
+    "loadError": "Impossible de charger vos commandes. Réessayez.",
+    "signInRequired": "Connectez-vous pour voir vos commandes.",
+    "empty": "Vous n’avez pas encore de commandes."
+  },
+  "validation": {
+    "emailRequired": "L’e-mail est obligatoire.",
+    "emailInvalid": "Saisissez une adresse e-mail valide.",
+    "passwordRequired": "Le mot de passe est obligatoire.",
+    "passwordMin": "Le mot de passe doit contenir au moins 8 caractères.",
+    "nameRequired": "Le nom est obligatoire.",
+    "nameMin": "Le nom doit contenir au moins 3 caractères.",
+    "nameMax": "Le nom doit contenir au maximum 100 caractères.",
+    "phoneRequired": "Le numéro de téléphone est obligatoire.",
+    "phoneDigits": "Le numéro de téléphone ne doit contenir que des chiffres.",
+    "phoneMin": "Le numéro de téléphone doit contenir au moins 10 chiffres.",
+    "addressRequired": "L’adresse est obligatoire.",
+    "addressMin": "Saisissez une adresse complète d’au moins 15 caractères."
+  },
+  "home": {
+    "loadError": "Impossible de charger les produits. Réessayez.",
+    "empty": "Aucun produit disponible."
+  }
+}

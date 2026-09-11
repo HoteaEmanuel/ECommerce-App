@@ -1,3 +1,5 @@
+import { formatPrice } from "../../localization/formatters";
+import { useTranslation } from "react-i18next";
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { s, vs } from "react-native-size-matters";
@@ -11,25 +13,26 @@ type TotalsViewProps = {
 };
 
 const TotalsView = ({ itemsPrice }: TotalsViewProps) => {
+  const { t, i18n } = useTranslation();
   const ORDER_TOTAL = itemsPrice + SHIPPING_FEE + TAXES;
   return (
     <View>
       <View style={styles.row}>
-        <AppText style={styles.orderTotalText}>Products:</AppText>
-        <AppText style={styles.priceText}>${itemsPrice}</AppText>
+        <AppText style={styles.orderTotalText}>{t("cart.products")}</AppText>
+        <AppText style={styles.priceText}>{formatPrice(itemsPrice, i18n.resolvedLanguage ?? "en")}</AppText>
       </View>
       <View style={styles.row}>
-        <AppText style={styles.orderTotalText}>Taxes:</AppText>
-        <AppText style={styles.priceText}>${TAXES}</AppText>
+        <AppText style={styles.orderTotalText}>{t("cart.taxes")}</AppText>
+        <AppText style={styles.priceText}>{formatPrice(TAXES, i18n.resolvedLanguage ?? "en")}</AppText>
       </View>
       <View style={styles.row}>
-        <AppText style={styles.orderTotalText}>Shipping Fee:</AppText>
-        <AppText style={styles.priceText}>${SHIPPING_FEE}</AppText>
+        <AppText style={styles.orderTotalText}>{t("cart.shipping")}</AppText>
+        <AppText style={styles.priceText}>{formatPrice(SHIPPING_FEE, i18n.resolvedLanguage ?? "en")}</AppText>
       </View>
       <Separator />
       <View style={styles.row}>
-        <AppText style={styles.orderTotalText}>Order Total:</AppText>
-        <AppText style={styles.priceText}>${ORDER_TOTAL}</AppText>
+        <AppText style={styles.orderTotalText}>{t("cart.total")}</AppText>
+        <AppText style={styles.priceText}>{formatPrice(ORDER_TOTAL, i18n.resolvedLanguage ?? "en")}</AppText>
       </View>
     </View>
   );

@@ -1,3 +1,6 @@
+import AppText from "../texts/AppText";
+import { formatPrice } from "../../localization/formatters";
+import { useTranslation } from "react-i18next";
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import Separator from "../separator";
@@ -15,18 +18,19 @@ interface OrderItemCardProps {
 }
 
 const OrderItemCard = ({ price, date }: OrderItemCardProps) => {
+  const { t, i18n } = useTranslation();
   return (
     <View style={[styles.container, commonStyles.shadow]}>
-      <Text style={styles.titleText}>Order Details:</Text>
+      <AppText style={styles.titleText}>{t("orders.details")}</AppText>
       <Separator />
 
       <View style={styles.row}>
-        <Text style={styles.text}>Total Price:</Text>
-        <Text style={styles.priceText}>${price}</Text>
+        <AppText style={styles.text}>{t("orders.total")}</AppText>
+        <AppText style={styles.priceText}>{formatPrice(price, i18n.resolvedLanguage ?? "en")}</AppText>
       </View>
       <View style={styles.row}>
-        <Text style={styles.text}>Date:</Text>
-        <Text style={styles.dateText}>{date}</Text>
+        <AppText style={styles.text}>{t("orders.date")}</AppText>
+        <AppText style={styles.dateText}>{date}</AppText>
       </View>
     </View>
   );
@@ -59,6 +63,8 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: "row",
     justifyContent: "space-between",
+    flexWrap: "wrap",
+    gap: s(8),
     marginBlock: vs(10),
   },
 });

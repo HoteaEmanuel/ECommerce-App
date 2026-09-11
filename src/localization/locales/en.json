@@ -1,0 +1,80 @@
+{
+  "common": {
+    "confirm": "Confirm",
+    "continue": "Continue",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "loading": "Loading…"
+  },
+  "navigation": {
+    "home": "Home",
+    "cart": "Cart",
+    "profile": "Profile",
+    "checkout": "Checkout",
+    "orders": "My Orders"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "name": "Name",
+    "login": "Log in",
+    "signup": "Sign up",
+    "createAccount": "Create account",
+    "goToSignIn": "Go to sign in",
+    "invalidCredentials": "Invalid email or password.",
+    "signupError": "The email address is invalid or already in use."
+  },
+  "profile": {
+    "language": "Language",
+    "logout": "Log out"
+  },
+  "language": {
+    "title": "Change language",
+    "saveError": "Unable to save your language. Please try again."
+  },
+  "cart": {
+    "emptyTitle": "Your cart is empty",
+    "emptyMessage": "Browse the products and find something you like!",
+    "startShopping": "Start shopping",
+    "products": "Products",
+    "taxes": "Taxes",
+    "shipping": "Shipping fee",
+    "total": "Order total",
+    "addItem": "Add {{title}} to cart",
+    "increase": "Increase quantity of {{title}}",
+    "decrease": "Decrease quantity of {{title}}"
+  },
+  "checkout": {
+    "fullName": "Full name",
+    "phone": "Phone number",
+    "address": "Detailed address",
+    "success": "Order placed successfully!",
+    "error": "Unable to place your order. Please try again."
+  },
+  "orders": {
+    "details": "Order details",
+    "date": "Date",
+    "total": "Total price",
+    "loadError": "Unable to load your orders. Please try again.",
+    "signInRequired": "Please sign in to view your orders.",
+    "empty": "You have no orders yet."
+  },
+  "validation": {
+    "emailRequired": "Email is required.",
+    "emailInvalid": "Please enter a valid email address.",
+    "passwordRequired": "Password is required.",
+    "passwordMin": "Password must contain at least 8 characters.",
+    "nameRequired": "Name is required.",
+    "nameMin": "Name must contain at least 3 characters.",
+    "nameMax": "Name must contain no more than 100 characters.",
+    "phoneRequired": "Phone number is required.",
+    "phoneDigits": "Phone number must contain only digits.",
+    "phoneMin": "Phone number must contain at least 10 digits.",
+    "addressRequired": "Address is required.",
+    "addressMin": "Please enter a detailed address with at least 15 characters."
+  },
+  "home": {
+    "loadError": "Unable to load products. Please try again.",
+    "empty": "No products available."
+  }
+}

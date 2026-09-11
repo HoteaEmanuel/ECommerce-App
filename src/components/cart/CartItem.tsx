@@ -1,3 +1,5 @@
+import { formatPrice } from "../../localization/formatters";
+import { useTranslation } from "react-i18next";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { s, vs } from "react-native-size-matters";
@@ -26,6 +28,7 @@ const CartItem = ({
   qty,
   title,
 }: CartItemProps) => {
+  const { t, i18n } = useTranslation();
 
 
   return (
@@ -38,14 +41,14 @@ const CartItem = ({
       {/* Details Container */}
       <View style={styles.detailsContainer}>
         <AppText style={styles.textTitle}>{title}</AppText>
-        <AppText style={styles.textPrice}>${price}</AppText>
+        <AppText style={styles.textPrice}>{formatPrice(price, i18n.resolvedLanguage ?? "en")}</AppText>
 
         <View style={styles.qtyContainer}>
-          <Pressable style={styles.iconButton} onPress={onIncreasePress}>
+          <Pressable style={styles.iconButton} onPress={onIncreasePress} accessibilityRole="button" accessibilityLabel={t("cart.increase", { title })}>
             <FontAwesome name="plus" size={s(10)} color={AppColors.black} />
           </Pressable>
           <AppText style={styles.textQty}>{qty}</AppText>
-          <Pressable style={styles.iconButton} onPress={onDecreasePress}>
+          <Pressable style={styles.iconButton} onPress={onDecreasePress} accessibilityRole="button" accessibilityLabel={t("cart.decrease", { title })}>
             <FontAwesome name="minus" size={10} color={AppColors.black} />
           </Pressable>
         </View>
@@ -59,7 +62,7 @@ const CartItem = ({
             size={s(14)}
             color={AppColors.redColor}
           />
-          <AppText style={styles.deleteText}>Delete</AppText>
+          <AppText style={styles.deleteText}>{t("common.delete")}</AppText>
         </Pressable>
       </View>
     </View>
@@ -108,7 +111,7 @@ const styles = StyleSheet.create({
   },
   deleteText: {
     fontSize: s(12),
-    marginLeft: s(7),
+    marginStart: s(7),
     fontFamily: AppFonts.Medium,
     color: AppColors.medGray,
     marginTop: vs(3),

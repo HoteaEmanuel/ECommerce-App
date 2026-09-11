@@ -1,0 +1,80 @@
+{
+  "common": {
+    "confirm": "Konfirmasi",
+    "continue": "Lanjutkan",
+    "delete": "Hapus",
+    "cancel": "Batal",
+    "loading": "Memuat…"
+  },
+  "navigation": {
+    "home": "Beranda",
+    "cart": "Keranjang",
+    "profile": "Profil",
+    "checkout": "Checkout",
+    "orders": "Pesanan saya"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Kata sandi",
+    "name": "Nama",
+    "login": "Masuk",
+    "signup": "Daftar",
+    "createAccount": "Buat akun",
+    "goToSignIn": "Ke halaman masuk",
+    "invalidCredentials": "Email atau kata sandi salah.",
+    "signupError": "Alamat email tidak valid atau sudah digunakan."
+  },
+  "profile": {
+    "language": "Bahasa",
+    "logout": "Keluar"
+  },
+  "language": {
+    "title": "Ubah bahasa",
+    "saveError": "Bahasa tidak dapat disimpan. Silakan coba lagi."
+  },
+  "cart": {
+    "emptyTitle": "Keranjang Anda kosong",
+    "emptyMessage": "Jelajahi produk dan temukan yang Anda sukai!",
+    "startShopping": "Mulai belanja",
+    "products": "Produk",
+    "taxes": "Pajak",
+    "shipping": "Ongkos kirim",
+    "total": "Total pesanan",
+    "addItem": "Tambahkan {{title}} ke keranjang",
+    "increase": "Tambah jumlah {{title}}",
+    "decrease": "Kurangi jumlah {{title}}"
+  },
+  "checkout": {
+    "fullName": "Nama lengkap",
+    "phone": "Nomor telepon",
+    "address": "Alamat lengkap",
+    "success": "Pesanan berhasil dibuat!",
+    "error": "Pesanan tidak dapat dibuat. Silakan coba lagi."
+  },
+  "orders": {
+    "details": "Detail pesanan",
+    "date": "Tanggal",
+    "total": "Harga total",
+    "loadError": "Pesanan Anda tidak dapat dimuat. Silakan coba lagi.",
+    "signInRequired": "Silakan masuk untuk melihat pesanan Anda.",
+    "empty": "Anda belum memiliki pesanan."
+  },
+  "validation": {
+    "emailRequired": "Email wajib diisi.",
+    "emailInvalid": "Masukkan alamat email yang valid.",
+    "passwordRequired": "Kata sandi wajib diisi.",
+    "passwordMin": "Kata sandi harus berisi minimal 8 karakter.",
+    "nameRequired": "Nama wajib diisi.",
+    "nameMin": "Nama harus berisi minimal 3 karakter.",
+    "nameMax": "Nama tidak boleh lebih dari 100 karakter.",
+    "phoneRequired": "Nomor telepon wajib diisi.",
+    "phoneDigits": "Nomor telepon hanya boleh berisi angka.",
+    "phoneMin": "Nomor telepon harus berisi minimal 10 digit.",
+    "addressRequired": "Alamat wajib diisi.",
+    "addressMin": "Masukkan alamat lengkap dengan minimal 15 karakter."
+  },
+  "home": {
+    "loadError": "Produk tidak dapat dimuat. Silakan coba lagi.",
+    "empty": "Tidak ada produk yang tersedia."
+  }
+}

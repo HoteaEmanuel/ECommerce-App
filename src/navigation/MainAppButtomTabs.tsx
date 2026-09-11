@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../screens/home/HomeScreen";
 import CartScreen from "../screens/cart/CartScreen";
@@ -9,6 +10,7 @@ import { IS_ANDROID } from "../constants/constants";
 const Tab = createBottomTabNavigator();
 
 export default function MainAppBottomTabs() {
+  const { t } = useTranslation();
   return (
     <Tab.Navigator
       initialRouteName="Home"
@@ -30,7 +32,7 @@ export default function MainAppBottomTabs() {
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="home" size={size} color={color} />
           ),
-          title: "Home",
+          title: t("navigation.home"),
         }}
         component={HomeScreen}
       />
@@ -40,7 +42,7 @@ export default function MainAppBottomTabs() {
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="cart" size={size} color={color} />
           ),
-          title: "Cart",
+          title: t("navigation.cart"),
         }}
         component={CartScreen}
       />
@@ -49,7 +51,7 @@ export default function MainAppBottomTabs() {
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="person" size={size} color={color} />
           ),
-          title: "Profile",
+          title: t("navigation.profile"),
         }}
         name="Profile"
         component={ProfileScreen}

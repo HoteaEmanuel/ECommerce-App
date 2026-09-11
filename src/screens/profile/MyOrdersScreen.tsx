@@ -1,48 +1,47 @@
-import { FlatList, StyleSheet, Text, View } from "react-native";
-import React from "react";
+import { useTranslation } from "react-i18next";
+import { FlatList, StyleSheet, View } from "react-native";
+import React, { useEffect, useState } from "react";
 import OrderItemCard from "../../components/cards/OrderItemCard";
 import { s, vs } from "react-native-size-matters";
 import { formatDate } from "../../helpers/dateFormat";
+import { fetchUserData } from "../../config/dataServices";
+import type { Order } from "../../types/order";
+import { showMessage } from "react-native-flash-message";
+import AppText from "../../components/texts/AppText";
 
-const ordersData = [
-  {
-    orderId: 1,
-    price: 100,
-    date: formatDate(new Date()),
-  },
-  {
-    orderId: 2,
-    price: 1250,
-    date: formatDate(new Date()),
-  },
-  {
-    orderId: 3,
-    price: 500,
-    date: formatDate(new Date()),
-  },
-  {
-    orderId: 4,
-    price: 500,
-    date: formatDate(new Date()),
-  },
-  {
-    orderId: 5,
-    price: 500,
-    date: formatDate(new Date()),
-  },
-  {
-    orderId: 6,
-    price: 500,
-    date: formatDate(new Date()),
-  },
-];
 const MyOrdersScreen = () => {
+  const { t, i18n } = useTranslation();
+  const [orders, setOrders] = useState<Order[]>([]);
+  const [loading, setLoading] = useState(true);
+  const getUserOrders = async () => {
+    try {
+      const data = await fetchUserData();
+      setOrders(data);
+    } catch (error) {
+      console.error("Error fetching orders:", error);
+      showMessage({
+        message: t("orders.loadError"),
+        type: "danger",
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+  useEffect(() => {
+    getUserOrders();
+  }, []);
   return (
     <View style={styles.container}>
       <FlatList
-        data={ordersData}
-        keyExtractor={(item) => item.orderId.toString()}
-        renderItem={({ item }) => <OrderItemCard {...item} />}
+        data={orders}
+        ListEmptyComponent={<AppText>{t(loading ? "common.loading" : "orders.empty")}</AppText>}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <OrderItemCard
+            price={item.totalPrice}
+            date={formatDate(item.createdAt.toDate(), i18n.resolvedLanguage)}
+          />
+        )}
         contentContainerStyle={{
           gap: s(10),
           marginBottom: vs(50),
@@ -56,8 +55,8 @@ const MyOrdersScreen = () => {
 export default MyOrdersScreen;
 
 const styles = StyleSheet.create({
-  container:{
-    height:'100%',
-    paddingBottom:vs(20)
-  }
+  container: {
+    height: "100%",
+    paddingBottom: vs(20),
+  },
 });

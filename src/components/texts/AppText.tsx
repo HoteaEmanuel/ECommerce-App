@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { StyleSheet, Text, TextProps, TextStyle, View } from "react-native";
 import React, { ReactNode } from "react";
 import { s } from "react-native-size-matters";
@@ -16,8 +17,9 @@ const AppText = ({
   variant = "medium",
   ...rest
 }: AppTextProps) => {
+  const { i18n } = useTranslation();
   return (
-    <Text {...rest} style={[styles[variant], style]}>
+    <Text {...rest} style={[styles[variant], { writingDirection: i18n.dir(), textAlign: i18n.dir() === "rtl" ? "right" : "left" }, style]}>
       {children}
     </Text>
   );

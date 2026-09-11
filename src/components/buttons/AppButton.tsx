@@ -63,12 +63,15 @@ export default AppButton;
 const styles = StyleSheet.create({
   button: {
     width: "100%",
-    height: vs(40),
+    minHeight: vs(40),
+    paddingVertical: vs(8),
+    paddingHorizontal: s(12),
     justifyContent: "center",
     alignItems: "center",
     borderRadius: s(25),
   },
   textTitle: {
     fontSize: s(16),
+    textAlign: "center",
   },
 });
