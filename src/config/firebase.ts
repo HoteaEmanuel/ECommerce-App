@@ -14,12 +14,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Initialize Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyBO2jiltGs2C3CdW4wDqlDGGbz-yZAGJto",
-  authDomain: "smart-ecommerce-9dd57.firebaseapp.com",
-  projectId: "smart-ecommerce-9dd57",
-  storageBucket: "smart-ecommerce-9dd57.firebasestorage.app",
-  messagingSenderId: "988119754947",
-  appId: "1:988119754947:web:5e15679251497241491a76",
+  apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.EXPO_PUBLIC_FIREBASE_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);
