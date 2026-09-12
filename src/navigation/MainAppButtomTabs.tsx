@@ -8,10 +8,14 @@ import { s, vs } from "react-native-size-matters";
 import { Ionicons } from "@expo/vector-icons";
 import { IS_ANDROID } from "../constants/constants";
 import type { RootStackParamList } from "./types";
+import { useSelector } from "react-redux";
+import { RootState } from "../store/store";
 const Tab = createBottomTabNavigator<RootStackParamList>();
 
 export default function MainAppBottomTabs() {
   const { t } = useTranslation();
+  const { items } = useSelector((store: RootState) => store.cartSlice);
+  const cartItemCount = items.reduce((sum, item) => sum + item.qty, 0);
   return (
     <Tab.Navigator
       initialRouteName="Home"
@@ -43,6 +47,11 @@ export default function MainAppBottomTabs() {
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="cart" size={size} color={color} />
           ),
+          tabBarBadge: cartItemCount > 0 ? cartItemCount : undefined,
+          tabBarBadgeStyle: {
+            backgroundColor: AppColors.redColor,
+            fontSize: s(10),
+          },
           title: t("navigation.cart"),
         }}
         component={CartScreen}

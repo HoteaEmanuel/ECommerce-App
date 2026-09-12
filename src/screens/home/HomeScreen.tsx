@@ -1,5 +1,6 @@
-import { FlatList } from "react-native";
-import React, { useEffect, useState } from "react";
+import { FlatList, RefreshControl, View } from "react-native";
+import React, { useEffect, useMemo, useState } from "react";
+import { useDebouncedValue } from "../../hooks/useDebouncedValue";
 import AppSaveView from "../../components/views/AppSaveView";
 import HomeHeader from "../../components/headers/HomeHeader";
 import ProductCard, { PRODUCT_GRID_GUTTER } from "../../components/cards/ProductCard";
@@ -12,10 +13,16 @@ import { showMessage } from "react-native-flash-message";
 import AppText from "../../components/texts/AppText";
 import { useNavigation } from "@react-navigation/native";
 import ProductsLoadingGrid from "../../components/loaders/ProductsLoadingGrid";
+import ProductsSearchBar, { type ProductSort } from "../../components/home/ProductsSearchBar";
+import { AppColors } from "../../styles/colors";
 
 const HomeScreen = () => {
   const { t } = useTranslation();
   const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
+  const [query, setQuery] = useState("");
+  const debouncedQuery = useDebouncedValue(query);
+  const [sort, setSort] = useState<ProductSort>("none");
   const dispatch = useDispatch();
   const navigation = useNavigation();
   const [products, setProducts] = useState<Product[]>([]);
@@ -33,14 +40,54 @@ const HomeScreen = () => {
   useEffect(() => {
     getProducts();
   }, []);
+
+  const refreshProducts = async () => {
+    setRefreshing(true);
+    await getProducts();
+    setRefreshing(false);
+  };
+
+  const visibleProducts = useMemo(() => {
+    const search = debouncedQuery.trim().toLowerCase();
+    const matches = search
+      ? products.filter((product) => product.title.toLowerCase().includes(search))
+      : products;
+    if (sort === "none") return matches;
+    return [...matches].sort((a, b) =>
+      sort === "priceAsc"
+        ? Number(a.price) - Number(b.price)
+        : Number(b.price) - Number(a.price),
+    );
+  }, [products, debouncedQuery, sort]);
+
   return (
     <AppSaveView>
       <HomeHeader />
+      <View style={{ paddingHorizontal: PRODUCT_GRID_GUTTER }}>
+        <ProductsSearchBar
+          query={query}
+          onQueryChange={setQuery}
+          sort={sort}
+          onSortChange={setSort}
+        />
+      </View>
       <FlatList
         numColumns={2}
-        data={products}
+        data={visibleProducts}
         ListEmptyComponent={
-          loading ? <ProductsLoadingGrid /> : <AppText>{t("home.empty")}</AppText>
+          loading ? (
+            <ProductsLoadingGrid />
+          ) : (
+            <AppText>{debouncedQuery.trim() ? t("home.noResults") : t("home.empty")}</AppText>
+          )
+        }
+        refreshControl={
+          <RefreshControl
+            refreshing={refreshing}
+            onRefresh={refreshProducts}
+            tintColor={AppColors.primary}
+            colors={[AppColors.primary]}
+          />
         }
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
@@ -59,6 +106,7 @@ const HomeScreen = () => {
         contentContainerStyle={{
           paddingHorizontal: PRODUCT_GRID_GUTTER,
         }}
+        keyboardShouldPersistTaps="handled"
       />
     </AppSaveView>
   );

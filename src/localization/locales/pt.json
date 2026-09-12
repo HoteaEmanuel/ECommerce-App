@@ -84,6 +84,11 @@
   },
   "home": {
     "loadError": "Não foi possível carregar os produtos. Tente novamente.",
-    "empty": "Nenhum produto disponível."
+    "empty": "Nenhum produto disponível.",
+    "search": "Pesquisar produtos",
+    "noResults": "Nenhum produto corresponde à sua pesquisa.",
+    "sortDefault": "Ordem padrão",
+    "sortPriceAsc": "Preço: menor para maior",
+    "sortPriceDesc": "Preço: maior para menor"
   }
 }
