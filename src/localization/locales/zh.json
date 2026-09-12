@@ -84,9 +84,12 @@
   },
   "home": {
     "loadError": "无法加载商品，请重试。",
-    "empty": "暂无商品。",
+    "emptyTitle": "暂无商品",
+    "emptyMessage": "目前找不到任何商品。下拉刷新后重试。",
     "search": "搜索商品",
-    "noResults": "没有符合搜索条件的商品。",
+    "noResultsTitle": "未找到匹配结果",
+    "noResultsMessage": "没有符合搜索条件的商品。请尝试其他关键词。",
+    "clearSearch": "清除搜索",
     "sortDefault": "默认排序",
     "sortPriceAsc": "价格：从低到高",
     "sortPriceDesc": "价格：从高到低"

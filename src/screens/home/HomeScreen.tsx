@@ -10,11 +10,11 @@ import { Product } from "../../types/product";
 import { getProductsData } from "../../config/dataServices";
 import { useTranslation } from "react-i18next";
 import { showMessage } from "react-native-flash-message";
-import AppText from "../../components/texts/AppText";
 import { useNavigation } from "@react-navigation/native";
 import ProductsLoadingGrid from "../../components/loaders/ProductsLoadingGrid";
 import ProductsSearchBar, { type ProductSort } from "../../components/home/ProductsSearchBar";
 import { AppColors } from "../../styles/colors";
+import HomeEmptyState from "./HomeEmptyState";
 
 const HomeScreen = () => {
   const { t } = useTranslation();
@@ -78,7 +78,10 @@ const HomeScreen = () => {
           loading ? (
             <ProductsLoadingGrid />
           ) : (
-            <AppText>{debouncedQuery.trim() ? t("home.noResults") : t("home.empty")}</AppText>
+            <HomeEmptyState
+              variant={debouncedQuery.trim() ? "noResults" : "empty"}
+              onClearSearch={() => setQuery("")}
+            />
           )
         }
         refreshControl={

@@ -84,9 +84,12 @@
   },
   "home": {
     "loadError": "Produsele nu au putut fi încărcate. Încearcă din nou.",
-    "empty": "Nu există produse disponibile.",
+    "emptyTitle": "Niciun produs încă",
+    "emptyMessage": "Nu am putut găsi niciun produs momentan. Trage pentru a reîmprospăta și încearcă din nou.",
     "search": "Caută produse",
-    "noResults": "Niciun produs nu corespunde căutării tale.",
+    "noResultsTitle": "Niciun rezultat găsit",
+    "noResultsMessage": "Niciun produs nu corespunde căutării tale. Încearcă un alt cuvânt cheie.",
+    "clearSearch": "Șterge căutarea",
     "sortDefault": "Ordine implicită",
     "sortPriceAsc": "Preț: crescător",
     "sortPriceDesc": "Preț: descrescător"

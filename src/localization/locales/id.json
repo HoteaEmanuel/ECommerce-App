@@ -84,9 +84,12 @@
   },
   "home": {
     "loadError": "Produk tidak dapat dimuat. Silakan coba lagi.",
-    "empty": "Tidak ada produk yang tersedia.",
+    "emptyTitle": "Belum ada produk",
+    "emptyMessage": "Kami tidak dapat menemukan produk saat ini. Tarik untuk menyegarkan dan coba lagi.",
     "search": "Cari produk",
-    "noResults": "Tidak ada produk yang cocok dengan pencarian Anda.",
+    "noResultsTitle": "Tidak ada hasil ditemukan",
+    "noResultsMessage": "Tidak ada produk yang cocok dengan pencarian Anda. Coba kata kunci lain.",
+    "clearSearch": "Hapus pencarian",
     "sortDefault": "Urutan default",
     "sortPriceAsc": "Harga: rendah ke tinggi",
     "sortPriceDesc": "Harga: tinggi ke rendah"

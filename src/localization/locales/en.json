@@ -84,9 +84,12 @@
   },
   "home": {
     "loadError": "Unable to load products. Please try again.",
-    "empty": "No products available.",
+    "emptyTitle": "No products yet",
+    "emptyMessage": "We couldn't find any products right now. Pull to refresh and try again.",
     "search": "Search products",
-    "noResults": "No products match your search.",
+    "noResultsTitle": "No matches found",
+    "noResultsMessage": "No products match your search. Try a different keyword.",
+    "clearSearch": "Clear search",
     "sortDefault": "Default order",
     "sortPriceAsc": "Price: low to high",
     "sortPriceDesc": "Price: high to low"
