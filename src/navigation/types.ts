@@ -1,3 +1,5 @@
+import type { Product } from "../types/product";
+
 /**
  * Every route in the app, flattened across the root stack, the auth stack and
  * the bottom tabs. Declaring it globally (below) means `useNavigation()` and
@@ -11,6 +13,7 @@ export type RootStackParamList = {
   MainAppBottomTabs: undefined;
   CheckoutScreen: undefined;
   MyOrdersScreen: undefined;
+  ProductDetailsScreen: { product: Product };
 
   // Auth stack (src/navigation/AuthStack.tsx)
   SignInScreen: undefined;

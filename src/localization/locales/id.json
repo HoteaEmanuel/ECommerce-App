@@ -14,7 +14,8 @@
     "cart": "Keranjang",
     "profile": "Profil",
     "checkout": "Checkout",
-    "orders": "Pesanan saya"
+    "orders": "Pesanan saya",
+    "productDetails": "Detail produk"
   },
   "auth": {
     "email": "Email",
@@ -45,7 +46,9 @@
     "total": "Total pesanan",
     "addItem": "Tambahkan {{title}} ke keranjang",
     "increase": "Tambah jumlah {{title}}",
-    "decrease": "Kurangi jumlah {{title}}"
+    "decrease": "Kurangi jumlah {{title}}",
+    "addToCart": "Tambahkan ke keranjang",
+    "added": "Ditambahkan ke keranjang"
   },
   "checkout": {
     "fullName": "Nama lengkap",

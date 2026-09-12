@@ -14,7 +14,8 @@
     "cart": "কার্ট",
     "profile": "প্রোফাইল",
     "checkout": "অর্ডার সম্পন্ন করুন",
-    "orders": "আমার অর্ডার"
+    "orders": "আমার অর্ডার",
+    "productDetails": "পণ্যের বিবরণ"
   },
   "auth": {
     "email": "ইমেইল",
@@ -45,7 +46,9 @@
     "total": "অর্ডারের মোট মূল্য",
     "addItem": "{{title}} কার্টে যোগ করুন",
     "increase": "{{title}}-এর পরিমাণ বাড়ান",
-    "decrease": "{{title}}-এর পরিমাণ কমান"
+    "decrease": "{{title}}-এর পরিমাণ কমান",
+    "addToCart": "কার্টে যোগ করুন",
+    "added": "কার্টে যোগ করা হয়েছে"
   },
   "checkout": {
     "fullName": "পুরো নাম",

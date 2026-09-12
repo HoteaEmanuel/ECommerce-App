@@ -14,7 +14,8 @@
     "cart": "Panier",
     "profile": "Profil",
     "checkout": "Passer commande",
-    "orders": "Mes commandes"
+    "orders": "Mes commandes",
+    "productDetails": "Détails du produit"
   },
   "auth": {
     "email": "E-mail",
@@ -45,7 +46,9 @@
     "total": "Total de la commande",
     "addItem": "Ajouter {{title}} au panier",
     "increase": "Augmenter la quantité de {{title}}",
-    "decrease": "Réduire la quantité de {{title}}"
+    "decrease": "Réduire la quantité de {{title}}",
+    "addToCart": "Ajouter au panier",
+    "added": "Ajouté au panier"
   },
   "checkout": {
     "fullName": "Nom complet",

@@ -1,6 +1,6 @@
 import { formatPrice } from "../../localization/formatters";
 import { useTranslation } from "react-i18next";
-import { Image, StyleSheet, View } from "react-native";
+import { Image, StyleSheet, TouchableOpacity, useWindowDimensions, View } from "react-native";
 import React from "react";
 import { AppColors } from "../../styles/colors";
 import { s, vs } from "react-native-size-matters";
@@ -10,22 +10,35 @@ import { commonStyles } from "../../styles/sharedStyles";
 import { getPrimaryImageURL } from "../../helpers/productImages";
 import IconButton from "../buttons/IconButton";
 
+// Shared with the screen that lays cards out in a grid, so the card's own
+// width and the FlatList's row spacing can never drift apart.
+export const PRODUCT_GRID_GUTTER = s(12);
+export const getProductCardWidth = (windowWidth: number) =>
+  (windowWidth - PRODUCT_GRID_GUTTER * 3) / 2;
+
 type ProductCardProps = {
   imageURLs: string[];
   title: string;
   price: number;
+  onPress: () => void;
   onAddToCartPress: () => void;
 };
 
 const ProductCard = ({
   imageURLs,
+  onPress,
   onAddToCartPress,
   price,
   title,
 }: ProductCardProps) => {
   const { t, i18n } = useTranslation();
+  const { width } = useWindowDimensions();
   return (
-    <View style={styles.container}>
+    <TouchableOpacity
+      style={[styles.container, { width: getProductCardWidth(width) }]}
+      onPress={onPress}
+      activeOpacity={0.85}
+    >
       <View style={styles.imageContainer}>
         <Image
           source={{
@@ -36,7 +49,9 @@ const ProductCard = ({
       </View>
 
       <View style={styles.detailsContainer}>
-        <AppText style={styles.titleText}>{title}</AppText>
+        <AppText style={styles.titleText} numberOfLines={2}>
+          {title}
+        </AppText>
         <AppText style={styles.priceText}>{formatPrice(price, i18n.resolvedLanguage ?? "en")}</AppText>
       </View>
 
@@ -46,7 +61,7 @@ const ProductCard = ({
         onPress={onAddToCartPress}
         accessibilityLabel={t("cart.addItem", { title })}
       />
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -54,8 +69,6 @@ export default ProductCard;
 
 const styles = StyleSheet.create({
   container: {
-    width: s(160),
-    height: vs(190),
     backgroundColor: AppColors.white,
     borderRadius: s(10),
     ...commonStyles.shadow,
@@ -64,7 +77,7 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     borderTopLeftRadius: s(10),
     borderTopRightRadius: s(10),
-    height: vs(130),
+    height: vs(165),
     width: "100%",
   },
   image: {
@@ -73,18 +86,17 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
   },
   detailsContainer: {
-    flex: 1,
-    paddingTop: s(8),
+    paddingTop: s(10),
     paddingBottom: vs(15),
     paddingHorizontal: s(10),
   },
   titleText: {
-    fontSize: s(16),
+    fontSize: s(15),
     fontFamily: AppFonts.Medium,
     color: AppColors.primary,
   },
   priceText: {
-    fontSize: s(14),
+    fontSize: s(17),
     fontFamily: AppFonts.Bold,
     color: AppColors.primary,
     marginTop: vs(7),

@@ -14,7 +14,8 @@
     "cart": "Cart",
     "profile": "Profile",
     "checkout": "Checkout",
-    "orders": "My Orders"
+    "orders": "My Orders",
+    "productDetails": "Product details"
   },
   "auth": {
     "email": "Email",
@@ -45,7 +46,9 @@
     "total": "Order total",
     "addItem": "Add {{title}} to cart",
     "increase": "Increase quantity of {{title}}",
-    "decrease": "Decrease quantity of {{title}}"
+    "decrease": "Decrease quantity of {{title}}",
+    "addToCart": "Add to cart",
+    "added": "Added to cart"
   },
   "checkout": {
     "fullName": "Full name",

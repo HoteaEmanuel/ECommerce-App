@@ -14,7 +14,8 @@
     "cart": "Coș",
     "profile": "Profil",
     "checkout": "Finalizarea comenzii",
-    "orders": "Comenzile mele"
+    "orders": "Comenzile mele",
+    "productDetails": "Detalii produs"
   },
   "auth": {
     "email": "E-mail",
@@ -45,7 +46,9 @@
     "total": "Total comandă",
     "addItem": "Adaugă {{title}} în coș",
     "increase": "Mărește cantitatea pentru {{title}}",
-    "decrease": "Micșorează cantitatea pentru {{title}}"
+    "decrease": "Micșorează cantitatea pentru {{title}}",
+    "addToCart": "Adaugă în coș",
+    "added": "Adăugat în coș"
   },
   "checkout": {
     "fullName": "Nume complet",

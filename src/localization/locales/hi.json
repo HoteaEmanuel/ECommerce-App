@@ -14,7 +14,8 @@
     "cart": "कार्ट",
     "profile": "प्रोफ़ाइल",
     "checkout": "ऑर्डर पूरा करें",
-    "orders": "मेरे ऑर्डर"
+    "orders": "मेरे ऑर्डर",
+    "productDetails": "उत्पाद विवरण"
   },
   "auth": {
     "email": "ईमेल",
@@ -45,7 +46,9 @@
     "total": "ऑर्डर का कुल मूल्य",
     "addItem": "{{title}} को कार्ट में जोड़ें",
     "increase": "{{title}} की मात्रा बढ़ाएँ",
-    "decrease": "{{title}} की मात्रा घटाएँ"
+    "decrease": "{{title}} की मात्रा घटाएँ",
+    "addToCart": "कार्ट में जोड़ें",
+    "added": "कार्ट में जोड़ा गया"
   },
   "checkout": {
     "fullName": "पूरा नाम",

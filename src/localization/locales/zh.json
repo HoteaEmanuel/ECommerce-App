@@ -14,7 +14,8 @@
     "cart": "购物车",
     "profile": "我的",
     "checkout": "结算",
-    "orders": "我的订单"
+    "orders": "我的订单",
+    "productDetails": "商品详情"
   },
   "auth": {
     "email": "电子邮箱",
@@ -45,7 +46,9 @@
     "total": "订单总额",
     "addItem": "将{{title}}加入购物车",
     "increase": "增加{{title}}的数量",
-    "decrease": "减少{{title}}的数量"
+    "decrease": "减少{{title}}的数量",
+    "addToCart": "加入购物车",
+    "added": "已加入购物车"
   },
   "checkout": {
     "fullName": "全名",

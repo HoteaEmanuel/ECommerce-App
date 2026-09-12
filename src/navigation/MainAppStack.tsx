@@ -4,6 +4,7 @@ import AuthStack from "./AuthStack";
 import MainAppBottomTabs from "./MainAppButtomTabs";
 import CheckoutScreen from "../screens/cart/CheckoutScreen";
 import MyOrdersScreen from "../screens/profile/MyOrdersScreen";
+import ProductDetailsScreen from "../screens/product/ProductDetailsScreen";
 import { useEffect, useState } from "react";
 
 import { ActivityIndicator } from "react-native";
@@ -57,6 +58,15 @@ export default function MainAppStack() {
         name="MyOrdersScreen"
         options={{ headerShown: true, title: t("navigation.orders") }}
         component={MyOrdersScreen}
+      />
+
+      <Stack.Screen
+        name="ProductDetailsScreen"
+        options={({ route }) => ({
+          headerShown: true,
+          title: route.params.product.title || t("navigation.productDetails"),
+        })}
+        component={ProductDetailsScreen}
       />
     </Stack.Navigator>
   );

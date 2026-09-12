@@ -1,24 +1,22 @@
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList } from "react-native";
 import React, { useEffect, useState } from "react";
 import AppSaveView from "../../components/views/AppSaveView";
 import HomeHeader from "../../components/headers/HomeHeader";
-import { AppFonts } from "../../styles/fonts";
-import ProductCard from "../../components/cards/ProductCard";
-import { products } from "../../data/products";
-import { s, vs } from "react-native-size-matters";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../store/store";
+import ProductCard, { PRODUCT_GRID_GUTTER } from "../../components/cards/ProductCard";
+import { useDispatch } from "react-redux";
 import { addItemToCart } from "../../store/reducers/cartSlice";
 import { Product } from "../../types/product";
 import { getProductsData } from "../../config/dataServices";
 import { useTranslation } from "react-i18next";
 import { showMessage } from "react-native-flash-message";
 import AppText from "../../components/texts/AppText";
+import { useNavigation } from "@react-navigation/native";
+
 const HomeScreen = () => {
   const { t } = useTranslation();
   const [loading, setLoading] = useState(true);
-  const { items } = useSelector((store: RootState) => store.cartSlice);
   const dispatch = useDispatch();
+  const navigation = useNavigation();
   const [products, setProducts] = useState<Product[]>([]);
 
   const getProducts = async () => {
@@ -45,6 +43,7 @@ const HomeScreen = () => {
         renderItem={({ item }) => (
           <ProductCard
             imageURLs={item.imageURLs}
+            onPress={() => navigation.navigate("ProductDetailsScreen", { product: item })}
             onAddToCartPress={() => dispatch(addItemToCart(item))}
             price={item.price}
             title={item.title}
@@ -52,10 +51,10 @@ const HomeScreen = () => {
         )}
         columnWrapperStyle={{
           justifyContent: "space-between",
-          marginBottom: vs(10),
+          marginBottom: PRODUCT_GRID_GUTTER,
         }}
         contentContainerStyle={{
-          paddingHorizontal: s(10),
+          paddingHorizontal: PRODUCT_GRID_GUTTER,
         }}
       />
     </AppSaveView>
@@ -63,5 +62,3 @@ const HomeScreen = () => {
 };
 
 export default HomeScreen;
-
-const styles = StyleSheet.create({});

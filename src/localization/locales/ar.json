@@ -14,7 +14,8 @@
     "cart": "السلة",
     "profile": "الملف الشخصي",
     "checkout": "إتمام الطلب",
-    "orders": "طلباتي"
+    "orders": "طلباتي",
+    "productDetails": "تفاصيل المنتج"
   },
   "auth": {
     "email": "البريد الإلكتروني",
@@ -45,7 +46,9 @@
     "total": "إجمالي الطلب",
     "addItem": "إضافة {{title}} إلى السلة",
     "increase": "زيادة كمية {{title}}",
-    "decrease": "تقليل كمية {{title}}"
+    "decrease": "تقليل كمية {{title}}",
+    "addToCart": "أضف إلى السلة",
+    "added": "تمت الإضافة إلى السلة"
   },
   "checkout": {
     "fullName": "الاسم الكامل",
