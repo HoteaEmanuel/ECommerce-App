@@ -8,16 +8,17 @@ import AppText from "../texts/AppText";
 import { AppFonts } from "../../styles/fonts";
 import { Ionicons } from "@expo/vector-icons";
 import { commonStyles } from "../../styles/sharedStyles";
+import { getPrimaryImageURL } from "../../helpers/productImages";
 
 type ProductCardProps = {
-  imageURL: string;
+  imageURLs: string[];
   title: string;
   price: number;
   onAddToCartPress: () => void;
 };
 
 const ProductCard = ({
-  imageURL,
+  imageURLs,
   onAddToCartPress,
   price,
   title,
@@ -28,7 +29,7 @@ const ProductCard = ({
       <View style={styles.imageContainer}>
         <Image
           source={{
-            uri: imageURL,
+            uri: getPrimaryImageURL({ imageURLs }),
           }}
           style={styles.image}
         />

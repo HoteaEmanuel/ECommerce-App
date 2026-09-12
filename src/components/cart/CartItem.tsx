@@ -7,13 +7,15 @@ import AppText from "../texts/AppText";
 import { AppFonts } from "../../styles/fonts";
 import { AppColors } from "../../styles/colors";
 import { FontAwesome, MaterialIcons } from "@expo/vector-icons";
+import { getPrimaryImageURL } from "../../helpers/productImages";
 
 
 type CartItemProps = {
   title: string;
   price: number | string;
   qty: number;
-  imageURL: string;
+  imageURL?: string;
+  imageURLs?: string[];
   onDeletePress: () => void;
   onIncreasePress: () => void;
   onDecreasePress: () => void;
@@ -21,6 +23,7 @@ type CartItemProps = {
 
 const CartItem = ({
   imageURL,
+  imageURLs,
   onDecreasePress,
   onDeletePress,
   onIncreasePress,
@@ -35,7 +38,7 @@ const CartItem = ({
     <View style={styles.container}>
       {/* Image Container */}
       <View style={styles.imageContainer}>
-        <Image source={{ uri: imageURL }} style={styles.image} />
+        <Image source={{ uri: getPrimaryImageURL({ imageURL, imageURLs }) }} style={styles.image} />
       </View>
 
       {/* Details Container */}

@@ -26,8 +26,18 @@ function fields(product) {
     id: { integerValue: String(product.id) },
     price: { doubleValue: product.price },
     title: { stringValue: product.title },
-    imageURL: { stringValue: product.imageURL },
+    imageURLs: {
+      arrayValue: { values: product.imageURLs.map((url) => ({ stringValue: url })) },
+    },
   };
+}
+
+function hasValidImages(product) {
+  return (
+    Array.isArray(product.imageURLs) &&
+    product.imageURLs.length > 0 &&
+    product.imageURLs.every((url) => new URL(url).protocol === "https:")
+  );
 }
 
 async function main() {
@@ -38,14 +48,15 @@ async function main() {
   for (const product of products) {
     if (!Number.isSafeInteger(product.id) || ids.has(product.id) ||
         !Number.isFinite(product.price) || product.price < 0 ||
-        !product.title.trim() || new URL(product.imageURL).protocol !== "https:") {
+        !product.title.trim() || !hasValidImages(product)) {
       throw new Error(`Invalid product: ${product.id}`);
     }
     ids.add(product.id);
   }
 
   console.log(`Target: ${database}, collection: products`);
-  console.table(products.map(({ id, title, price }) => ({ id, title, price })));
+  console.table(products.map(({ id, title, price, imageURLs }) =>
+    ({ id, title, price, images: imageURLs.length })));
   if (!process.argv.includes("--write")) {
     console.log("Preview only. Pass --write to import. New product prices are sample catalog prices.");
     return;

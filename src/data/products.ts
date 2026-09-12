@@ -3,349 +3,520 @@ export const products = [
     id: 1,
     price: 1199,
     title: "iPhone 16 Pro Max",
-    imageURL:
+    imageURLs: [
       "https://2b.com.eg/media/catalog/product/cache/661473ab953cdcdf4c3b607144109b90/m/a/ma658.jpg",
+    ],
   },
   {
     id: 2,
     price: 749,
     title: "Lenovo Laptop",
-    imageURL:
+    imageURLs: [
       "https://image.made-in-china.com/318f0j00nEfGPdYIhWom/6%E6%9C%8814%E6%97%A5%287%29.mp4.webp",
+    ],
   },
   {
     id: 3,
     price: 1799,
     title: "Mac Book Pro 15",
-    imageURL:
+    imageURLs: [
       "https://image.made-in-china.com/2f0j00CTdkRwQaYmzE/2023-Latest-Original-Good-Quality-Laptop-for-Book-15-2023-Laptop.webp",
+    ],
   },
   {
     id: 4,
     price: 1299,
     title: "Samsung Phone",
-    imageURL:
+    imageURLs: [
       "https://d1b5h9psu9yexj.cloudfront.net/60226/Samsung-Galaxy-S24_20240319-183738_full.jpeg",
+    ],
   },
   {
     id: 5,
     price: 59,
     title: "Logitech Mouse",
-    imageURL:
+    imageURLs: [
       "https://media.ldlc.com/r374/ld/products/00/05/88/25/LD0005882564_1.jpg",
+    ],
   },
   {
     id: 6,
     price: 99,
     title: "Logitech Headset",
-    imageURL:
+    imageURLs: [
       "https://resource.logitech.com/b_white/content/dam/logitech/en/products/headsets/zone-900/gallery/logitech-zone-900-gallery-1.png",
+      "https://resource.logitech.com/content/dam/logitech/en/products/headsets/zone-900/gallery/logitech-zone-900-gallery-2.png",
+      "https://resource.logitech.com/content/dam/logitech/en/products/headsets/zone-900/gallery/logitech-zone-900-gallery-3.png",
+      "https://resource.logitech.com/content/dam/logitech/en/products/headsets/zone-900/gallery/logitech-zone-900-gallery-4.png",
+    ],
   },
   {
     id: 7,
     price: 79,
     title: "Logitech Camera ",
-    imageURL: "https://resource.logitech.com/content/dam/logitech/en/products/webcams/c310/gallery/c310-gallery-1.png",
+    imageURLs: [
+      "https://resource.logitech.com/content/dam/logitech/en/products/webcams/c310/gallery/c310-gallery-1.png",
+      "https://resource.logitech.com/content/dam/logitech/en/products/webcams/c310/gallery/c310-gallery-2.png",
+      "https://resource.logitech.com/content/dam/logitech/en/products/webcams/c310/gallery/c310-gallery-3.png",
+      "https://resource.logitech.com/content/dam/logitech/en/products/webcams/c310/gallery/c310-gallery-4.png",
+    ],
   },
   {
     id: 8,
     price: 49,
     title: "Logitech K380 Bluetooth Keyboard",
-    imageURL:
+    imageURLs: [
       "https://resource.logitech.com/content/dam/logitech/en/products/keyboards/multi-keyboard-k380/gallery/k380-sand-gallery-1-us.png",
+      "https://resource.logitech.com/content/dam/logitech/en/products/keyboards/multi-keyboard-k380/gallery/k380-sand-gallery-2-us.png",
+      "https://resource.logitech.com/content/dam/logitech/en/products/keyboards/multi-keyboard-k380/gallery/k380-sand-gallery-3.png",
+    ],
   },
   {
     id: 9,
     price: 59,
     title: "Logitech G305 LIGHTSPEED Wireless Gaming Mouse",
-    imageURL:
+    imageURLs: [
       "https://resource.logitechg.com/content/dam/gaming/en/products/g305/2025-update/g305-lightspeed-mouse-top-angle-black-gallery-1.png",
+      "https://resource.logitechg.com/content/dam/gaming/en/products/g305/2025-update/g305-lightspeed-mouse-profile-left-angle-black-gallery-4.png",
+      "https://resource.logitechg.com/content/dam/gaming/en/products/g305/2025-update/g305-lightspeed-mouse-bottom-angle-black-gallery-5.png",
+      "https://resource.logitechg.com/content/dam/gaming/en/products/g305/2025-update/g305-lightspeed-mouse-3qtr-high-back-angle-black-gallery-7.png",
+    ],
   },
   {
     id: 10,
     price: 1999.99,
     title: "Apple MacBook Pro 14 Inch Space Grey",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/1.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/2.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/3.webp",
+    ],
   },
   {
     id: 11,
     price: 1799.99,
     title: "Asus Zenbook Pro Dual Screen Laptop",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/1.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/2.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/3.webp",
+    ],
   },
   {
     id: 12,
     price: 1399.99,
     title: "Huawei Matebook X Pro",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/1.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/2.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/3.webp",
+    ],
   },
   {
     id: 13,
     price: 1099.99,
     title: "Lenovo Yoga 920",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/1.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/2.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/3.webp",
+    ],
   },
   {
     id: 14,
     price: 1499.99,
     title: "New DELL XPS 13 9300 Laptop",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/1.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/2.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/3.webp",
+    ],
   },
   {
     id: 15,
     price: 199.99,
     title: "iPhone 5s",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/3.webp",
+    ],
   },
   {
     id: 16,
     price: 299.99,
     title: "iPhone 6",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/iphone-6/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-6/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-6/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-6/3.webp",
+    ],
   },
   {
     id: 17,
     price: 1099.99,
     title: "iPhone 13 Pro",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/3.webp",
+    ],
   },
   {
     id: 18,
     price: 899.99,
     title: "iPhone X",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/iphone-x/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-x/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-x/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-x/3.webp",
+    ],
   },
   {
     id: 19,
     price: 249.99,
     title: "Oppo A57",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/3.webp",
+    ],
   },
   {
     id: 20,
     price: 399.99,
     title: "Oppo F19 Pro Plus",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/3.webp",
+    ],
   },
   {
     id: 21,
     price: 299.99,
     title: "Oppo K1",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/3.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/4.webp",
+    ],
   },
   {
     id: 22,
     price: 149.99,
     title: "Realme C35",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/realme-c35/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-c35/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-c35/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-c35/3.webp",
+    ],
   },
   {
     id: 23,
     price: 299.99,
     title: "Realme X",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/realme-x/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-x/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-x/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-x/3.webp",
+    ],
   },
   {
     id: 24,
     price: 349.99,
     title: "Realme XT",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/realme-xt/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-xt/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-xt/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-xt/3.webp",
+    ],
   },
   {
     id: 25,
     price: 299.99,
     title: "Samsung Galaxy S7",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/3.webp",
+    ],
   },
   {
     id: 26,
     price: 499.99,
     title: "Samsung Galaxy S8",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/3.webp",
+    ],
   },
   {
     id: 27,
     price: 699.99,
     title: "Samsung Galaxy S10",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s10/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s10/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s10/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s10/3.webp",
+    ],
   },
   {
     id: 28,
     price: 249.99,
     title: "Vivo S1",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/vivo-s1/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/vivo-s1/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/vivo-s1/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/vivo-s1/3.webp",
+    ],
   },
   {
     id: 29,
     price: 299.99,
     title: "Vivo V9",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/vivo-v9/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/vivo-v9/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/vivo-v9/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/vivo-v9/3.webp",
+    ],
   },
   {
     id: 30,
     price: 499.99,
     title: "Vivo X21",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/vivo-x21/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/vivo-x21/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/vivo-x21/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/vivo-x21/3.webp",
+    ],
   },
   {
     id: 31,
     price: 499.99,
     title: "iPad Mini 2021 Starlight",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/tablets/ipad-mini-2021-starlight/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/tablets/ipad-mini-2021-starlight/1.webp",
+      "https://cdn.dummyjson.com/product-images/tablets/ipad-mini-2021-starlight/2.webp",
+      "https://cdn.dummyjson.com/product-images/tablets/ipad-mini-2021-starlight/3.webp",
+      "https://cdn.dummyjson.com/product-images/tablets/ipad-mini-2021-starlight/4.webp",
+    ],
   },
   {
     id: 32,
     price: 599.99,
     title: "Samsung Galaxy Tab S8 Plus Grey",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-s8-plus-grey/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-s8-plus-grey/1.webp",
+      "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-s8-plus-grey/2.webp",
+      "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-s8-plus-grey/3.webp",
+      "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-s8-plus-grey/4.webp",
+    ],
   },
   {
     id: 33,
     price: 349.99,
     title: "Samsung Galaxy Tab White",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-white/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-white/1.webp",
+      "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-white/2.webp",
+      "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-white/3.webp",
+      "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-white/4.webp",
+    ],
   },
   {
     id: 34,
     price: 99.99,
     title: "Amazon Echo Plus",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/amazon-echo-plus/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/amazon-echo-plus/1.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/amazon-echo-plus/2.webp",
+    ],
   },
   {
     id: 35,
     price: 129.99,
     title: "Apple Airpods",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/1.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/2.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/3.webp",
+    ],
   },
   {
     id: 36,
     price: 549.99,
     title: "Apple AirPods Max Silver",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods-max-silver/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods-max-silver/1.webp",
+    ],
   },
   {
     id: 37,
     price: 79.99,
     title: "Apple Airpower Wireless Charger",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpower-wireless-charger/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpower-wireless-charger/1.webp",
+    ],
   },
   {
     id: 38,
     price: 99.99,
     title: "Apple HomePod Mini Cosmic Grey",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-homepod-mini-cosmic-grey/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-homepod-mini-cosmic-grey/1.webp",
+    ],
   },
   {
     id: 39,
     price: 19.99,
     title: "Apple iPhone Charger",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-iphone-charger/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-iphone-charger/1.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-iphone-charger/2.webp",
+    ],
   },
   {
     id: 40,
     price: 99.99,
     title: "Apple MagSafe Battery Pack",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-magsafe-battery-pack/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-magsafe-battery-pack/1.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-magsafe-battery-pack/2.webp",
+    ],
   },
   {
     id: 41,
     price: 349.99,
     title: "Apple Watch Series 4 Gold",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-watch-series-4-gold/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-watch-series-4-gold/1.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-watch-series-4-gold/2.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-watch-series-4-gold/3.webp",
+    ],
   },
   {
     id: 42,
     price: 49.99,
     title: "Beats Flex Wireless Earphones",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/beats-flex-wireless-earphones/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/beats-flex-wireless-earphones/1.webp",
+    ],
   },
   {
     id: 43,
     price: 29.99,
     title: "iPhone 12 Silicone Case with MagSafe Plum",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/1.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/2.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/3.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/4.webp",
+    ],
   },
   {
     id: 44,
     price: 19.99,
     title: "Monopod",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/monopod/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/monopod/1.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/monopod/2.webp",
+    ],
   },
   {
     id: 45,
     price: 14.99,
     title: "Selfie Lamp with iPhone",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/selfie-lamp-with-iphone/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/selfie-lamp-with-iphone/1.webp",
+    ],
   },
   {
     id: 46,
     price: 12.99,
     title: "Selfie Stick Monopod",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/selfie-stick-monopod/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/selfie-stick-monopod/1.webp",
+    ],
   },
   {
     id: 47,
     price: 499.99,
     title: "TV Studio Camera Pedestal",
-    imageURL:
+    imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/tv-studio-camera-pedestal/thumbnail.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/tv-studio-camera-pedestal/1.webp",
+    ],
   },
   {
     id: 48,
     price: 99,
     title: "Logitech MX Master 3S Bluetooth Mouse",
-    imageURL:
+    imageURLs: [
       "https://resource.logitech.com/content/dam/logitech/en/products/mice/mx-master-3s/2025-update/mx-master-3s-bluetooth-edition-top-view-black-new-1.png",
+      "https://resource.logitech.com/content/dam/logitech/en/products/mice/mx-master-3s/gallery/mx-master-3s-mouse-side-view-graphite.png",
+      "https://resource.logitech.com/content/dam/logitech/en/products/mice/mx-master-3s/gallery/mx-master-3s-mouse-front-view-graphite.png",
+      "https://resource.logitech.com/content/dam/logitech/en/products/mice/mx-master-3s/gallery/mx-master-3s-mouse-3-4-view-graphite.png",
+    ],
   },
   {
     id: 49,
     price: 149,
     title: "Logitech G733 LIGHTSPEED Wireless Gaming Headset",
-    imageURL:
+    imageURLs: [
       "https://resource.logitechg.com/content/dam/gaming/en/products/g733/gallery/g733-black-gallery-1.png",
+      "https://resource.logitechg.com/content/dam/gaming/en/products/g733/gallery/g733-black-gallery-2.png",
+      "https://resource.logitechg.com/content/dam/gaming/en/products/g733/gallery/g733-black-gallery-3.png",
+    ],
   },
   {
     id: 50,
     price: 99,
     title: "Logitech MX Keys Mini Wireless Keyboard",
-    imageURL:
+    imageURLs: [
       "https://resource.logitech.com/content/dam/logitech/en/products/keyboards/mx-keys-mini/gallery/us/mx-keys-mini-top-graphite-us.png",
+      "https://resource.logitech.com/content/dam/logitech/en/products/keyboards/mx-keys-mini/gallery/us/mx-keys-mini-3q-tilted-graphite-us.png",
+      "https://resource.logitech.com/content/dam/logitech/en/products/keyboards/mx-keys-mini/gallery/us/mx-keys-mini-3q-flat-graphite-us.png",
+      "https://resource.logitech.com/content/dam/logitech/en/products/keyboards/mx-keys-mini/gallery/us/mx-keys-mini-front-graphite-us.png",
+    ],
   },
 ];

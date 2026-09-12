@@ -44,7 +44,7 @@ const HomeScreen = () => {
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
           <ProductCard
-            imageURL={item.imageURL}
+            imageURLs={item.imageURLs}
             onAddToCartPress={() => dispatch(addItemToCart(item))}
             price={item.price}
             title={item.title}
