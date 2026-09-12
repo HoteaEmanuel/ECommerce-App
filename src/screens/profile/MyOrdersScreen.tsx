@@ -8,6 +8,7 @@ import { fetchUserData } from "../../config/dataServices";
 import type { Order } from "../../types/order";
 import { showMessage } from "react-native-flash-message";
 import AppText from "../../components/texts/AppText";
+import EmptyOrders from "./EmptyOrders";
 
 const MyOrdersScreen = () => {
   const { t, i18n } = useTranslation();
@@ -30,11 +31,14 @@ const MyOrdersScreen = () => {
   useEffect(() => {
     getUserOrders();
   }, []);
+
+  if (!loading && orders.length === 0) return <EmptyOrders />;
+
   return (
     <View style={styles.container}>
       <FlatList
         data={orders}
-        ListEmptyComponent={<AppText>{t(loading ? "common.loading" : "orders.empty")}</AppText>}
+        ListEmptyComponent={<AppText>{t("common.loading")}</AppText>}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <OrderItemCard

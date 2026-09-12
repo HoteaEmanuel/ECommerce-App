@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 import { showMessage } from "react-native-flash-message";
 import AppText from "../../components/texts/AppText";
 import { useNavigation } from "@react-navigation/native";
+import ProductsLoadingGrid from "../../components/loaders/ProductsLoadingGrid";
 
 const HomeScreen = () => {
   const { t } = useTranslation();
@@ -38,7 +39,9 @@ const HomeScreen = () => {
       <FlatList
         numColumns={2}
         data={products}
-        ListEmptyComponent={<AppText>{t(loading ? "common.loading" : "home.empty")}</AppText>}
+        ListEmptyComponent={
+          loading ? <ProductsLoadingGrid /> : <AppText>{t("home.empty")}</AppText>
+        }
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
           <ProductCard

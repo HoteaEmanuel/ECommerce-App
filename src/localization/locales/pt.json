@@ -64,7 +64,8 @@
     "total": "Preço total",
     "loadError": "Não foi possível carregar seus pedidos. Tente novamente.",
     "signInRequired": "Entre para ver seus pedidos.",
-    "empty": "Você ainda não tem pedidos."
+    "emptyTitle": "Ainda sem pedidos",
+    "emptyMessage": "Você ainda não fez nenhum pedido. Comece a comprar para vê-los aqui!"
   },
   "validation": {
     "emailRequired": "O e-mail é obrigatório.",

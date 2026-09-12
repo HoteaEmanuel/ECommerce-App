@@ -64,7 +64,8 @@
     "total": "总价",
     "loadError": "无法加载您的订单，请重试。",
     "signInRequired": "请登录以查看您的订单。",
-    "empty": "您还没有订单。"
+    "emptyTitle": "暂无订单",
+    "emptyMessage": "您还没有下过任何订单。开始购物即可在此查看！"
   },
   "validation": {
     "emailRequired": "请输入电子邮箱。",

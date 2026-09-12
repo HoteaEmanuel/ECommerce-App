@@ -64,7 +64,8 @@
     "total": "Harga total",
     "loadError": "Pesanan Anda tidak dapat dimuat. Silakan coba lagi.",
     "signInRequired": "Silakan masuk untuk melihat pesanan Anda.",
-    "empty": "Anda belum memiliki pesanan."
+    "emptyTitle": "Belum ada pesanan",
+    "emptyMessage": "Anda belum melakukan pesanan apa pun. Mulai belanja untuk melihatnya di sini!"
   },
   "validation": {
     "emailRequired": "Email wajib diisi.",

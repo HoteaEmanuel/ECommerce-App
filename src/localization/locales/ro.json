@@ -64,7 +64,8 @@
     "total": "Preț total",
     "loadError": "Comenzile nu au putut fi încărcate. Încearcă din nou.",
     "signInRequired": "Autentifică-te pentru a vedea comenzile.",
-    "empty": "Nu ai încă nicio comandă."
+    "emptyTitle": "Nicio comandă încă",
+    "emptyMessage": "Nu ai plasat încă nicio comandă. Începe cumpărăturile pentru a le vedea aici!"
   },
   "validation": {
     "emailRequired": "Adresa de e-mail este obligatorie.",

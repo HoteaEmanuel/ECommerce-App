@@ -64,7 +64,8 @@
     "total": "Prix total",
     "loadError": "Impossible de charger vos commandes. Réessayez.",
     "signInRequired": "Connectez-vous pour voir vos commandes.",
-    "empty": "Vous n’avez pas encore de commandes."
+    "emptyTitle": "Aucune commande pour le moment",
+    "emptyMessage": "Vous n’avez pas encore passé de commande. Commencez vos achats pour les voir ici !"
   },
   "validation": {
     "emailRequired": "L’e-mail est obligatoire.",
