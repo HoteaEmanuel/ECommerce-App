@@ -13,6 +13,7 @@ import AppTextInput from "./AppTextInput";
 import { AppColors } from "../../styles/colors";
 import AppText from "../texts/AppText";
 import { s } from "react-native-size-matters";
+import type { Ionicons } from "@expo/vector-icons";
 interface AppTextInputControllerProps<T extends FieldValues> {
   control: Control<T>;
   name: Path<T>;
@@ -21,6 +22,7 @@ interface AppTextInputControllerProps<T extends FieldValues> {
   secureTextEntry?: boolean;
   keyboardType?: "default" | "email-address" | "numeric";
   autoFocus?: boolean;
+  icon?: keyof typeof Ionicons.glyphMap;
 }
 const AppTextInputController = <T extends FieldValues>({
   control,
@@ -30,6 +32,7 @@ const AppTextInputController = <T extends FieldValues>({
   secureTextEntry,
   keyboardType = "default",
   autoFocus = false,
+  icon,
 }: AppTextInputControllerProps<T>) => {
   const { t, i18n } = useTranslation();
   return (
@@ -50,6 +53,8 @@ const AppTextInputController = <T extends FieldValues>({
             keyboardType={keyboardType}
             style={error && styles.errorInput}
             autoFocus={autoFocus}
+            icon={icon}
+            iconColor={error ? AppColors.redColor : AppColors.medGray}
           />
           {error?.message && (
             <AppText style={styles.textError}>{i18n.exists(error.message) ? t(error.message) : error.message}</AppText>

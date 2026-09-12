@@ -90,16 +90,20 @@ const CheckoutScreen = () => {
             control={control}
             placeholder={t("checkout.fullName")}
             name="fullName"
+            icon="person-outline"
           />
           <AppTextInputController
             control={control}
             placeholder={t("checkout.phone")}
             name="phoneNumber"
+            icon="call-outline"
+            keyboardType="numeric"
           />
           <AppTextInputController
             control={control}
             placeholder={t("checkout.address")}
             name="detailedAddress"
+            icon="location-outline"
           />
         </View>
       </View>
