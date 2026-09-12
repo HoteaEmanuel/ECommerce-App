@@ -7,7 +7,8 @@
     "loading": "Memuat…",
     "previousImage": "Gambar sebelumnya",
     "nextImage": "Gambar berikutnya",
-    "imageIndicator": "Gambar {{current}} dari {{total}}"
+    "imageIndicator": "Gambar {{current}} dari {{total}}",
+    "description": "Deskripsi"
   },
   "navigation": {
     "home": "Beranda",

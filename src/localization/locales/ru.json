@@ -7,7 +7,8 @@
     "loading": "Загрузка…",
     "previousImage": "Предыдущее изображение",
     "nextImage": "Следующее изображение",
-    "imageIndicator": "Изображение {{current}} из {{total}}"
+    "imageIndicator": "Изображение {{current}} из {{total}}",
+    "description": "Описание"
   },
   "navigation": {
     "home": "Главная",

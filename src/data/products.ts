@@ -3,6 +3,7 @@ export const products = [
     id: 1,
     price: 1199,
     title: "iPhone 16 Pro Max",
+    description: "Apple's flagship smartphone with a titanium frame, a massive Pro Max display, and the longest battery life of any iPhone.",
     imageURLs: [
       "https://2b.com.eg/media/catalog/product/cache/661473ab953cdcdf4c3b607144109b90/m/a/ma658.jpg",
     ],
@@ -11,6 +12,7 @@ export const products = [
     id: 2,
     price: 749,
     title: "Lenovo Laptop",
+    description: "A dependable everyday laptop from Lenovo, built for productivity, web browsing, and light multitasking on the go.",
     imageURLs: [
       "https://image.made-in-china.com/318f0j00nEfGPdYIhWom/6%E6%9C%8814%E6%97%A5%287%29.mp4.webp",
     ],
@@ -19,6 +21,7 @@ export const products = [
     id: 3,
     price: 1799,
     title: "Mac Book Pro 15",
+    description: "A 15-inch MacBook Pro with a brilliant Retina display and a powerful chip for creative work and demanding applications.",
     imageURLs: [
       "https://image.made-in-china.com/2f0j00CTdkRwQaYmzE/2023-Latest-Original-Good-Quality-Laptop-for-Book-15-2023-Laptop.webp",
     ],
@@ -27,6 +30,7 @@ export const products = [
     id: 4,
     price: 1299,
     title: "Samsung Phone",
+    description: "A modern Samsung smartphone with a vivid AMOLED display, a versatile camera system, and all-day battery life.",
     imageURLs: [
       "https://d1b5h9psu9yexj.cloudfront.net/60226/Samsung-Galaxy-S24_20240319-183738_full.jpeg",
     ],
@@ -35,6 +39,7 @@ export const products = [
     id: 5,
     price: 59,
     title: "Logitech Mouse",
+    description: "A comfortable, precise wireless mouse from Logitech, ideal for everyday use at the office or at home.",
     imageURLs: [
       "https://media.ldlc.com/r374/ld/products/00/05/88/25/LD0005882564_1.jpg",
     ],
@@ -43,6 +48,7 @@ export const products = [
     id: 6,
     price: 99,
     title: "Logitech Headset",
+    description: "A wireless headset with rich sound and a noise-cancelling microphone, built for calls, music, and gaming.",
     imageURLs: [
       "https://resource.logitech.com/b_white/content/dam/logitech/en/products/headsets/zone-900/gallery/logitech-zone-900-gallery-1.png",
       "https://resource.logitech.com/content/dam/logitech/en/products/headsets/zone-900/gallery/logitech-zone-900-gallery-2.png",
@@ -54,6 +60,7 @@ export const products = [
     id: 7,
     price: 79,
     title: "Logitech Camera ",
+    description: "A crisp HD webcam with a wide field of view, perfect for video calls, streaming, and remote meetings.",
     imageURLs: [
       "https://resource.logitech.com/content/dam/logitech/en/products/webcams/c310/gallery/c310-gallery-1.png",
       "https://resource.logitech.com/content/dam/logitech/en/products/webcams/c310/gallery/c310-gallery-2.png",
@@ -65,6 +72,7 @@ export const products = [
     id: 8,
     price: 49,
     title: "Logitech K380 Bluetooth Keyboard",
+    description: "A slim, quiet multi-device Bluetooth keyboard that pairs with up to three devices and switches between them instantly.",
     imageURLs: [
       "https://resource.logitech.com/content/dam/logitech/en/products/keyboards/multi-keyboard-k380/gallery/k380-sand-gallery-1-us.png",
       "https://resource.logitech.com/content/dam/logitech/en/products/keyboards/multi-keyboard-k380/gallery/k380-sand-gallery-2-us.png",
@@ -75,6 +83,7 @@ export const products = [
     id: 9,
     price: 59,
     title: "Logitech G305 LIGHTSPEED Wireless Gaming Mouse",
+    description: "An ultra-lightweight wireless gaming mouse with LIGHTSPEED speed and up to 250 hours of battery life.",
     imageURLs: [
       "https://resource.logitechg.com/content/dam/gaming/en/products/g305/2025-update/g305-lightspeed-mouse-top-angle-black-gallery-1.png",
       "https://resource.logitechg.com/content/dam/gaming/en/products/g305/2025-update/g305-lightspeed-mouse-profile-left-angle-black-gallery-4.png",
@@ -86,6 +95,7 @@ export const products = [
     id: 10,
     price: 1999.99,
     title: "Apple MacBook Pro 14 Inch Space Grey",
+    description: "A 14-inch MacBook Pro in Space Grey with a stunning Liquid Retina XDR display and pro-level performance.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/1.webp",
@@ -97,6 +107,7 @@ export const products = [
     id: 11,
     price: 1799.99,
     title: "Asus Zenbook Pro Dual Screen Laptop",
+    description: "A dual-screen laptop from Asus that adds a second display above the keyboard for serious multitasking.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/1.webp",
@@ -108,6 +119,7 @@ export const products = [
     id: 12,
     price: 1399.99,
     title: "Huawei Matebook X Pro",
+    description: "A sleek, ultra-portable Huawei laptop with a near-borderless display and premium all-metal design.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/1.webp",
@@ -119,6 +131,7 @@ export const products = [
     id: 13,
     price: 1099.99,
     title: "Lenovo Yoga 920",
+    description: "A versatile 2-in-1 Lenovo laptop that folds into tablet mode, built for flexibility on the move.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/1.webp",
@@ -130,6 +143,7 @@ export const products = [
     id: 14,
     price: 1499.99,
     title: "New DELL XPS 13 9300 Laptop",
+    description: "Dell's compact XPS 13 laptop with a stunning InfinityEdge display packed into an ultra-portable chassis.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/1.webp",
@@ -141,6 +155,7 @@ export const products = [
     id: 15,
     price: 199.99,
     title: "iPhone 5s",
+    description: "A classic iPhone with Touch ID, a durable aluminum design, and the timeless iOS experience.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/1.webp",
@@ -152,6 +167,7 @@ export const products = [
     id: 16,
     price: 299.99,
     title: "iPhone 6",
+    description: "A reliable iPhone with a bright Retina display and Apple's signature build quality at an accessible price.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/iphone-6/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/smartphones/iphone-6/1.webp",
@@ -163,6 +179,7 @@ export const products = [
     id: 17,
     price: 1099.99,
     title: "iPhone 13 Pro",
+    description: "A Pro-level iPhone with a triple-camera system, Face ID, and a stunning Super Retina XDR display.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/1.webp",
@@ -174,6 +191,7 @@ export const products = [
     id: 18,
     price: 899.99,
     title: "iPhone X",
+    description: "The iPhone that introduced Face ID and an edge-to-edge OLED display, still a design icon today.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/iphone-x/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/smartphones/iphone-x/1.webp",
@@ -185,6 +203,7 @@ export const products = [
     id: 19,
     price: 249.99,
     title: "Oppo A57",
+    description: "An affordable Oppo smartphone with a large battery and a clean, easy-to-use interface for everyday tasks.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/1.webp",
@@ -196,6 +215,7 @@ export const products = [
     id: 20,
     price: 399.99,
     title: "Oppo F19 Pro Plus",
+    description: "A stylish mid-range Oppo phone with fast charging and a smooth, vibrant display.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/1.webp",
@@ -207,6 +227,7 @@ export const products = [
     id: 21,
     price: 299.99,
     title: "Oppo K1",
+    description: "A budget-friendly Oppo smartphone offering solid performance and a dual-camera setup for everyday photography.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/1.webp",
@@ -219,6 +240,7 @@ export const products = [
     id: 22,
     price: 149.99,
     title: "Realme C35",
+    description: "A Realme smartphone with a large display, dependable battery life, and a quad-camera setup.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/realme-c35/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/smartphones/realme-c35/1.webp",
@@ -230,6 +252,7 @@ export const products = [
     id: 23,
     price: 299.99,
     title: "Realme X",
+    description: "An early Realme flagship known for its striking dewdrop notch design and balanced performance.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/realme-x/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/smartphones/realme-x/1.webp",
@@ -241,6 +264,7 @@ export const products = [
     id: 24,
     price: 349.99,
     title: "Realme XT",
+    description: "A Realme smartphone with a fast charging battery and a versatile camera system for everyday shooting.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/realme-xt/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/smartphones/realme-xt/1.webp",
@@ -252,6 +276,7 @@ export const products = [
     id: 25,
     price: 299.99,
     title: "Samsung Galaxy S7",
+    description: "A Samsung Galaxy classic with a compact metal-and-glass design and a sharp Super AMOLED screen.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/1.webp",
@@ -263,6 +288,7 @@ export const products = [
     id: 26,
     price: 499.99,
     title: "Samsung Galaxy S8",
+    description: "A Samsung Galaxy phone with wireless charging, IP68 water resistance, and an immersive curved display.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/1.webp",
@@ -274,6 +300,7 @@ export const products = [
     id: 27,
     price: 699.99,
     title: "Samsung Galaxy S10",
+    description: "A Samsung flagship with an in-display fingerprint sensor and a stunning Infinity-O display.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s10/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s10/1.webp",
@@ -285,6 +312,7 @@ export const products = [
     id: 28,
     price: 249.99,
     title: "Vivo S1",
+    description: "A Vivo smartphone built for everyday use, with a stylish design and a capable rear camera.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/vivo-s1/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/smartphones/vivo-s1/1.webp",
@@ -296,6 +324,7 @@ export const products = [
     id: 29,
     price: 299.99,
     title: "Vivo V9",
+    description: "A Vivo phone with a notch display and AI-enhanced camera, designed for social sharing.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/vivo-v9/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/smartphones/vivo-v9/1.webp",
@@ -307,6 +336,7 @@ export const products = [
     id: 30,
     price: 499.99,
     title: "Vivo X21",
+    description: "A Vivo flagship with an in-display fingerprint scanner and a vibrant Super AMOLED display.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/smartphones/vivo-x21/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/smartphones/vivo-x21/1.webp",
@@ -318,6 +348,7 @@ export const products = [
     id: 31,
     price: 499.99,
     title: "iPad Mini 2021 Starlight",
+    description: "A compact iPad Mini in Starlight, powerful enough for work and play, small enough to take anywhere.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/tablets/ipad-mini-2021-starlight/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/tablets/ipad-mini-2021-starlight/1.webp",
@@ -330,6 +361,7 @@ export const products = [
     id: 32,
     price: 599.99,
     title: "Samsung Galaxy Tab S8 Plus Grey",
+    description: "A large-screen Samsung Galaxy Tab in Grey, built for streaming, note-taking, and productivity with S Pen support.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-s8-plus-grey/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-s8-plus-grey/1.webp",
@@ -342,6 +374,7 @@ export const products = [
     id: 33,
     price: 349.99,
     title: "Samsung Galaxy Tab White",
+    description: "A Samsung Galaxy Tab in White, offering a bright display and long battery life for entertainment on the go.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-white/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-white/1.webp",
@@ -354,6 +387,7 @@ export const products = [
     id: 34,
     price: 99.99,
     title: "Amazon Echo Plus",
+    description: "Amazon's Echo Plus smart speaker with a built-in smart home hub and Alexa always ready to help.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/amazon-echo-plus/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/mobile-accessories/amazon-echo-plus/1.webp",
@@ -364,6 +398,7 @@ export const products = [
     id: 35,
     price: 129.99,
     title: "Apple Airpods",
+    description: "Apple's original wireless earbuds, offering effortless pairing and all-day battery life with the charging case.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/1.webp",
@@ -375,6 +410,7 @@ export const products = [
     id: 36,
     price: 549.99,
     title: "Apple AirPods Max Silver",
+    description: "Apple's over-ear AirPods Max in Silver, delivering high-fidelity sound with active noise cancellation.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods-max-silver/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods-max-silver/1.webp",
@@ -384,6 +420,7 @@ export const products = [
     id: 37,
     price: 79.99,
     title: "Apple Airpower Wireless Charger",
+    description: "Apple's wireless charging mat designed to charge an iPhone, Apple Watch, and AirPods together.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpower-wireless-charger/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpower-wireless-charger/1.webp",
@@ -393,6 +430,7 @@ export const products = [
     id: 38,
     price: 99.99,
     title: "Apple HomePod Mini Cosmic Grey",
+    description: "A compact HomePod Mini in Cosmic Grey, delivering surprisingly full sound and built-in Siri smarts.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-homepod-mini-cosmic-grey/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-homepod-mini-cosmic-grey/1.webp",
@@ -402,6 +440,7 @@ export const products = [
     id: 39,
     price: 19.99,
     title: "Apple iPhone Charger",
+    description: "An official Apple iPhone charger for fast, reliable charging you can count on every day.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-iphone-charger/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-iphone-charger/1.webp",
@@ -412,6 +451,7 @@ export const products = [
     id: 40,
     price: 99.99,
     title: "Apple MagSafe Battery Pack",
+    description: "Apple's MagSafe Battery Pack, snapping onto an iPhone for convenient wireless top-up charging on the go.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-magsafe-battery-pack/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-magsafe-battery-pack/1.webp",
@@ -422,6 +462,7 @@ export const products = [
     id: 41,
     price: 349.99,
     title: "Apple Watch Series 4 Gold",
+    description: "An Apple Watch Series 4 in Gold, combining fitness tracking, notifications, and a bright always-visible display.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-watch-series-4-gold/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-watch-series-4-gold/1.webp",
@@ -433,6 +474,7 @@ export const products = [
     id: 42,
     price: 49.99,
     title: "Beats Flex Wireless Earphones",
+    description: "Beats Flex wireless earphones with a flexible neckband design and up to 12 hours of battery life.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/beats-flex-wireless-earphones/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/mobile-accessories/beats-flex-wireless-earphones/1.webp",
@@ -442,6 +484,7 @@ export const products = [
     id: 43,
     price: 29.99,
     title: "iPhone 12 Silicone Case with MagSafe Plum",
+    description: "A silicone iPhone 12 case in Plum with MagSafe support, offering a soft grip and precise magnetic snap.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/1.webp",
@@ -454,6 +497,7 @@ export const products = [
     id: 44,
     price: 19.99,
     title: "Monopod",
+    description: "A compact, extendable monopod for steady handheld shots and effortless group selfies.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/monopod/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/mobile-accessories/monopod/1.webp",
@@ -464,6 +508,7 @@ export const products = [
     id: 45,
     price: 14.99,
     title: "Selfie Lamp with iPhone",
+    description: "A clip-on selfie lamp for iPhone that adds flattering, adjustable light to every selfie and video call.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/selfie-lamp-with-iphone/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/mobile-accessories/selfie-lamp-with-iphone/1.webp",
@@ -473,6 +518,7 @@ export const products = [
     id: 46,
     price: 12.99,
     title: "Selfie Stick Monopod",
+    description: "A lightweight selfie stick monopod with an extendable arm, perfect for photos and vlogging on the move.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/selfie-stick-monopod/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/mobile-accessories/selfie-stick-monopod/1.webp",
@@ -482,6 +528,7 @@ export const products = [
     id: 47,
     price: 499.99,
     title: "TV Studio Camera Pedestal",
+    description: "A sturdy studio camera pedestal built for smooth, professional camera movement in broadcast setups.",
     imageURLs: [
       "https://cdn.dummyjson.com/product-images/mobile-accessories/tv-studio-camera-pedestal/thumbnail.webp",
       "https://cdn.dummyjson.com/product-images/mobile-accessories/tv-studio-camera-pedestal/1.webp",
@@ -491,6 +538,7 @@ export const products = [
     id: 48,
     price: 99,
     title: "Logitech MX Master 3S Bluetooth Mouse",
+    description: "Logitech's MX Master 3S, a precision Bluetooth mouse with an ultra-fast scroll wheel for power users.",
     imageURLs: [
       "https://resource.logitech.com/content/dam/logitech/en/products/mice/mx-master-3s/2025-update/mx-master-3s-bluetooth-edition-top-view-black-new-1.png",
       "https://resource.logitech.com/content/dam/logitech/en/products/mice/mx-master-3s/gallery/mx-master-3s-mouse-side-view-graphite.png",
@@ -502,6 +550,7 @@ export const products = [
     id: 49,
     price: 149,
     title: "Logitech G733 LIGHTSPEED Wireless Gaming Headset",
+    description: "A LIGHTSPEED wireless gaming headset from Logitech with immersive audio and a reliable low-latency connection.",
     imageURLs: [
       "https://resource.logitechg.com/content/dam/gaming/en/products/g733/gallery/g733-black-gallery-1.png",
       "https://resource.logitechg.com/content/dam/gaming/en/products/g733/gallery/g733-black-gallery-2.png",
@@ -512,6 +561,7 @@ export const products = [
     id: 50,
     price: 99,
     title: "Logitech MX Keys Mini Wireless Keyboard",
+    description: "Logitech's MX Keys Mini, a compact wireless keyboard with smart backlighting and multi-device pairing.",
     imageURLs: [
       "https://resource.logitech.com/content/dam/logitech/en/products/keyboards/mx-keys-mini/gallery/us/mx-keys-mini-top-graphite-us.png",
       "https://resource.logitech.com/content/dam/logitech/en/products/keyboards/mx-keys-mini/gallery/us/mx-keys-mini-3q-tilted-graphite-us.png",

@@ -1,7 +1,8 @@
 # Product import
 
 Requires Node.js 22.18+ (native TypeScript support). Reads `src/data/products.ts`.
-The catalog contains 50 products, each with an `imageURLs` array (a product gallery).
+The catalog contains 50 products, each with an `imageURLs` array (a product gallery)
+and a short `description` shown on the product details screen.
 Added products use sample catalog prices in the same units as the existing entries,
 not verified current retail prices.
 Products 10–47 use matching product image galleries from [DummyJSON](https://dummyjson.com/products).
@@ -53,3 +54,22 @@ field, and the legacy `imageURL` field itself, is left untouched — and uses an
 `exists: true` precondition so it can only update, never create, a document.
 Safe to re-run; it always reports "Nothing to migrate" once every document has
 `imageURLs`.
+
+# Product description migration
+
+`scripts/migrate-product-descriptions.mjs` backfills the `description` field
+onto `products` documents seeded before it existed. Same auth and usage
+pattern as the other scripts above:
+
+```bash
+node scripts/migrate-product-descriptions.mjs           # preview
+node scripts/migrate-product-descriptions.mjs --write   # backfill
+```
+
+For each document without a non-empty `description`, it takes the description
+from `src/data/products.ts` (matched by product `id`); a document whose id
+isn't found locally is reported as unresolved and left untouched rather than
+guessed at. Writes only the `description` field via `updateMask` with an
+`exists: true` precondition, so it can only update, never create, a document.
+Safe to re-run; it always reports "Nothing to migrate" once every document has
+a description.

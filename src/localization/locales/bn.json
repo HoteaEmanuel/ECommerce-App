@@ -7,7 +7,8 @@
     "loading": "লোড হচ্ছে…",
     "previousImage": "আগের ছবি",
     "nextImage": "পরের ছবি",
-    "imageIndicator": "ছবি {{current}} (মোট {{total}})"
+    "imageIndicator": "ছবি {{current}} (মোট {{total}})",
+    "description": "বিবরণ"
   },
   "navigation": {
     "home": "হোম",

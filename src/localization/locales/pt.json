@@ -7,7 +7,8 @@
     "loading": "Carregando…",
     "previousImage": "Imagem anterior",
     "nextImage": "Próxima imagem",
-    "imageIndicator": "Imagem {{current}} de {{total}}"
+    "imageIndicator": "Imagem {{current}} de {{total}}",
+    "description": "Descrição"
   },
   "navigation": {
     "home": "Início",

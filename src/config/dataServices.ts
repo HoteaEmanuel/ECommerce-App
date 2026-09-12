@@ -12,8 +12,13 @@ export const getProductsData = async () => {
     const list: Product[] = [];
     querySnapshot.forEach((doc) => {
       const data = doc.data();
-      // Documents seeded before the multi-image migration only have `imageURL`.
-      list.push({ ...data, imageURLs: getImageURLs(data) } as Product);
+      // Documents seeded before the multi-image/description migrations only
+      // have `imageURL` and no `description` at all.
+      list.push({
+        ...data,
+        imageURLs: getImageURLs(data),
+        description: typeof data.description === "string" ? data.description : "",
+      } as Product);
     });
     return list;
   } catch (error) {

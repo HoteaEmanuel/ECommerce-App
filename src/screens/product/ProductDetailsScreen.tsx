@@ -37,6 +37,15 @@ const ProductDetailsScreen = () => {
           <AppText style={styles.priceText}>
             {formatPrice(product.price, i18n.resolvedLanguage ?? "en")}
           </AppText>
+
+          {!!product.description && (
+            <View style={styles.descriptionContainer}>
+              <AppText variant="bold" style={styles.descriptionTitle}>
+                {t("common.description")}
+              </AppText>
+              <AppText style={styles.descriptionText}>{product.description}</AppText>
+            </View>
+          )}
         </View>
       </ScrollView>
 
@@ -67,6 +76,20 @@ const styles = StyleSheet.create({
     fontFamily: AppFonts.Bold,
     color: AppColors.primary,
     marginTop: vs(8),
+  },
+  descriptionContainer: {
+    marginTop: vs(20),
+  },
+  descriptionTitle: {
+    fontSize: s(16),
+    color: AppColors.primary,
+  },
+  descriptionText: {
+    fontSize: s(14),
+    fontFamily: AppFonts.Medium,
+    color: AppColors.medGray,
+    marginTop: vs(6),
+    lineHeight: vs(20),
   },
   bottomButtonContainer: {
     paddingHorizontal: sharedPaddingHorizontal,

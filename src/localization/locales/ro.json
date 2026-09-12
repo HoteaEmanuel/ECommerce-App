@@ -7,7 +7,8 @@
     "loading": "Se încarcă…",
     "previousImage": "Imaginea anterioară",
     "nextImage": "Imaginea următoare",
-    "imageIndicator": "Imaginea {{current}} din {{total}}"
+    "imageIndicator": "Imaginea {{current}} din {{total}}",
+    "description": "Descriere"
   },
   "navigation": {
     "home": "Acasă",
