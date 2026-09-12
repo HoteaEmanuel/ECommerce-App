@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { FlatList, StyleSheet, View } from "react-native";
 import React, { useEffect, useState } from "react";
 import OrderItemCard from "../../components/cards/OrderItemCard";
-import { s, vs } from "react-native-size-matters";
+import { vs } from "react-native-size-matters";
 import { formatDate } from "../../helpers/dateFormat";
 import { fetchUserData } from "../../config/dataServices";
 import type { Order } from "../../types/order";
@@ -44,10 +44,12 @@ const MyOrdersScreen = () => {
           <OrderItemCard
             price={item.totalPrice}
             date={formatDate(item.createdAt.toDate(), i18n.resolvedLanguage)}
+            items={item.items}
           />
         )}
         contentContainerStyle={{
-          gap: s(10),
+          gap: vs(14),
+          paddingTop: vs(4),
           marginBottom: vs(50),
         }}
         showsVerticalScrollIndicator={false}

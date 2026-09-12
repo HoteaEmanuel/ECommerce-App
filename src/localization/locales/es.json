@@ -60,6 +60,7 @@
   },
   "orders": {
     "details": "Detalles del pedido",
+    "productImage": "Imagen del producto {{title}}",
     "date": "Fecha",
     "total": "Precio total",
     "loadError": "No se pudieron cargar tus pedidos. Inténtalo de nuevo.",

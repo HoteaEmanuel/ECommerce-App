@@ -60,6 +60,7 @@
   },
   "orders": {
     "details": "Order details",
+    "productImage": "{{title}} product image",
     "date": "Date",
     "total": "Total price",
     "loadError": "Unable to load your orders. Please try again.",

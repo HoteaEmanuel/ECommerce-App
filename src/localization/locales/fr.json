@@ -60,6 +60,7 @@
   },
   "orders": {
     "details": "Détails de la commande",
+    "productImage": "Image du produit {{title}}",
     "date": "Date",
     "total": "Prix total",
     "loadError": "Impossible de charger vos commandes. Réessayez.",

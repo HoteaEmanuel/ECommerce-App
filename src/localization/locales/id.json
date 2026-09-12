@@ -60,6 +60,7 @@
   },
   "orders": {
     "details": "Detail pesanan",
+    "productImage": "Gambar produk {{title}}",
     "date": "Tanggal",
     "total": "Harga total",
     "loadError": "Pesanan Anda tidak dapat dimuat. Silakan coba lagi.",

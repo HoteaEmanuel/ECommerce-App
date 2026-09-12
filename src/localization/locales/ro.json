@@ -60,6 +60,7 @@
   },
   "orders": {
     "details": "Detaliile comenzii",
+    "productImage": "Imagine produs {{title}}",
     "date": "Dată",
     "total": "Preț total",
     "loadError": "Comenzile nu au putut fi încărcate. Încearcă din nou.",
