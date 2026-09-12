@@ -8,7 +8,8 @@
     "previousImage": "Imagem anterior",
     "nextImage": "Próxima imagem",
     "imageIndicator": "Imagem {{current}} de {{total}}",
-    "description": "Descrição"
+    "description": "Descrição",
+    "notNow": "Agora não"
   },
   "navigation": {
     "home": "Início",
@@ -71,7 +72,12 @@
     "phone": "Número de telefone",
     "address": "Endereço completo",
     "success": "Pedido realizado com sucesso!",
-    "error": "Não foi possível realizar o pedido. Tente novamente."
+    "error": "Não foi possível realizar o pedido. Tente novamente.",
+    "saveAddressTitle": "Salvar esses dados?",
+    "saveAddressMessage": "Salve seu nome, telefone e endereço para um checkout mais rápido da próxima vez.",
+    "saveAddress": "Salvar endereço",
+    "updateAddressTitle": "Atualizar dados salvos?",
+    "updateAddress": "Atualizar endereço"
   },
   "orders": {
     "details": "Detalhes do pedido",

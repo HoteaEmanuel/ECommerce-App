@@ -8,7 +8,8 @@
     "previousImage": "Image précédente",
     "nextImage": "Image suivante",
     "imageIndicator": "Image {{current}} sur {{total}}",
-    "description": "Description"
+    "description": "Description",
+    "notNow": "Pas maintenant"
   },
   "navigation": {
     "home": "Accueil",
@@ -71,7 +72,12 @@
     "phone": "Numéro de téléphone",
     "address": "Adresse complète",
     "success": "Commande passée avec succès !",
-    "error": "Impossible de passer la commande. Réessayez."
+    "error": "Impossible de passer la commande. Réessayez.",
+    "saveAddressTitle": "Enregistrer ces informations ?",
+    "saveAddressMessage": "Enregistrez votre nom, téléphone et adresse pour un paiement plus rapide la prochaine fois.",
+    "saveAddress": "Enregistrer l'adresse",
+    "updateAddressTitle": "Mettre à jour les informations enregistrées ?",
+    "updateAddress": "Mettre à jour l'adresse"
   },
   "orders": {
     "details": "Détails de la commande",

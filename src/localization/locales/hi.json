@@ -8,7 +8,8 @@
     "previousImage": "पिछली छवि",
     "nextImage": "अगली छवि",
     "imageIndicator": "छवि {{current}} / {{total}}",
-    "description": "विवरण"
+    "description": "विवरण",
+    "notNow": "अभी नहीं"
   },
   "navigation": {
     "home": "होम",
@@ -71,7 +72,12 @@
     "phone": "फ़ोन नंबर",
     "address": "पूरा पता",
     "success": "ऑर्डर सफलतापूर्वक दिया गया!",
-    "error": "ऑर्डर नहीं दिया जा सका। कृपया दोबारा कोशिश करें।"
+    "error": "ऑर्डर नहीं दिया जा सका। कृपया दोबारा कोशिश करें।",
+    "saveAddressTitle": "क्या इन विवरणों को सहेजना है?",
+    "saveAddressMessage": "अगली बार तेज़ चेकआउट के लिए अपना नाम, फ़ोन नंबर और पता सहेजें।",
+    "saveAddress": "पता सहेजें",
+    "updateAddressTitle": "सहेजा गया विवरण अपडेट करें?",
+    "updateAddress": "पता अपडेट करें"
   },
   "orders": {
     "details": "ऑर्डर का विवरण",

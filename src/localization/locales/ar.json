@@ -8,7 +8,8 @@
     "previousImage": "الصورة السابقة",
     "nextImage": "الصورة التالية",
     "imageIndicator": "الصورة {{current}} من {{total}}",
-    "description": "الوصف"
+    "description": "الوصف",
+    "notNow": "ليس الآن"
   },
   "navigation": {
     "home": "الرئيسية",
@@ -71,7 +72,12 @@
     "phone": "رقم الهاتف",
     "address": "العنوان التفصيلي",
     "success": "تم تقديم الطلب بنجاح!",
-    "error": "تعذّر تقديم الطلب. يُرجى المحاولة مجددًا."
+    "error": "تعذّر تقديم الطلب. يُرجى المحاولة مجددًا.",
+    "saveAddressTitle": "هل تريد حفظ هذه البيانات؟",
+    "saveAddressMessage": "احفظ اسمك ورقم هاتفك وعنوانك لإتمام الطلب بشكل أسرع في المرة القادمة.",
+    "saveAddress": "حفظ العنوان",
+    "updateAddressTitle": "هل تريد تحديث البيانات المحفوظة؟",
+    "updateAddress": "تحديث العنوان"
   },
   "orders": {
     "details": "تفاصيل الطلب",

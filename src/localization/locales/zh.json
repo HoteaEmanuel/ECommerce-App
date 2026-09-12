@@ -8,7 +8,8 @@
     "previousImage": "上一张图片",
     "nextImage": "下一张图片",
     "imageIndicator": "第 {{current}} 张，共 {{total}} 张",
-    "description": "描述"
+    "description": "描述",
+    "notNow": "暂不"
   },
   "navigation": {
     "home": "首页",
@@ -71,7 +72,12 @@
     "phone": "电话号码",
     "address": "详细地址",
     "success": "下单成功！",
-    "error": "无法提交订单，请重试。"
+    "error": "无法提交订单，请重试。",
+    "saveAddressTitle": "保存这些信息吗？",
+    "saveAddressMessage": "保存您的姓名、电话和地址，下次结账更快捷。",
+    "saveAddress": "保存地址",
+    "updateAddressTitle": "更新已保存的信息吗？",
+    "updateAddress": "更新地址"
   },
   "orders": {
     "details": "订单详情",

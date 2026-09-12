@@ -8,7 +8,8 @@
     "previousImage": "Gambar sebelumnya",
     "nextImage": "Gambar berikutnya",
     "imageIndicator": "Gambar {{current}} dari {{total}}",
-    "description": "Deskripsi"
+    "description": "Deskripsi",
+    "notNow": "Nanti saja"
   },
   "navigation": {
     "home": "Beranda",
@@ -71,7 +72,12 @@
     "phone": "Nomor telepon",
     "address": "Alamat lengkap",
     "success": "Pesanan berhasil dibuat!",
-    "error": "Pesanan tidak dapat dibuat. Silakan coba lagi."
+    "error": "Pesanan tidak dapat dibuat. Silakan coba lagi.",
+    "saveAddressTitle": "Simpan detail ini?",
+    "saveAddressMessage": "Simpan nama, nomor telepon, dan alamat Anda agar checkout berikutnya lebih cepat.",
+    "saveAddress": "Simpan alamat",
+    "updateAddressTitle": "Perbarui detail yang tersimpan?",
+    "updateAddress": "Perbarui alamat"
   },
   "orders": {
     "details": "Detail pesanan",

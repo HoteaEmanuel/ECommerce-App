@@ -8,7 +8,8 @@
     "previousImage": "Imaginea anterioară",
     "nextImage": "Imaginea următoare",
     "imageIndicator": "Imaginea {{current}} din {{total}}",
-    "description": "Descriere"
+    "description": "Descriere",
+    "notNow": "Nu acum"
   },
   "navigation": {
     "home": "Acasă",
@@ -71,7 +72,12 @@
     "phone": "Număr de telefon",
     "address": "Adresă completă",
     "success": "Comanda a fost plasată cu succes!",
-    "error": "Comanda nu a putut fi plasată. Încearcă din nou."
+    "error": "Comanda nu a putut fi plasată. Încearcă din nou.",
+    "saveAddressTitle": "Salvezi aceste detalii?",
+    "saveAddressMessage": "Salvează-ți numele, telefonul și adresa pentru o finalizare mai rapidă data viitoare.",
+    "saveAddress": "Salvează adresa",
+    "updateAddressTitle": "Actualizezi detaliile salvate?",
+    "updateAddress": "Actualizează adresa"
   },
   "orders": {
     "details": "Detaliile comenzii",

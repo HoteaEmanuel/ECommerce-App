@@ -8,7 +8,8 @@
     "previousImage": "Previous image",
     "nextImage": "Next image",
     "imageIndicator": "Image {{current}} of {{total}}",
-    "description": "Description"
+    "description": "Description",
+    "notNow": "Not now"
   },
   "navigation": {
     "home": "Home",
@@ -71,7 +72,12 @@
     "phone": "Phone number",
     "address": "Detailed address",
     "success": "Order placed successfully!",
-    "error": "Unable to place your order. Please try again."
+    "error": "Unable to place your order. Please try again.",
+    "saveAddressTitle": "Save these details?",
+    "saveAddressMessage": "Save your name, phone and address for faster checkout next time.",
+    "saveAddress": "Save address",
+    "updateAddressTitle": "Update saved details?",
+    "updateAddress": "Update address"
   },
   "orders": {
     "details": "Order details",

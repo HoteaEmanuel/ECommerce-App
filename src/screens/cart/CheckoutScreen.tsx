@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import AppSaveView from "../../components/views/AppSaveView";
 import {
   commonStyles,
@@ -22,6 +22,16 @@ import { db } from "../../config/firebase";
 import { showMessage } from "react-native-flash-message";
 import { useNavigation } from "@react-navigation/native";
 import { emptyCart } from "../../store/reducers/cartSlice";
+import { SheetManager } from "react-native-actions-sheet";
+import SaveContactInfoSheet, {
+  SAVE_CONTACT_INFO_SHEET_ID,
+} from "../../components/cart/SaveContactInfoSheet";
+import {
+  getSavedContactInfo,
+  isSameContactInfo,
+  saveContactInfo,
+  type SavedContactInfo,
+} from "../../helpers/savedContactInfo";
 type FormData = yup.InferType<typeof schema>;
 const schema = yup.object({
   fullName: yup
@@ -43,6 +53,14 @@ const CheckoutScreen = () => {
   const { t } = useTranslation();
   const { control, handleSubmit } = useForm({
     resolver: yupResolver(schema),
+    defaultValues: async () => {
+      const saved = await getSavedContactInfo();
+      return {
+        fullName: saved?.fullName ?? "",
+        phoneNumber: saved?.phoneNumber ?? "",
+        detailedAddress: saved?.detailedAddress ?? "",
+      };
+    },
   });
 
   const { items } = useSelector((store: RootState) => store.cartSlice);
@@ -52,6 +70,9 @@ const CheckoutScreen = () => {
   const totalPrice = totalProductPrices + TAXES + SHIPPING_FEE;
   const dispatch = useDispatch();
   const { userData } = useSelector((store: RootState) => store.userSlice);
+  const [pendingContactInfo, setPendingContactInfo] = useState<SavedContactInfo | null>(null);
+  const [contactInfoIsUpdate, setContactInfoIsUpdate] = useState(false);
+
   const saveOrder = async (formData: FormData) => {
     try {
       const orderBody = {
@@ -72,7 +93,20 @@ const CheckoutScreen = () => {
         message: t("checkout.success"),
       });
       dispatch(emptyCart());
-      navigation.goBack();
+
+      const currentContactInfo: SavedContactInfo = {
+        fullName: formData.fullName,
+        phoneNumber: formData.phoneNumber,
+        detailedAddress: formData.detailedAddress,
+      };
+      const saved = await getSavedContactInfo();
+      if (!saved || !isSameContactInfo(saved, currentContactInfo)) {
+        setPendingContactInfo(currentContactInfo);
+        setContactInfoIsUpdate(!!saved);
+        SheetManager.show(SAVE_CONTACT_INFO_SHEET_ID);
+      } else {
+        navigation.goBack();
+      }
     } catch (error) {
       console.log("Error in placing order: ", error);
       showMessage({
@@ -114,6 +148,14 @@ const CheckoutScreen = () => {
           onPress={handleSubmit(saveOrder)}
         />
       </View>
+
+      <SaveContactInfoSheet
+        isUpdate={contactInfoIsUpdate}
+        onConfirm={async () => {
+          if (pendingContactInfo) await saveContactInfo(pendingContactInfo);
+        }}
+        onDismiss={() => navigation.goBack()}
+      />
     </AppSaveView>
   );
 };
