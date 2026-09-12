@@ -77,7 +77,8 @@
     "saveAddressMessage": "保存您的姓名、电话和地址，下次结账更快捷。",
     "saveAddress": "保存地址",
     "updateAddressTitle": "更新已保存的信息吗？",
-    "updateAddress": "更新地址"
+    "updateAddress": "更新地址",
+    "contactInfoSaved": "您的信息已保存，供下次使用。"
   },
   "orders": {
     "details": "订单详情",

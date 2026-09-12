@@ -77,7 +77,8 @@
     "saveAddressMessage": "Guarda tu nombre, teléfono y dirección para pagar más rápido la próxima vez.",
     "saveAddress": "Guardar dirección",
     "updateAddressTitle": "¿Actualizar los datos guardados?",
-    "updateAddress": "Actualizar dirección"
+    "updateAddress": "Actualizar dirección",
+    "contactInfoSaved": "Tus datos se guardaron para la próxima vez."
   },
   "orders": {
     "details": "Detalles del pedido",

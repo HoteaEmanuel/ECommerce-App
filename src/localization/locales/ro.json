@@ -77,7 +77,8 @@
     "saveAddressMessage": "Salvează-ți numele, telefonul și adresa pentru o finalizare mai rapidă data viitoare.",
     "saveAddress": "Salvează adresa",
     "updateAddressTitle": "Actualizezi detaliile salvate?",
-    "updateAddress": "Actualizează adresa"
+    "updateAddress": "Actualizează adresa",
+    "contactInfoSaved": "Datele tale au fost salvate pentru data viitoare."
   },
   "orders": {
     "details": "Detaliile comenzii",

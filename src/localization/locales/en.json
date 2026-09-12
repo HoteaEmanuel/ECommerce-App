@@ -77,7 +77,8 @@
     "saveAddressMessage": "Save your name, phone and address for faster checkout next time.",
     "saveAddress": "Save address",
     "updateAddressTitle": "Update saved details?",
-    "updateAddress": "Update address"
+    "updateAddress": "Update address",
+    "contactInfoSaved": "Your details were saved for next time."
   },
   "orders": {
     "details": "Order details",

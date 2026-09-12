@@ -77,7 +77,8 @@
     "saveAddressMessage": "احفظ اسمك ورقم هاتفك وعنوانك لإتمام الطلب بشكل أسرع في المرة القادمة.",
     "saveAddress": "حفظ العنوان",
     "updateAddressTitle": "هل تريد تحديث البيانات المحفوظة؟",
-    "updateAddress": "تحديث العنوان"
+    "updateAddress": "تحديث العنوان",
+    "contactInfoSaved": "تم حفظ بياناتك للمرة القادمة."
   },
   "orders": {
     "details": "تفاصيل الطلب",

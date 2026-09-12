@@ -77,7 +77,8 @@
     "saveAddressMessage": "Simpan nama, nomor telepon, dan alamat Anda agar checkout berikutnya lebih cepat.",
     "saveAddress": "Simpan alamat",
     "updateAddressTitle": "Perbarui detail yang tersimpan?",
-    "updateAddress": "Perbarui alamat"
+    "updateAddress": "Perbarui alamat",
+    "contactInfoSaved": "Detail Anda telah disimpan untuk lain kali."
   },
   "orders": {
     "details": "Detail pesanan",

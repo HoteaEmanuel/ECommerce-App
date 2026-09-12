@@ -159,7 +159,12 @@ const CheckoutScreen = () => {
       <SaveContactInfoSheet
         isUpdate={contactInfoIsUpdate}
         onConfirm={async () => {
-          if (pendingContactInfo) await saveContactInfo(pendingContactInfo);
+          if (!pendingContactInfo) return;
+          await saveContactInfo(pendingContactInfo);
+          showMessage({
+            type: "success",
+            message: t("checkout.contactInfoSaved"),
+          });
         }}
         onDismiss={() => navigation.goBack()}
       />

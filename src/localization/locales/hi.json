@@ -77,7 +77,8 @@
     "saveAddressMessage": "अगली बार तेज़ चेकआउट के लिए अपना नाम, फ़ोन नंबर और पता सहेजें।",
     "saveAddress": "पता सहेजें",
     "updateAddressTitle": "सहेजा गया विवरण अपडेट करें?",
-    "updateAddress": "पता अपडेट करें"
+    "updateAddress": "पता अपडेट करें",
+    "contactInfoSaved": "आपका विवरण अगली बार के लिए सहेज लिया गया है।"
   },
   "orders": {
     "details": "ऑर्डर का विवरण",
