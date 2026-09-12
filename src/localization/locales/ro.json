@@ -28,11 +28,18 @@
     "createAccount": "Creează un cont",
     "goToSignIn": "Mergi la autentificare",
     "invalidCredentials": "E-mail sau parolă incorectă.",
-    "signupError": "Adresa de e-mail nu este validă sau este deja utilizată."
+    "signupError": "Adresa de e-mail nu este validă sau este deja utilizată.",
+    "forgotPassword": "Ai uitat parola?",
+    "resetPasswordSubtitle": "Introdu adresa de e-mail și îți vom trimite un link pentru a-ți reseta parola.",
+    "sendResetLink": "Trimite linkul de resetare",
+    "backToSignIn": "Înapoi la autentificare",
+    "resetEmailSent": "E-mailul de resetare a fost trimis. Verifică-ți căsuța de e-mail.",
+    "resetEmailError": "Nu am putut trimite e-mailul. Verifică adresa și încearcă din nou."
   },
   "profile": {
     "language": "Limbă",
-    "logout": "Deconectare"
+    "logout": "Deconectare",
+    "noName": "Niciun nume setat"
   },
   "language": {
     "title": "Schimbă limba",

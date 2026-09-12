@@ -28,11 +28,18 @@
     "createAccount": "Créer un compte",
     "goToSignIn": "Aller à la connexion",
     "invalidCredentials": "E-mail ou mot de passe incorrect.",
-    "signupError": "L’adresse e-mail est invalide ou déjà utilisée."
+    "signupError": "L’adresse e-mail est invalide ou déjà utilisée.",
+    "forgotPassword": "Mot de passe oublié ?",
+    "resetPasswordSubtitle": "Saisissez votre e-mail et nous vous enverrons un lien pour réinitialiser votre mot de passe.",
+    "sendResetLink": "Envoyer le lien de réinitialisation",
+    "backToSignIn": "Retour à la connexion",
+    "resetEmailSent": "E-mail de réinitialisation envoyé. Vérifiez votre boîte de réception.",
+    "resetEmailError": "Impossible d'envoyer l'e-mail. Vérifiez l'adresse et réessayez."
   },
   "profile": {
     "language": "Langue",
-    "logout": "Se déconnecter"
+    "logout": "Se déconnecter",
+    "noName": "Aucun nom défini"
   },
   "language": {
     "title": "Changer de langue",

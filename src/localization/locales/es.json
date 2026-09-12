@@ -28,11 +28,18 @@
     "createAccount": "Crear cuenta",
     "goToSignIn": "Ir a iniciar sesión",
     "invalidCredentials": "Correo electrónico o contraseña incorrectos.",
-    "signupError": "La dirección de correo no es válida o ya está en uso."
+    "signupError": "La dirección de correo no es válida o ya está en uso.",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "resetPasswordSubtitle": "Ingresa tu correo y te enviaremos un enlace para restablecer tu contraseña.",
+    "sendResetLink": "Enviar enlace de restablecimiento",
+    "backToSignIn": "Volver a iniciar sesión",
+    "resetEmailSent": "Correo de restablecimiento enviado. Revisa tu bandeja de entrada.",
+    "resetEmailError": "No se pudo enviar el correo. Verifica la dirección e inténtalo de nuevo."
   },
   "profile": {
     "language": "Idioma",
-    "logout": "Cerrar sesión"
+    "logout": "Cerrar sesión",
+    "noName": "Sin nombre"
   },
   "language": {
     "title": "Cambiar idioma",

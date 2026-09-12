@@ -28,11 +28,18 @@
     "createAccount": "Criar conta",
     "goToSignIn": "Ir para o login",
     "invalidCredentials": "E-mail ou senha incorretos.",
-    "signupError": "O endereço de e-mail é inválido ou já está em uso."
+    "signupError": "O endereço de e-mail é inválido ou já está em uso.",
+    "forgotPassword": "Esqueceu a senha?",
+    "resetPasswordSubtitle": "Digite seu e-mail e enviaremos um link para redefinir sua senha.",
+    "sendResetLink": "Enviar link de redefinição",
+    "backToSignIn": "Voltar para o login",
+    "resetEmailSent": "E-mail de redefinição enviado. Verifique sua caixa de entrada.",
+    "resetEmailError": "Não foi possível enviar o e-mail. Verifique o endereço e tente novamente."
   },
   "profile": {
     "language": "Idioma",
-    "logout": "Sair"
+    "logout": "Sair",
+    "noName": "Nenhum nome definido"
   },
   "language": {
     "title": "Alterar idioma",
