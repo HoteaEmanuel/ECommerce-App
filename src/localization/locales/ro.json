@@ -4,7 +4,10 @@
     "continue": "Continuă",
     "delete": "Șterge",
     "cancel": "Anulează",
-    "loading": "Se încarcă…"
+    "loading": "Se încarcă…",
+    "previousImage": "Imaginea anterioară",
+    "nextImage": "Imaginea următoare",
+    "imageIndicator": "Imaginea {{current}} din {{total}}"
   },
   "navigation": {
     "home": "Acasă",

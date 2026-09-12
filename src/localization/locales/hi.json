@@ -4,7 +4,10 @@
     "continue": "जारी रखें",
     "delete": "हटाएँ",
     "cancel": "रद्द करें",
-    "loading": "लोड हो रहा है…"
+    "loading": "लोड हो रहा है…",
+    "previousImage": "पिछली छवि",
+    "nextImage": "अगली छवि",
+    "imageIndicator": "छवि {{current}} / {{total}}"
   },
   "navigation": {
     "home": "होम",

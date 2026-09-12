@@ -4,7 +4,10 @@
     "continue": "এগিয়ে যান",
     "delete": "মুছুন",
     "cancel": "বাতিল করুন",
-    "loading": "লোড হচ্ছে…"
+    "loading": "লোড হচ্ছে…",
+    "previousImage": "আগের ছবি",
+    "nextImage": "পরের ছবি",
+    "imageIndicator": "ছবি {{current}} (মোট {{total}})"
   },
   "navigation": {
     "home": "হোম",

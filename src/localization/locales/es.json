@@ -4,7 +4,10 @@
     "continue": "Continuar",
     "delete": "Eliminar",
     "cancel": "Cancelar",
-    "loading": "Cargando…"
+    "loading": "Cargando…",
+    "previousImage": "Imagen anterior",
+    "nextImage": "Imagen siguiente",
+    "imageIndicator": "Imagen {{current}} de {{total}}"
   },
   "navigation": {
     "home": "Inicio",

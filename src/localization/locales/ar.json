@@ -4,7 +4,10 @@
     "continue": "متابعة",
     "delete": "حذف",
     "cancel": "إلغاء",
-    "loading": "جارٍ التحميل…"
+    "loading": "جارٍ التحميل…",
+    "previousImage": "الصورة السابقة",
+    "nextImage": "الصورة التالية",
+    "imageIndicator": "الصورة {{current}} من {{total}}"
   },
   "navigation": {
     "home": "الرئيسية",

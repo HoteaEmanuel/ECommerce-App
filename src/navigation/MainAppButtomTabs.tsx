@@ -7,7 +7,8 @@ import { AppColors } from "../styles/colors";
 import { s, vs } from "react-native-size-matters";
 import { Ionicons } from "@expo/vector-icons";
 import { IS_ANDROID } from "../constants/constants";
-const Tab = createBottomTabNavigator();
+import type { RootStackParamList } from "./types";
+const Tab = createBottomTabNavigator<RootStackParamList>();
 
 export default function MainAppBottomTabs() {
   const { t } = useTranslation();

@@ -4,7 +4,10 @@
     "continue": "Продолжить",
     "delete": "Удалить",
     "cancel": "Отмена",
-    "loading": "Загрузка…"
+    "loading": "Загрузка…",
+    "previousImage": "Предыдущее изображение",
+    "nextImage": "Следующее изображение",
+    "imageIndicator": "Изображение {{current}} из {{total}}"
   },
   "navigation": {
     "home": "Главная",

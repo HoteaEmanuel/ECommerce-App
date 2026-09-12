@@ -4,7 +4,10 @@
     "continue": "Lanjutkan",
     "delete": "Hapus",
     "cancel": "Batal",
-    "loading": "Memuat…"
+    "loading": "Memuat…",
+    "previousImage": "Gambar sebelumnya",
+    "nextImage": "Gambar berikutnya",
+    "imageIndicator": "Gambar {{current}} dari {{total}}"
   },
   "navigation": {
     "home": "Beranda",

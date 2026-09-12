@@ -11,7 +11,8 @@ import { View } from "react-native";
 import { AppColors } from "../styles/colors";
 import { onAuthStateChanged } from "@firebase/auth";
 import { auth } from "../config/firebase";
-const Stack = createStackNavigator();
+import type { RootStackParamList } from "./types";
+const Stack = createStackNavigator<RootStackParamList>();
 
 export default function MainAppStack() {
   const { t } = useTranslation();

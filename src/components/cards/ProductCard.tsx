@@ -1,14 +1,14 @@
 import { formatPrice } from "../../localization/formatters";
 import { useTranslation } from "react-i18next";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, View } from "react-native";
 import React from "react";
 import { AppColors } from "../../styles/colors";
 import { s, vs } from "react-native-size-matters";
 import AppText from "../texts/AppText";
 import { AppFonts } from "../../styles/fonts";
-import { Ionicons } from "@expo/vector-icons";
 import { commonStyles } from "../../styles/sharedStyles";
 import { getPrimaryImageURL } from "../../helpers/productImages";
+import IconButton from "../buttons/IconButton";
 
 type ProductCardProps = {
   imageURLs: string[];
@@ -40,14 +40,12 @@ const ProductCard = ({
         <AppText style={styles.priceText}>{formatPrice(price, i18n.resolvedLanguage ?? "en")}</AppText>
       </View>
 
-      <TouchableOpacity
+      <IconButton
+        name="cart"
         style={styles.addToCartButton}
         onPress={onAddToCartPress}
-        accessibilityRole="button"
         accessibilityLabel={t("cart.addItem", { title })}
-      >
-        <Ionicons name="cart" size={15} color={AppColors.white} />
-      </TouchableOpacity>
+      />
     </View>
   );
 };
@@ -94,13 +92,7 @@ const styles = StyleSheet.create({
   addToCartButton: {
     position: "absolute",
     top: vs(5),
-    left: s(5),
-    backgroundColor: AppColors.primary,
-    height: vs(30),
-    width: s(30),
-    borderRadius: s(15),
-    alignItems: "center",
-    justifyContent: "center",
+    start: s(5),
     zIndex: 1,
   },
 });
