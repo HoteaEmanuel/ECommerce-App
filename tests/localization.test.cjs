@@ -59,7 +59,7 @@ test('every static translation and validation key used in the app exists in each
   const english = flatten(resources.en.translation);
   for (const file of files) {
     const source = fs.readFileSync(path.join(root, 'src', file), 'utf8');
-    for (const match of source.matchAll(/["']((?:common|navigation|auth|profile|language|cart|checkout|orders|validation|home)\.[A-Za-z]+)["']/g)) {
+    for (const match of source.matchAll(/["']((?:common|navigation|auth|profile|language|cart|checkout|orders|validation|home|favorites)\.[A-Za-z]+)["']/g)) {
       assert.ok(english[match[1]], `${file}: ${match[1]}`);
     }
   }

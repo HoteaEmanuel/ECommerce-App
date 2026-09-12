@@ -3,16 +3,22 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useDebouncedValue } from "../../hooks/useDebouncedValue";
 import AppSaveView from "../../components/views/AppSaveView";
 import HomeHeader from "../../components/headers/HomeHeader";
-import ProductCard, { PRODUCT_GRID_GUTTER } from "../../components/cards/ProductCard";
-import { useDispatch } from "react-redux";
+import ProductCard, {
+  PRODUCT_GRID_GUTTER,
+} from "../../components/cards/ProductCard";
+import { useDispatch, useSelector } from "react-redux";
 import { addItemToCart } from "../../store/reducers/cartSlice";
+import { toggleFavorite } from "../../store/reducers/favoritesSlice";
+import { RootState } from "../../store/store";
 import { Product } from "../../types/product";
 import { getProductsData } from "../../config/dataServices";
 import { useTranslation } from "react-i18next";
 import { showMessage } from "react-native-flash-message";
 import { useNavigation } from "@react-navigation/native";
 import ProductsLoadingGrid from "../../components/loaders/ProductsLoadingGrid";
-import ProductsSearchBar, { type ProductSort } from "../../components/home/ProductsSearchBar";
+import ProductsSearchBar, {
+  type ProductSort,
+} from "../../components/home/ProductsSearchBar";
 import { AppColors } from "../../styles/colors";
 import HomeEmptyState from "./HomeEmptyState";
 
@@ -26,6 +32,13 @@ const HomeScreen = () => {
   const dispatch = useDispatch();
   const navigation = useNavigation();
   const [products, setProducts] = useState<Product[]>([]);
+  const { items: favoriteItems } = useSelector(
+    (store: RootState) => store.favoritesSlice,
+  );
+  const favoriteIds = useMemo(
+    () => new Set(favoriteItems.map((item) => item.id)),
+    [favoriteItems],
+  );
 
   const getProducts = async () => {
     try {
@@ -50,7 +63,9 @@ const HomeScreen = () => {
   const visibleProducts = useMemo(() => {
     const search = debouncedQuery.trim().toLowerCase();
     const matches = search
-      ? products.filter((product) => product.title.toLowerCase().includes(search))
+      ? products.filter((product) =>
+          product.title.toLowerCase().includes(search),
+        )
       : products;
     if (sort === "none") return matches;
     return [...matches].sort((a, b) =>
@@ -96,9 +111,13 @@ const HomeScreen = () => {
         renderItem={({ item }) => (
           <ProductCard
             imageURLs={item.imageURLs}
-            onPress={() => navigation.navigate("ProductDetailsScreen", { product: item })}
+            onPress={() =>
+              navigation.navigate("ProductDetailsScreen", { product: item })
+            }
             onAddToCartPress={() => dispatch(addItemToCart(item))}
-            price={item.price}
+            isFavorite={favoriteIds.has(item.id)}
+            onToggleFavoritePress={() => dispatch(toggleFavorite(item))}
+            price={Number(item.price)}
             title={item.title}
           />
         )}

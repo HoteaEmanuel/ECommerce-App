@@ -16,7 +16,8 @@
     "profile": "प्रोफ़ाइल",
     "checkout": "ऑर्डर पूरा करें",
     "orders": "मेरे ऑर्डर",
-    "productDetails": "उत्पाद विवरण"
+    "productDetails": "उत्पाद विवरण",
+    "favorites": "पसंदीदा"
   },
   "auth": {
     "email": "ईमेल",
@@ -93,5 +94,11 @@
     "sortDefault": "डिफ़ॉल्ट क्रम",
     "sortPriceAsc": "कीमत: कम से ज़्यादा",
     "sortPriceDesc": "कीमत: ज़्यादा से कम"
+  },
+  "favorites": {
+    "emptyTitle": "अभी तक कोई पसंदीदा नहीं",
+    "emptyMessage": "हार्ट आइकन पर टैप करके अपने पसंदीदा उत्पाद सहेजें।",
+    "addItem": "{{title}} को पसंदीदा में जोड़ें",
+    "removeItem": "{{title}} को पसंदीदा से हटाएं"
   }
 }

@@ -16,7 +16,8 @@
     "profile": "Profile",
     "checkout": "Checkout",
     "orders": "My Orders",
-    "productDetails": "Product details"
+    "productDetails": "Product details",
+    "favorites": "Favorites"
   },
   "auth": {
     "email": "Email",
@@ -93,5 +94,11 @@
     "sortDefault": "Default order",
     "sortPriceAsc": "Price: low to high",
     "sortPriceDesc": "Price: high to low"
+  },
+  "favorites": {
+    "emptyTitle": "No favorites yet",
+    "emptyMessage": "Save products you love by tapping the heart icon.",
+    "addItem": "Add {{title}} to favorites",
+    "removeItem": "Remove {{title}} from favorites"
   }
 }

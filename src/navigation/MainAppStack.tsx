@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { createStackNavigator } from "@react-navigation/stack";
 import AuthStack from "./AuthStack";
-import MainAppBottomTabs from "./MainAppButtomTabs";
+import MainAppBottomTabs from "./MainAppBottomTabs";
 import CheckoutScreen from "../screens/cart/CheckoutScreen";
 import MyOrdersScreen from "../screens/profile/MyOrdersScreen";
 import ProductDetailsScreen from "../screens/product/ProductDetailsScreen";

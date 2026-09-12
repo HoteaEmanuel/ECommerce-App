@@ -22,6 +22,8 @@ type ProductCardProps = {
   price: number;
   onPress: () => void;
   onAddToCartPress: () => void;
+  isFavorite?: boolean;
+  onToggleFavoritePress?: () => void;
 };
 
 const ProductCard = ({
@@ -30,6 +32,8 @@ const ProductCard = ({
   onAddToCartPress,
   price,
   title,
+  isFavorite = false,
+  onToggleFavoritePress,
 }: ProductCardProps) => {
   const { t, i18n } = useTranslation();
   const { width } = useWindowDimensions();
@@ -61,6 +65,20 @@ const ProductCard = ({
         onPress={onAddToCartPress}
         accessibilityLabel={t("cart.addItem", { title })}
       />
+
+      {onToggleFavoritePress && (
+        <IconButton
+          name={isFavorite ? "heart" : "heart-outline"}
+          style={styles.favoriteButton}
+          onPress={onToggleFavoritePress}
+          backgroundColor={AppColors.white}
+          color={isFavorite ? AppColors.redColor : AppColors.medGray}
+          accessibilityLabel={t(
+            isFavorite ? "favorites.removeItem" : "favorites.addItem",
+            { title },
+          )}
+        />
+      )}
     </TouchableOpacity>
   );
 };
@@ -105,6 +123,12 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: vs(5),
     start: s(5),
+    zIndex: 1,
+  },
+  favoriteButton: {
+    position: "absolute",
+    top: 0,
+    end: 0,
     zIndex: 1,
   },
 });

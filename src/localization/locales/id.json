@@ -16,7 +16,8 @@
     "profile": "Profil",
     "checkout": "Checkout",
     "orders": "Pesanan saya",
-    "productDetails": "Detail produk"
+    "productDetails": "Detail produk",
+    "favorites": "Favorit"
   },
   "auth": {
     "email": "Email",
@@ -93,5 +94,11 @@
     "sortDefault": "Urutan default",
     "sortPriceAsc": "Harga: rendah ke tinggi",
     "sortPriceDesc": "Harga: tinggi ke rendah"
+  },
+  "favorites": {
+    "emptyTitle": "Belum ada favorit",
+    "emptyMessage": "Simpan produk yang Anda sukai dengan mengetuk ikon hati.",
+    "addItem": "Tambahkan {{title}} ke favorit",
+    "removeItem": "Hapus {{title}} dari favorit"
   }
 }

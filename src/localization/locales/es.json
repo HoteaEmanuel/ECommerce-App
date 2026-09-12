@@ -16,7 +16,8 @@
     "profile": "Perfil",
     "checkout": "Finalizar compra",
     "orders": "Mis pedidos",
-    "productDetails": "Detalles del producto"
+    "productDetails": "Detalles del producto",
+    "favorites": "Favoritos"
   },
   "auth": {
     "email": "Correo electrónico",
@@ -93,5 +94,11 @@
     "sortDefault": "Orden predeterminado",
     "sortPriceAsc": "Precio: de menor a mayor",
     "sortPriceDesc": "Precio: de mayor a menor"
+  },
+  "favorites": {
+    "emptyTitle": "Aún no tienes favoritos",
+    "emptyMessage": "Guarda los productos que te gustan tocando el ícono del corazón.",
+    "addItem": "Añadir {{title}} a favoritos",
+    "removeItem": "Quitar {{title}} de favoritos"
   }
 }

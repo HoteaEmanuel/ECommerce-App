@@ -16,7 +16,8 @@
     "profile": "الملف الشخصي",
     "checkout": "إتمام الطلب",
     "orders": "طلباتي",
-    "productDetails": "تفاصيل المنتج"
+    "productDetails": "تفاصيل المنتج",
+    "favorites": "المفضلة"
   },
   "auth": {
     "email": "البريد الإلكتروني",
@@ -93,5 +94,11 @@
     "sortDefault": "الترتيب الافتراضي",
     "sortPriceAsc": "السعر: من الأقل إلى الأعلى",
     "sortPriceDesc": "السعر: من الأعلى إلى الأقل"
+  },
+  "favorites": {
+    "emptyTitle": "لا توجد عناصر مفضلة بعد",
+    "emptyMessage": "احفظ المنتجات التي تعجبك بالنقر على أيقونة القلب.",
+    "addItem": "أضف {{title}} إلى المفضلة",
+    "removeItem": "أزل {{title}} من المفضلة"
   }
 }

@@ -19,8 +19,9 @@ export type RootStackParamList = {
   SignInScreen: undefined;
   SignUpScreen: undefined;
 
-  // Bottom tabs (src/navigation/MainAppButtomTabs.tsx)
+  // Bottom tabs (src/navigation/MainAppBottomTabs.tsx)
   Home: undefined;
+  Favorites: undefined;
   Cart: undefined;
   Profile: undefined;
 };

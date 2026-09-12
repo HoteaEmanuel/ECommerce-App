@@ -16,7 +16,8 @@
     "profile": "Profil",
     "checkout": "Finalizarea comenzii",
     "orders": "Comenzile mele",
-    "productDetails": "Detalii produs"
+    "productDetails": "Detalii produs",
+    "favorites": "Favorite"
   },
   "auth": {
     "email": "E-mail",
@@ -93,5 +94,11 @@
     "sortDefault": "Ordine implicită",
     "sortPriceAsc": "Preț: crescător",
     "sortPriceDesc": "Preț: descrescător"
+  },
+  "favorites": {
+    "emptyTitle": "Niciun favorit încă",
+    "emptyMessage": "Salvează produsele care îți plac atingând iconița inimă.",
+    "addItem": "Adaugă {{title}} la favorite",
+    "removeItem": "Elimină {{title}} din favorite"
   }
 }

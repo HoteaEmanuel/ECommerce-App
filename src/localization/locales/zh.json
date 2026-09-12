@@ -16,7 +16,8 @@
     "profile": "我的",
     "checkout": "结算",
     "orders": "我的订单",
-    "productDetails": "商品详情"
+    "productDetails": "商品详情",
+    "favorites": "收藏"
   },
   "auth": {
     "email": "电子邮箱",
@@ -93,5 +94,11 @@
     "sortDefault": "默认排序",
     "sortPriceAsc": "价格：从低到高",
     "sortPriceDesc": "价格：从高到低"
+  },
+  "favorites": {
+    "emptyTitle": "暂无收藏",
+    "emptyMessage": "点击心形图标即可收藏您喜欢的商品。",
+    "addItem": "将{{title}}加入收藏",
+    "removeItem": "将{{title}}移出收藏"
   }
 }
