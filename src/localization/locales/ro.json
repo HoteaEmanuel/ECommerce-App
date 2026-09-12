@@ -17,7 +17,8 @@
     "checkout": "Finalizarea comenzii",
     "orders": "Comenzile mele",
     "productDetails": "Detalii produs",
-    "favorites": "Favorite"
+    "favorites": "Favorite",
+    "changePassword": "Schimbă parola"
   },
   "auth": {
     "email": "E-mail",
@@ -39,7 +40,13 @@
   "profile": {
     "language": "Limbă",
     "logout": "Deconectare",
-    "noName": "Niciun nume setat"
+    "noName": "Niciun nume setat",
+    "currentPassword": "Parola curentă",
+    "newPassword": "Parolă nouă",
+    "confirmNewPassword": "Confirmă parola nouă",
+    "updatePassword": "Actualizează parola",
+    "passwordChanged": "Parola a fost actualizată cu succes.",
+    "passwordChangeError": "Parola nu a putut fi actualizată. Verifică parola curentă și încearcă din nou."
   },
   "language": {
     "title": "Schimbă limba",
@@ -88,7 +95,8 @@
     "phoneDigits": "Numărul de telefon trebuie să conțină doar cifre.",
     "phoneMin": "Numărul de telefon trebuie să conțină cel puțin 10 cifre.",
     "addressRequired": "Adresa este obligatorie.",
-    "addressMin": "Introdu o adresă completă de cel puțin 15 caractere."
+    "addressMin": "Introdu o adresă completă de cel puțin 15 caractere.",
+    "passwordsMustMatch": "Parolele trebuie să coincidă."
   },
   "home": {
     "loadError": "Produsele nu au putut fi încărcate. Încearcă din nou.",

@@ -17,7 +17,8 @@
     "checkout": "Checkout",
     "orders": "My Orders",
     "productDetails": "Product details",
-    "favorites": "Favorites"
+    "favorites": "Favorites",
+    "changePassword": "Change password"
   },
   "auth": {
     "email": "Email",
@@ -39,7 +40,13 @@
   "profile": {
     "language": "Language",
     "logout": "Log out",
-    "noName": "No name set"
+    "noName": "No name set",
+    "currentPassword": "Current password",
+    "newPassword": "New password",
+    "confirmNewPassword": "Confirm new password",
+    "updatePassword": "Update password",
+    "passwordChanged": "Password updated successfully.",
+    "passwordChangeError": "Couldn't update your password. Please check your current password and try again."
   },
   "language": {
     "title": "Change language",
@@ -88,7 +95,8 @@
     "phoneDigits": "Phone number must contain only digits.",
     "phoneMin": "Phone number must contain at least 10 digits.",
     "addressRequired": "Address is required.",
-    "addressMin": "Please enter a detailed address with at least 15 characters."
+    "addressMin": "Please enter a detailed address with at least 15 characters.",
+    "passwordsMustMatch": "Passwords must match."
   },
   "home": {
     "loadError": "Unable to load products. Please try again.",

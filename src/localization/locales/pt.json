@@ -17,7 +17,8 @@
     "checkout": "Finalizar compra",
     "orders": "Meus pedidos",
     "productDetails": "Detalhes do produto",
-    "favorites": "Favoritos"
+    "favorites": "Favoritos",
+    "changePassword": "Alterar senha"
   },
   "auth": {
     "email": "E-mail",
@@ -39,7 +40,13 @@
   "profile": {
     "language": "Idioma",
     "logout": "Sair",
-    "noName": "Nenhum nome definido"
+    "noName": "Nenhum nome definido",
+    "currentPassword": "Senha atual",
+    "newPassword": "Nova senha",
+    "confirmNewPassword": "Confirmar nova senha",
+    "updatePassword": "Atualizar senha",
+    "passwordChanged": "Senha atualizada com sucesso.",
+    "passwordChangeError": "Não foi possível atualizar sua senha. Verifique sua senha atual e tente novamente."
   },
   "language": {
     "title": "Alterar idioma",
@@ -88,7 +95,8 @@
     "phoneDigits": "O número de telefone deve conter apenas dígitos.",
     "phoneMin": "O número de telefone deve conter pelo menos 10 dígitos.",
     "addressRequired": "O endereço é obrigatório.",
-    "addressMin": "Digite um endereço completo com pelo menos 15 caracteres."
+    "addressMin": "Digite um endereço completo com pelo menos 15 caracteres.",
+    "passwordsMustMatch": "As senhas devem coincidir."
   },
   "home": {
     "loadError": "Não foi possível carregar os produtos. Tente novamente.",

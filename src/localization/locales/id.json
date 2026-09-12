@@ -17,7 +17,8 @@
     "checkout": "Checkout",
     "orders": "Pesanan saya",
     "productDetails": "Detail produk",
-    "favorites": "Favorit"
+    "favorites": "Favorit",
+    "changePassword": "Ubah kata sandi"
   },
   "auth": {
     "email": "Email",
@@ -39,7 +40,13 @@
   "profile": {
     "language": "Bahasa",
     "logout": "Keluar",
-    "noName": "Belum ada nama"
+    "noName": "Belum ada nama",
+    "currentPassword": "Kata sandi saat ini",
+    "newPassword": "Kata sandi baru",
+    "confirmNewPassword": "Konfirmasi kata sandi baru",
+    "updatePassword": "Perbarui kata sandi",
+    "passwordChanged": "Kata sandi berhasil diperbarui.",
+    "passwordChangeError": "Kata sandi tidak dapat diperbarui. Periksa kata sandi Anda saat ini dan coba lagi."
   },
   "language": {
     "title": "Ubah bahasa",
@@ -88,7 +95,8 @@
     "phoneDigits": "Nomor telepon hanya boleh berisi angka.",
     "phoneMin": "Nomor telepon harus berisi minimal 10 digit.",
     "addressRequired": "Alamat wajib diisi.",
-    "addressMin": "Masukkan alamat lengkap dengan minimal 15 karakter."
+    "addressMin": "Masukkan alamat lengkap dengan minimal 15 karakter.",
+    "passwordsMustMatch": "Kata sandi harus sama."
   },
   "home": {
     "loadError": "Produk tidak dapat dimuat. Silakan coba lagi.",

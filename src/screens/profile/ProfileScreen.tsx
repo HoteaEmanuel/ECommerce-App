@@ -47,6 +47,10 @@ const ProfileScreen = () => {
           onPress={() => SheetManager.show("LANG_SHEET")}
         />
         <ProfileSectionButton
+          title={t("navigation.changePassword")}
+          onPress={() => navigation.navigate("ChangePasswordScreen")}
+        />
+        <ProfileSectionButton
           title={t("profile.logout")}
           onPress={handleLogin}
         />

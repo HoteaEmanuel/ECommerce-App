@@ -17,7 +17,8 @@
     "checkout": "Finalizar compra",
     "orders": "Mis pedidos",
     "productDetails": "Detalles del producto",
-    "favorites": "Favoritos"
+    "favorites": "Favoritos",
+    "changePassword": "Cambiar contraseña"
   },
   "auth": {
     "email": "Correo electrónico",
@@ -39,7 +40,13 @@
   "profile": {
     "language": "Idioma",
     "logout": "Cerrar sesión",
-    "noName": "Sin nombre"
+    "noName": "Sin nombre",
+    "currentPassword": "Contraseña actual",
+    "newPassword": "Nueva contraseña",
+    "confirmNewPassword": "Confirmar nueva contraseña",
+    "updatePassword": "Actualizar contraseña",
+    "passwordChanged": "Contraseña actualizada correctamente.",
+    "passwordChangeError": "No se pudo actualizar tu contraseña. Verifica tu contraseña actual e inténtalo de nuevo."
   },
   "language": {
     "title": "Cambiar idioma",
@@ -88,7 +95,8 @@
     "phoneDigits": "El número de teléfono solo debe contener dígitos.",
     "phoneMin": "El número de teléfono debe tener al menos 10 dígitos.",
     "addressRequired": "La dirección es obligatoria.",
-    "addressMin": "Introduce una dirección completa de al menos 15 caracteres."
+    "addressMin": "Introduce una dirección completa de al menos 15 caracteres.",
+    "passwordsMustMatch": "Las contraseñas deben coincidir."
   },
   "home": {
     "loadError": "No se pudieron cargar los productos. Inténtalo de nuevo.",

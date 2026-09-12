@@ -5,6 +5,7 @@ import MainAppBottomTabs from "./MainAppBottomTabs";
 import CheckoutScreen from "../screens/cart/CheckoutScreen";
 import MyOrdersScreen from "../screens/profile/MyOrdersScreen";
 import ProductDetailsScreen from "../screens/product/ProductDetailsScreen";
+import ChangePasswordScreen from "../screens/profile/ChangePasswordScreen";
 import { useEffect, useState } from "react";
 
 import { ActivityIndicator } from "react-native";
@@ -67,6 +68,12 @@ export default function MainAppStack() {
           title: route.params.product.title || t("navigation.productDetails"),
         })}
         component={ProductDetailsScreen}
+      />
+
+      <Stack.Screen
+        name="ChangePasswordScreen"
+        options={{ headerShown: true, title: t("navigation.changePassword") }}
+        component={ChangePasswordScreen}
       />
     </Stack.Navigator>
   );

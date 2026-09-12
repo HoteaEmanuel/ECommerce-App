@@ -14,6 +14,7 @@ export type RootStackParamList = {
   CheckoutScreen: undefined;
   MyOrdersScreen: undefined;
   ProductDetailsScreen: { product: Product };
+  ChangePasswordScreen: undefined;
 
   // Auth stack (src/navigation/AuthStack.tsx)
   SignInScreen: undefined;

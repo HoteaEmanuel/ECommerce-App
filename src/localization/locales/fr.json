@@ -17,7 +17,8 @@
     "checkout": "Passer commande",
     "orders": "Mes commandes",
     "productDetails": "Détails du produit",
-    "favorites": "Favoris"
+    "favorites": "Favoris",
+    "changePassword": "Changer le mot de passe"
   },
   "auth": {
     "email": "E-mail",
@@ -39,7 +40,13 @@
   "profile": {
     "language": "Langue",
     "logout": "Se déconnecter",
-    "noName": "Aucun nom défini"
+    "noName": "Aucun nom défini",
+    "currentPassword": "Mot de passe actuel",
+    "newPassword": "Nouveau mot de passe",
+    "confirmNewPassword": "Confirmer le nouveau mot de passe",
+    "updatePassword": "Mettre à jour le mot de passe",
+    "passwordChanged": "Mot de passe mis à jour avec succès.",
+    "passwordChangeError": "Impossible de mettre à jour votre mot de passe. Vérifiez votre mot de passe actuel et réessayez."
   },
   "language": {
     "title": "Changer de langue",
@@ -88,7 +95,8 @@
     "phoneDigits": "Le numéro de téléphone ne doit contenir que des chiffres.",
     "phoneMin": "Le numéro de téléphone doit contenir au moins 10 chiffres.",
     "addressRequired": "L’adresse est obligatoire.",
-    "addressMin": "Saisissez une adresse complète d’au moins 15 caractères."
+    "addressMin": "Saisissez une adresse complète d’au moins 15 caractères.",
+    "passwordsMustMatch": "Les mots de passe doivent correspondre."
   },
   "home": {
     "loadError": "Impossible de charger les produits. Réessayez.",
