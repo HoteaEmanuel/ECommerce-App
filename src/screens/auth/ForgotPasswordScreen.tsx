@@ -1,99 +1,81 @@
 import { useTranslation } from "react-i18next";
-import { Alert, Image, StyleSheet, Text, View } from "react-native";
-import React, { useState } from "react";
+import { Image, StyleSheet } from "react-native";
+import React from "react";
 import AppSaveView from "../../components/views/AppSaveView";
 import { sharedPaddingHorizontal } from "../../styles/sharedStyles";
 import { IMAGES } from "../../constants/images-paths";
 import { s, vs } from "react-native-size-matters";
-import AppTextInput from "../../components/inputs/AppTextInput";
 import AppButton from "../../components/buttons/AppButton";
 import AppText from "../../components/texts/AppText";
-
 import { AppColors } from "../../styles/colors";
 import { useNavigation } from "@react-navigation/native";
+import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
 import AppTextInputController from "../../components/inputs/AppTextInputController";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { sendPasswordResetEmail } from "firebase/auth";
 import { auth } from "../../config/firebase";
 import { showMessage } from "react-native-flash-message";
-import { useDispatch } from "react-redux";
-import { setUserData } from "../../store/reducers/userSlice";
+
 const schema = yup.object({
   email: yup
     .string()
     .email("validation.emailInvalid")
     .required("validation.emailRequired"),
-  password: yup
-    .string()
-    .min(8, "validation.passwordMin")
-    .required("validation.passwordRequired"),
 });
 
 type FormData = yup.InferType<typeof schema>;
-const SignInScreen = () => {
+
+const ForgotPasswordScreen = () => {
   const { t } = useTranslation();
   const { handleSubmit, control } = useForm({
     resolver: yupResolver(schema),
   });
   const navigation = useNavigation();
 
-  const dispatch = useDispatch();
-  const handleLogin = async (loginData: FormData) => {
+  const handleResetPassword = async (data: FormData) => {
     try {
-      const userCredential = await signInWithEmailAndPassword(
-        auth,
-        loginData.email,
-        loginData.password,
-      );
-
-      const userDataObj = {
-        uid: userCredential.user.uid,
-      };
-      dispatch(setUserData(userDataObj));
-      navigation.navigate("MainAppBottomTabs");
-    } catch (error) {
-      const errorMessage = t("auth.invalidCredentials");
+      await sendPasswordResetEmail(auth, data.email);
       showMessage({
-        message: errorMessage,
+        type: "success",
+        message: t("auth.resetEmailSent"),
+      });
+      navigation.goBack();
+    } catch (error) {
+      showMessage({
         type: "danger",
+        message: t("auth.resetEmailError"),
       });
     }
   };
+
   return (
     <AppSaveView style={styles.container}>
       <Image source={IMAGES.appLogo} style={styles.logo} />
+      <AppText style={styles.subtitle}>{t("auth.resetPasswordSubtitle")}</AppText>
       <AppTextInputController
         placeholder={t("auth.email")}
         control={control}
         name="email"
-      />
-      <AppTextInputController
-        placeholder={t("auth.password")}
-        control={control}
-        name="password"
-        secureTextEntry
+        icon="mail-outline"
+        keyboardType="email-address"
       />
 
-      <AppButton title={t("auth.login")} onPress={handleSubmit(handleLogin)} />
-      <AppText
-        style={styles.forgotPasswordText}
-        onPress={() => navigation.navigate("ForgotPasswordScreen")}
-      >
-        {t("auth.forgotPassword")}
-      </AppText>
       <AppButton
-        title={t("auth.signup")}
-        style={styles.registerButton}
+        title={t("auth.sendResetLink")}
+        onPress={handleSubmit(handleResetPassword)}
+      />
+      <AppButton
+        title={t("auth.backToSignIn")}
+        style={styles.backButton}
         textColor={AppColors.primary}
-        onPress={() => navigation.navigate("SignUpScreen")}
+        onPress={() => navigation.goBack()}
       />
     </AppSaveView>
   );
 };
 
-export default SignInScreen;
+export default ForgotPasswordScreen;
 
 const styles = StyleSheet.create({
   container: {
@@ -103,20 +85,17 @@ const styles = StyleSheet.create({
   logo: {
     height: vs(150),
     width: s(150),
-    marginBottom: vs(30),
+    marginBottom: vs(20),
   },
-  appName: {
-    fontSize: s(16),
+  subtitle: {
+    textAlign: "center",
+    color: AppColors.medGray,
+    marginBottom: vs(20),
   },
-  registerButton: {
+  backButton: {
     backgroundColor: AppColors.white,
     borderWidth: 1,
     marginTop: vs(15),
     borderColor: AppColors.primary,
-  },
-  forgotPasswordText: {
-    color: AppColors.primary,
-    fontSize: s(14),
-    marginTop: vs(12),
   },
 });

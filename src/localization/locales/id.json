@@ -28,11 +28,18 @@
     "createAccount": "Buat akun",
     "goToSignIn": "Ke halaman masuk",
     "invalidCredentials": "Email atau kata sandi salah.",
-    "signupError": "Alamat email tidak valid atau sudah digunakan."
+    "signupError": "Alamat email tidak valid atau sudah digunakan.",
+    "forgotPassword": "Lupa kata sandi?",
+    "resetPasswordSubtitle": "Masukkan email Anda dan kami akan mengirimkan tautan untuk mengatur ulang kata sandi Anda.",
+    "sendResetLink": "Kirim tautan reset",
+    "backToSignIn": "Kembali ke halaman masuk",
+    "resetEmailSent": "Email reset kata sandi telah dikirim. Periksa kotak masuk Anda.",
+    "resetEmailError": "Gagal mengirim email reset. Periksa alamatnya dan coba lagi."
   },
   "profile": {
     "language": "Bahasa",
-    "logout": "Keluar"
+    "logout": "Keluar",
+    "noName": "Belum ada nama"
   },
   "language": {
     "title": "Ubah bahasa",

@@ -16,10 +16,12 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { setUserData } from "../../store/reducers/userSlice";
 import { signOut } from "firebase/auth";
 import { auth } from "../../config/firebase";
+import ProfileAccountHeader from "../../components/profile/ProfileAccountHeader";
 const ProfileScreen = () => {
   const { t } = useTranslation();
   const navigation = useNavigation();
   const dispatch = useDispatch();
+  const currentUser = auth.currentUser;
   const handleLogin = async () => {
     try {
       dispatch(setUserData({}));
@@ -35,6 +37,7 @@ const ProfileScreen = () => {
     <AppSaveView>
       <HomeHeader />
       <View style={{ paddingHorizontal: sharedPaddingHorizontal }}>
+        <ProfileAccountHeader name={currentUser?.displayName} email={currentUser?.email} />
         <ProfileSectionButton
           title={t("navigation.orders")}
           onPress={() => navigation.navigate("MyOrdersScreen")}

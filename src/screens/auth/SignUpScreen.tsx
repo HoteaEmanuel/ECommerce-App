@@ -14,7 +14,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import AppTextInputController from "../../components/inputs/AppTextInputController";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../../config/firebase";
 import { showMessage } from "react-native-flash-message";
 import { useDispatch } from "react-redux";
@@ -49,6 +49,7 @@ const SignUpScreen = () => {
         data.email,
         data.password,
       );
+      await updateProfile(userCredential.user, { displayName: data.name });
 
       const userDataObj = {
         uid: userCredential.user.uid,

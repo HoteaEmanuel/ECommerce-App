@@ -18,6 +18,7 @@ export type RootStackParamList = {
   // Auth stack (src/navigation/AuthStack.tsx)
   SignInScreen: undefined;
   SignUpScreen: undefined;
+  ForgotPasswordScreen: undefined;
 
   // Bottom tabs (src/navigation/MainAppBottomTabs.tsx)
   Home: undefined;

@@ -28,11 +28,18 @@
     "createAccount": "Create account",
     "goToSignIn": "Go to sign in",
     "invalidCredentials": "Invalid email or password.",
-    "signupError": "The email address is invalid or already in use."
+    "signupError": "The email address is invalid or already in use.",
+    "forgotPassword": "Forgot password?",
+    "resetPasswordSubtitle": "Enter your email and we'll send you a link to reset your password.",
+    "sendResetLink": "Send reset link",
+    "backToSignIn": "Back to sign in",
+    "resetEmailSent": "Password reset email sent. Check your inbox.",
+    "resetEmailError": "Couldn't send the reset email. Please check the address and try again."
   },
   "profile": {
     "language": "Language",
-    "logout": "Log out"
+    "logout": "Log out",
+    "noName": "No name set"
   },
   "language": {
     "title": "Change language",
