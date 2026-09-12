@@ -33,12 +33,22 @@ export const isLanguageCode = (code: unknown): code is LanguageCode =>
   languages.some((language) => language.code === code);
 
 const resources = {
-  en: { translation: en }, zh: { translation: zh }, hi: { translation: hi },
-  es: { translation: es }, ar: { translation: ar }, fr: { translation: fr },
-  bn: { translation: bn }, pt: { translation: pt }, ru: { translation: ru },
-  id: { translation: id }, ro: { translation: ro },
+  en: { translation: en },
+  zh: { translation: zh },
+  hi: { translation: hi },
+  es: { translation: es },
+  ar: { translation: ar },
+  fr: { translation: fr },
+  bn: { translation: bn },
+  pt: { translation: pt },
+  ru: { translation: ru },
+  id: { translation: id },
+  ro: { translation: ro },
 };
-const deviceLanguage = getLocales().map((locale) => locale.languageCode).find(isLanguageCode) ?? "en";
+const deviceLanguage =
+  getLocales()
+    .map((locale) => locale.languageCode)
+    .find(isLanguageCode) ?? "en";
 const initialized = i18n.use(initReactI18next).init({
   resources,
   lng: deviceLanguage,

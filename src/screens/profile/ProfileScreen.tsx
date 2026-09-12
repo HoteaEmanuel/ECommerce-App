@@ -8,14 +8,26 @@ import { sharedPaddingHorizontal } from "../../styles/sharedStyles";
 import AppText from "../../components/texts/AppText";
 import { s, vs } from "react-native-size-matters";
 import { useNavigation } from "@react-navigation/native";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import { SheetManager } from "react-native-actions-sheet";
 import LanguageBottomSheet from "../../components/language/LanguageBottomSheet";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { setUserData } from "../../store/reducers/userSlice";
 
 const ProfileScreen = () => {
   const { t } = useTranslation();
   const navigation = useNavigation();
+  const dispatch = useDispatch();
+  const handleLogin = async () => {
+    try {
+      dispatch(setUserData({}));
+      await AsyncStorage.removeItem("USER_DATA");
+      navigation.navigate("AuthStack");
+    } catch (error) {
+      console.error("Error loggin out: ", error);
+    }
+  };
 
   return (
     <AppSaveView>
@@ -29,7 +41,10 @@ const ProfileScreen = () => {
           title={t("profile.language")}
           onPress={() => SheetManager.show("LANG_SHEET")}
         />
-        <ProfileSectionButton title={t("profile.logout")} />
+        <ProfileSectionButton
+          title={t("profile.logout")}
+          onPress={handleLogin}
+        />
       </View>
 
       <LanguageBottomSheet />
