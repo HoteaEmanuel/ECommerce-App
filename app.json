@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "SmartECommerce",
+    "name": "Smart E-Commerce",
     "slug": "SmartECommerce",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/appicon.png",
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": true
@@ -12,14 +12,28 @@
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "foregroundImage": "./assets/appicon.png",
+        "backgroundImage": "./assets/appicon.png",
+        "monochromeImage": "./assets/appicon.png"
       },
       "predictiveBackGestureEnabled": false
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#ffffff",
+          "image": "./assets/appsplash.png",
+          "dark": {
+            "image": "./assets/appsplash.png",
+            "backgroundColor": "#000000"
+          },
+          "imageWidth": 200
+        }
+      ]
+    ]
   }
 }

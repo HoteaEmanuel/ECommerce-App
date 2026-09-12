@@ -37,10 +37,7 @@ const schema = yup.object({
   detailedAddress: yup
     .string()
     .required("validation.addressRequired")
-    .min(
-      15,
-      "validation.addressMin",
-    ),
+    .min(15, "validation.addressMin"),
 });
 const CheckoutScreen = () => {
   const { t } = useTranslation();
@@ -77,7 +74,7 @@ const CheckoutScreen = () => {
       dispatch(emptyCart());
       navigation.goBack();
     } catch (error) {
-      console.log(error);
+      console.log("Error in placing order: ", error);
       showMessage({
         type: "danger",
         message: t("checkout.error"),
@@ -108,7 +105,10 @@ const CheckoutScreen = () => {
       </View>
 
       <View style={styles.bottomButtonContainer}>
-        <AppButton title={t("common.confirm")} onPress={handleSubmit(saveOrder)} />
+        <AppButton
+          title={t("common.confirm")}
+          onPress={handleSubmit(saveOrder)}
+        />
       </View>
     </AppSaveView>
   );

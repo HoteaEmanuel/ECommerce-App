@@ -4,40 +4,36 @@ import AuthStack from "./AuthStack";
 import MainAppBottomTabs from "./MainAppButtomTabs";
 import CheckoutScreen from "../screens/cart/CheckoutScreen";
 import MyOrdersScreen from "../screens/profile/MyOrdersScreen";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { useDispatch, useSelector } from "react-redux";
-import { setLoading, setUserData } from "../store/reducers/userSlice";
-import { useEffect } from "react";
-import { RootState } from "../store/store";
-import { ActivityIndicator } from "react-native";
+import { useEffect, useState } from "react";
 
+import { ActivityIndicator } from "react-native";
+import { View } from "react-native";
+import { AppColors } from "../styles/colors";
+import { onAuthStateChanged } from "@firebase/auth";
+import { auth } from "../config/firebase";
 const Stack = createStackNavigator();
 
 export default function MainAppStack() {
   const { t } = useTranslation();
 
-  const dispatch = useDispatch();
-
-  const { userData, isLoading } = useSelector(
-    (store: RootState) => store.userSlice,
-  );
-
-  const isUserLoggedIn = async () => {
-    try {
-      const storedUserData = await AsyncStorage.getItem("USER_DATA");
-      if (storedUserData) dispatch(setUserData(JSON.parse(storedUserData)));
-    } catch (error) {
-      console.error("Error reading stored user: ", error);
-    } finally {
-      dispatch(setLoading(false));
-    }
-  };
+  const [isLoading, setIsLoading] = useState(true);
+  const [userData, setUserData] = useState<object | null>(null);
 
   useEffect(() => {
-    isUserLoggedIn();
+    onAuthStateChanged(auth, (userFromFirebase) => {
+      if (userFromFirebase) {
+        setIsLoading(false);
+        setUserData(userFromFirebase);
+      }
+      setIsLoading(false);
+    });
   }, []);
-
-  if (isLoading) return <ActivityIndicator size="large" />;
+  if (isLoading)
+    return (
+      <View style={{ justifyContent: "center", alignItems: "center", flex: 1 }}>
+        <ActivityIndicator size="large" color={AppColors.primary} />;
+      </View>
+    );
   return (
     <Stack.Navigator
       screenOptions={{

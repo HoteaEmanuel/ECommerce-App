@@ -14,7 +14,8 @@ import { SheetManager } from "react-native-actions-sheet";
 import LanguageBottomSheet from "../../components/language/LanguageBottomSheet";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { setUserData } from "../../store/reducers/userSlice";
-
+import { signOut } from "firebase/auth";
+import { auth } from "../../config/firebase";
 const ProfileScreen = () => {
   const { t } = useTranslation();
   const navigation = useNavigation();
@@ -23,6 +24,7 @@ const ProfileScreen = () => {
     try {
       dispatch(setUserData({}));
       await AsyncStorage.removeItem("USER_DATA");
+      await signOut(auth);
       navigation.navigate("AuthStack");
     } catch (error) {
       console.error("Error loggin out: ", error);
