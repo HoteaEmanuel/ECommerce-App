@@ -53,6 +53,8 @@ const SignUpScreen = () => {
 
       const userDataObj = {
         uid: userCredential.user.uid,
+        email: userCredential.user.email,
+        displayName: data.name,
       };
       dispatch(setUserData(userDataObj));
       navigation.navigate("MainAppBottomTabs");

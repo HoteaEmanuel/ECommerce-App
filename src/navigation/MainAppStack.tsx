@@ -14,23 +14,34 @@ import { AppColors } from "../styles/colors";
 import { onAuthStateChanged } from "@firebase/auth";
 import { auth } from "../config/firebase";
 import type { RootStackParamList } from "./types";
+import { useDispatch } from "react-redux";
+import { setUserData as setReduxUserData } from "../store/reducers/userSlice";
 const Stack = createStackNavigator<RootStackParamList>();
 
 export default function MainAppStack() {
   const { t } = useTranslation();
+  const dispatch = useDispatch();
 
   const [isLoading, setIsLoading] = useState(true);
   const [userData, setUserData] = useState<object | null>(null);
 
   useEffect(() => {
     onAuthStateChanged(auth, (userFromFirebase) => {
-      if (userFromFirebase) {
-        setIsLoading(false);
-        setUserData(userFromFirebase);
-      }
+      setUserData(userFromFirebase);
+      dispatch(
+        setReduxUserData(
+          userFromFirebase
+            ? {
+                uid: userFromFirebase.uid,
+                email: userFromFirebase.email,
+                displayName: userFromFirebase.displayName,
+              }
+            : null,
+        ),
+      );
       setIsLoading(false);
     });
-  }, []);
+  }, [dispatch]);
   if (isLoading)
     return (
       <View style={{ justifyContent: "center", alignItems: "center", flex: 1 }}>

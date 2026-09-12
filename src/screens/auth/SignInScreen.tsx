@@ -50,6 +50,8 @@ const SignInScreen = () => {
 
       const userDataObj = {
         uid: userCredential.user.uid,
+        email: userCredential.user.email,
+        displayName: userCredential.user.displayName,
       };
       dispatch(setUserData(userDataObj));
       navigation.navigate("MainAppBottomTabs");

@@ -74,6 +74,13 @@ const CheckoutScreen = () => {
   const [contactInfoIsUpdate, setContactInfoIsUpdate] = useState(false);
 
   const saveOrder = async (formData: FormData) => {
+    if (!userData) {
+      showMessage({
+        type: "danger",
+        message: t("checkout.error"),
+      });
+      return;
+    }
     try {
       const orderBody = {
         ...formData,

@@ -24,7 +24,7 @@ const ProfileScreen = () => {
   const currentUser = auth.currentUser;
   const handleLogin = async () => {
     try {
-      dispatch(setUserData({}));
+      dispatch(setUserData(null));
       await AsyncStorage.removeItem("USER_DATA");
       await signOut(auth);
       navigation.navigate("AuthStack");
